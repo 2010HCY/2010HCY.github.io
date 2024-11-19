@@ -6,7 +6,7 @@
   <link href="https://100713.xyz/atom.xml" rel="self"/>
   
   <link href="https://100713.xyz/"/>
-  <updated>2024-11-15T16:38:27.889Z</updated>
+  <updated>2024-11-19T07:39:02.442Z</updated>
   <id>https://100713.xyz/</id>
   
   <author>
@@ -17,9 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>天凉了</title>
+    <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%A4%A9%E5%87%89%E4%BA%86"/>
+    <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%A4%A9%E5%87%89%E4%BA%86</id>
+    <published>2024-11-19T07:37:54.000Z</published>
+    <updated>2024-11-19T07:39:02.442Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随记" scheme="https://100713.xyz/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="生活随记" scheme="https://100713.xyz/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/"/>
+    
+    <category term="一年" scheme="https://100713.xyz/tags/%E4%B8%80%E5%B9%B4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>电子八卦盘</title>
-    <link href="https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%AD%90%E5%85%AB%E5%8D%A6%E7%9B%98.html"/>
-    <id>https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%AD%90%E5%85%AB%E5%8D%A6%E7%9B%98.html</id>
+    <link href="https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%AD%90%E5%85%AB%E5%8D%A6%E7%9B%98"/>
+    <id>https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%AD%90%E5%85%AB%E5%8D%A6%E7%9B%98</id>
     <published>2024-11-15T15:36:03.000Z</published>
     <updated>2024-11-15T16:38:27.889Z</updated>
     
@@ -47,8 +74,8 @@
   
   <entry>
     <title>博客发展历程13-佛祖保佑，永无BUG</title>
-    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG.html"/>
-    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG.html</id>
+    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG"/>
+    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG</id>
     <published>2024-11-10T15:51:39.000Z</published>
     <updated>2024-11-10T16:22:17.005Z</updated>
     
@@ -66,9 +93,9 @@
     <category term="博客发展历程" scheme="https://100713.xyz/categories/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
     
     
-    <category term="程序代码" scheme="https://100713.xyz/tags/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
-    
     <category term="赛博佛祖" scheme="https://100713.xyz/tags/%E8%B5%9B%E5%8D%9A%E4%BD%9B%E7%A5%96/"/>
+    
+    <category term="程序代码" scheme="https://100713.xyz/tags/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
     
     <category term="代码护符" scheme="https://100713.xyz/tags/%E4%BB%A3%E7%A0%81%E6%8A%A4%E7%AC%A6/"/>
     
@@ -76,8 +103,8 @@
   
   <entry>
     <title>电压倍增电路</title>
-    <link href="https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%8E%8B%E5%80%8D%E5%A2%9E%E7%94%B5%E8%B7%AF.html"/>
-    <id>https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%8E%8B%E5%80%8D%E5%A2%9E%E7%94%B5%E8%B7%AF.html</id>
+    <link href="https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%8E%8B%E5%80%8D%E5%A2%9E%E7%94%B5%E8%B7%AF"/>
+    <id>https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%8E%8B%E5%80%8D%E5%A2%9E%E7%94%B5%E8%B7%AF</id>
     <published>2024-11-10T11:36:03.000Z</published>
     <updated>2024-11-15T14:17:09.550Z</updated>
     
@@ -107,8 +134,8 @@
   
   <entry>
     <title>Windows如何开机自启动，隐藏窗口启动</title>
-    <link href="https://100713.xyz/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/Windows%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8.html"/>
-    <id>https://100713.xyz/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/Windows%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8.html</id>
+    <link href="https://100713.xyz/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/Windows%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8"/>
+    <id>https://100713.xyz/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/Windows%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8</id>
     <published>2024-11-09T10:19:05.000Z</published>
     <updated>2024-11-09T10:19:30.576Z</updated>
     
@@ -134,8 +161,8 @@
   
   <entry>
     <title>昨晚的噩梦：长满头发的猫</title>
-    <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E6%9C%80%E8%BF%91%E5%81%9A%E7%9A%84%E6%A2%A6.html"/>
-    <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E6%9C%80%E8%BF%91%E5%81%9A%E7%9A%84%E6%A2%A6.html</id>
+    <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E6%9C%80%E8%BF%91%E5%81%9A%E7%9A%84%E6%A2%A6"/>
+    <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E6%9C%80%E8%BF%91%E5%81%9A%E7%9A%84%E6%A2%A6</id>
     <published>2024-11-01T00:50:58.000Z</published>
     <updated>2024-11-09T16:02:52.632Z</updated>
     
@@ -161,8 +188,8 @@
   
   <entry>
     <title>HTML段落</title>
-    <link href="https://100713.xyz/%E7%BC%96%E7%A8%8B/HTML/HTML08.%E6%AE%B5%E8%90%BD.html"/>
-    <id>https://100713.xyz/%E7%BC%96%E7%A8%8B/HTML/HTML08.%E6%AE%B5%E8%90%BD.html</id>
+    <link href="https://100713.xyz/%E7%BC%96%E7%A8%8B/HTML/HTML08.%E6%AE%B5%E8%90%BD"/>
+    <id>https://100713.xyz/%E7%BC%96%E7%A8%8B/HTML/HTML08.%E6%AE%B5%E8%90%BD</id>
     <published>2024-10-09T05:30:41.000Z</published>
     <updated>2024-10-09T05:47:42.665Z</updated>
     
@@ -190,8 +217,8 @@
   
   <entry>
     <title>《水果忍者》为何在一夜之间消失？！</title>
-    <link href="https://100713.xyz/%E6%B8%B8%E6%88%8F/%E6%B0%B4%E6%9E%9C%E5%BF%8D%E8%80%85.html"/>
-    <id>https://100713.xyz/%E6%B8%B8%E6%88%8F/%E6%B0%B4%E6%9E%9C%E5%BF%8D%E8%80%85.html</id>
+    <link href="https://100713.xyz/%E6%B8%B8%E6%88%8F/%E6%B0%B4%E6%9E%9C%E5%BF%8D%E8%80%85"/>
+    <id>https://100713.xyz/%E6%B8%B8%E6%88%8F/%E6%B0%B4%E6%9E%9C%E5%BF%8D%E8%80%85</id>
     <published>2024-10-06T15:50:58.000Z</published>
     <updated>2024-11-09T16:13:52.423Z</updated>
     
@@ -221,8 +248,8 @@
   
   <entry>
     <title>HTML标题</title>
-    <link href="https://100713.xyz/%E7%BC%96%E7%A8%8B/HTML/HTML07.%E6%A0%87%E9%A2%98.html"/>
-    <id>https://100713.xyz/%E7%BC%96%E7%A8%8B/HTML/HTML07.%E6%A0%87%E9%A2%98.html</id>
+    <link href="https://100713.xyz/%E7%BC%96%E7%A8%8B/HTML/HTML07.%E6%A0%87%E9%A2%98"/>
+    <id>https://100713.xyz/%E7%BC%96%E7%A8%8B/HTML/HTML07.%E6%A0%87%E9%A2%98</id>
     <published>2024-10-06T07:40:55.000Z</published>
     <updated>2024-10-09T05:47:37.801Z</updated>
     
@@ -250,10 +277,10 @@
   
   <entry>
     <title>大文件生成二维码</title>
-    <link href="https://100713.xyz/%E7%BC%96%E7%A8%8B/%E5%A4%A7%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81.html"/>
-    <id>https://100713.xyz/%E7%BC%96%E7%A8%8B/%E5%A4%A7%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81.html</id>
+    <link href="https://100713.xyz/%E7%BC%96%E7%A8%8B/%E5%A4%A7%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81"/>
+    <id>https://100713.xyz/%E7%BC%96%E7%A8%8B/%E5%A4%A7%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81</id>
     <published>2024-10-02T07:47:18.000Z</published>
-    <updated>2024-11-10T16:05:54.773Z</updated>
+    <updated>2024-11-19T05:04:16.418Z</updated>
     
     
       
@@ -278,9 +305,36 @@
   </entry>
   
   <entry>
+    <title>各大搜索引擎的提交入口</title>
+    <link href="https://100713.xyz/%E7%BC%96%E7%A8%8B/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8F%90%E4%BA%A4"/>
+    <id>https://100713.xyz/%E7%BC%96%E7%A8%8B/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8F%90%E4%BA%A4</id>
+    <published>2024-10-02T07:47:18.000Z</published>
+    <updated>2024-11-19T08:44:30.577Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://100713.xyz/categories/programming/"/>
+    
+    
+    <category term="工具" scheme="https://100713.xyz/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="网站提交" scheme="https://100713.xyz/tags/%E7%BD%91%E7%AB%99%E6%8F%90%E4%BA%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>加入Tor网络节点</title>
-    <link href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E5%8A%A0%E5%85%A5tor%E7%BD%91%E7%BB%9C%E8%8A%82%E7%82%B9.html"/>
-    <id>https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E5%8A%A0%E5%85%A5tor%E7%BD%91%E7%BB%9C%E8%8A%82%E7%82%B9.html</id>
+    <link href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E5%8A%A0%E5%85%A5tor%E7%BD%91%E7%BB%9C%E8%8A%82%E7%82%B9"/>
+    <id>https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E5%8A%A0%E5%85%A5tor%E7%BD%91%E7%BB%9C%E8%8A%82%E7%82%B9</id>
     <published>2024-10-02T06:18:37.000Z</published>
     <updated>2024-10-02T06:19:23.399Z</updated>
     
@@ -308,8 +362,8 @@
   
   <entry>
     <title>博客功能更新日志12</title>
-    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.27.html"/>
-    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.27.html</id>
+    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.27"/>
+    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.27</id>
     <published>2024-09-27T10:49:08.000Z</published>
     <updated>2024-11-10T16:06:23.635Z</updated>
     
@@ -337,8 +391,8 @@
   
   <entry>
     <title>25个洋葱站点推荐</title>
-    <link href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/25%E4%B8%AA%E6%B4%8B%E8%91%B1%E7%AB%99%E7%82%B9%E6%8E%A8%E8%8D%90.html"/>
-    <id>https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/25%E4%B8%AA%E6%B4%8B%E8%91%B1%E7%AB%99%E7%82%B9%E6%8E%A8%E8%8D%90.html</id>
+    <link href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/25%E4%B8%AA%E6%B4%8B%E8%91%B1%E7%AB%99%E7%82%B9%E6%8E%A8%E8%8D%90"/>
+    <id>https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/25%E4%B8%AA%E6%B4%8B%E8%91%B1%E7%AB%99%E7%82%B9%E6%8E%A8%E8%8D%90</id>
     <published>2024-09-27T10:34:51.000Z</published>
     <updated>2024-11-09T16:08:17.443Z</updated>
     
@@ -366,8 +420,8 @@
   
   <entry>
     <title>连接tor网络</title>
-    <link href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E8%BF%9E%E6%8E%A5tor%E7%BD%91%E7%BB%9C.html"/>
-    <id>https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E8%BF%9E%E6%8E%A5tor%E7%BD%91%E7%BB%9C.html</id>
+    <link href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E8%BF%9E%E6%8E%A5tor%E7%BD%91%E7%BB%9C"/>
+    <id>https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E8%BF%9E%E6%8E%A5tor%E7%BD%91%E7%BB%9C</id>
     <published>2024-09-26T07:21:27.000Z</published>
     <updated>2024-11-09T16:08:29.054Z</updated>
     
@@ -395,8 +449,8 @@
   
   <entry>
     <title>什么是tor网络</title>
-    <link href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E4%BB%80%E4%B9%88%E6%98%AFtor%E7%BD%91%E7%BB%9C.html"/>
-    <id>https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E4%BB%80%E4%B9%88%E6%98%AFtor%E7%BD%91%E7%BB%9C.html</id>
+    <link href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E4%BB%80%E4%B9%88%E6%98%AFtor%E7%BD%91%E7%BB%9C"/>
+    <id>https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E4%BB%80%E4%B9%88%E6%98%AFtor%E7%BD%91%E7%BB%9C</id>
     <published>2024-09-25T07:56:39.000Z</published>
     <updated>2024-09-25T08:26:24.079Z</updated>
     
@@ -424,8 +478,8 @@
   
   <entry>
     <title>博客功能更新日志11</title>
-    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.23.html"/>
-    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.23.html</id>
+    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.23"/>
+    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.23</id>
     <published>2024-09-23T04:24:33.000Z</published>
     <updated>2024-11-10T16:06:14.205Z</updated>
     
@@ -453,8 +507,8 @@
   
   <entry>
     <title>文具防御</title>
-    <link href="https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1.html"/>
-    <id>https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1.html</id>
+    <link href="https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1"/>
+    <id>https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1</id>
     <published>2024-09-21T14:03:21.000Z</published>
     <updated>2024-09-28T05:38:23.410Z</updated>
     
@@ -482,8 +536,8 @@
   
   <entry>
     <title>轰炸机战争2加强版</title>
-    <link href="https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88.html"/>
-    <id>https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88.html</id>
+    <link href="https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88"/>
+    <id>https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88</id>
     <published>2024-09-21T14:03:07.000Z</published>
     <updated>2024-09-28T05:38:14.678Z</updated>
     
@@ -511,8 +565,8 @@
   
   <entry>
     <title>轰炸机战争2无敌版</title>
-    <link href="https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E6%97%A0%E6%95%8C%E7%89%88.html"/>
-    <id>https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E6%97%A0%E6%95%8C%E7%89%88.html</id>
+    <link href="https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E6%97%A0%E6%95%8C%E7%89%88"/>
+    <id>https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E6%97%A0%E6%95%8C%E7%89%88</id>
     <published>2024-09-21T14:02:47.000Z</published>
     <updated>2024-09-28T05:38:27.044Z</updated>
     
@@ -529,68 +583,6 @@
     
     <category term="在线小游戏" scheme="https://100713.xyz/categories/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/"/>
     
-    
-    <category term="在线游戏" scheme="https://100713.xyz/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="flash游戏" scheme="https://100713.xyz/tags/flash%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="轰炸机战争" scheme="https://100713.xyz/tags/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>轰炸机战争1</title>
-    <link href="https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891.html"/>
-    <id>https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891.html</id>
-    <published>2024-09-21T13:52:48.000Z</published>
-    <updated>2024-09-28T05:37:29.997Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="在线小游戏" scheme="https://100713.xyz/categories/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/"/>
-    
-    
-    <category term="在线游戏" scheme="https://100713.xyz/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="flash游戏" scheme="https://100713.xyz/tags/flash%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="轰炸机战争" scheme="https://100713.xyz/tags/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>首次加入在线flash游戏</title>
-    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E9%A6%96%E6%AC%A1%E5%8A%A0%E5%85%A5%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F.html"/>
-    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E9%A6%96%E6%AC%A1%E5%8A%A0%E5%85%A5%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F.html</id>
-    <published>2024-09-15T07:04:33.000Z</published>
-    <updated>2024-11-11T05:58:22.956Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="博客发展历程" scheme="https://100713.xyz/categories/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
-    
-    
-    <category term="博客发展历程" scheme="https://100713.xyz/tags/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
-    
-    <category term="新功能添加" scheme="https://100713.xyz/tags/%E6%96%B0%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0/"/>
     
     <category term="在线游戏" scheme="https://100713.xyz/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/"/>
     

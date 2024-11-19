@@ -4,7 +4,6 @@ Disallow: /friends/
 Disallow: /tags/
 
 User-agent: Googlebot
-Disallow: /*.html#!$
 Disallow: /*.#!$
 
 Sitemap: https://100713.xyz/sitemap.xml

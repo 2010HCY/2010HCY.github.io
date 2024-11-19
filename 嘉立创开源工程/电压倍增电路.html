@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 
-
+<link rel="stylesheet" href="/js/prism/prism.css">
 <head><!-- hexo injector head_begin start -->
 <link rel="stylesheet" href="/css/bilicard.css">
 <!-- hexo injector head_begin end -->
@@ -18,10 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6594862214748582"
-     crossorigin="anonymous"></script>
-
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0P4JLHJL9R"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -598,12 +595,10 @@
         <hr class="clearfix">
 
         
-
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
         
-        <!-- 代码块折行 -->
-        <style type="text/css">
-            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
-        </style>
+
         
 
         <div class="card-content article-card-content">
@@ -704,7 +699,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%8E%8B%E5%80%8D%E5%A2%9E%E7%94%B5%E8%B7%AF.html">https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%8E%8B%E5%80%8D%E5%A2%9E%E7%94%B5%E8%B7%AF.html</a>
+                    <a href="https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%8E%8B%E5%80%8D%E5%A2%9E%E7%94%B5%E8%B7%AF">https://100713.xyz/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E7%94%B5%E5%8E%8B%E5%80%8D%E5%A2%9E%E7%94%B5%E8%B7%AF</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -930,7 +925,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG.html">
+                <a href="/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG">
                     <div class="card-image">
                         
                         <img src="/../images/%E8%B5%9B%E5%8D%9A%E4%BD%9B%E7%A5%96.png" class="responsive-img" alt="博客发展历程13-佛祖保佑，永无BUG">
@@ -963,12 +958,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/">
-                        <span class="chip bg-color">程序代码</span>
-                    </a>
-                    
                     <a href="/tags/%E8%B5%9B%E5%8D%9A%E4%BD%9B%E7%A5%96/">
                         <span class="chip bg-color">赛博佛祖</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/">
+                        <span class="chip bg-color">程序代码</span>
                     </a>
                     
                     <a href="/tags/%E4%BB%A3%E7%A0%81%E6%8A%A4%E7%AC%A6/">
@@ -986,7 +981,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/Windows%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8.html">
+                <a href="/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/Windows%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8">
                     <div class="card-image">
                         
                         
@@ -1059,6 +1054,29 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
@@ -1176,7 +1194,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">35.2k</span>&nbsp;字
+                class="white-color">37.5k</span>&nbsp;字
             
             
             
@@ -1201,13 +1219,9 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/2010HCY" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
 
 
-
-    <a href="mailto:2010hcy@proton.me" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:Ethaniel@100713.xyz" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1228,6 +1242,7 @@
     </a>
 
 </div>
+<script src="/js/prism/prism.js" async></script>
     </div>
 </footer>
 
