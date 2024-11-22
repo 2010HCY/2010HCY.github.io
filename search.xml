@@ -2833,4 +2833,59 @@
         <tag>脑洞大开</tag>
       </tags>
   </entry>
+  <entry>
+    <title>发疯的cloudflare</title>
+    <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/cloudflare%E4%BD%A0%E8%BF%98%E5%A5%BD%E5%90%97.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="cloudflare今天发了42封邮件轰炸我"><a href="#cloudflare今天发了42封邮件轰炸我" class="headerlink" title="cloudflare今天发了42封邮件轰炸我"></a>cloudflare今天发了42封邮件轰炸我</h2><p>中午起床一看信箱，好家伙，20封来自cloudflare的邮件，提示我我的网站tls加密升级了，我邮件还没看完，霍，又来3封，这些邮件内容全是一模一样的，</p>
+<img src="/images/cloudflare的邮件/中午.png" style="zoom:80%;" />
+
+<p>然后我下线了几小时，再次上线后，好家伙，整整42封邮件（看下图）</p>
+<img src="/images/cloudflare的邮件/统计.png" style="zoom:80%;" />
+
+<p>如下是完整的邮件列表，恐怖如斯：</p>
+<img src="/images/cloudflare的邮件/全部.png" style="zoom:80%;" />
+
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>生活随记</category>
+      </categories>
+      <tags>
+        <tag>生活随记</tag>
+        <tag>故逝</tag>
+        <tag>cloudflare</tag>
+        <tag>邮件轰炸</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客发展历程14-加入博客订阅功能</title>
+    <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="今日上线订阅功能"><a href="#今日上线订阅功能" class="headerlink" title="今日上线订阅功能"></a>今日上线订阅功能</h2><!-- BEGIN: Benchmark Email Signup Form Code -->
+<script type="text/javascript" id="lbscript1763564" src="https://lb.benchmarkemail.com//cn/code/lbformnew.js?mFcQnoBFKMSDt505ZSslSqjgVtVj7bhtpHzA6beJ4yTdeRnZQ7PzVg%253D%253D"></script><noscript>Please enable JavaScript <br /><div align="center" style="padding-top:5px;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;"><a href="https://www.benchmarkemail.com/email-marketing?utm_source=usersignupforms&utm_medium=customers&utm_campaign=usersignupforms" target="_new" style="text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;">Email Marketing </a> by Benchmark</div></noscript>
+<!-- END: Benchmark Email Signup Form Code -->
+
+<p>看到上面的表格了吗？这是满客电子邮件的登记表格，仅需填写电子邮件即可以每15天收到更新的邮件，我把它也放在了<a href="/contact">访客等级处</a>，名字不是必填项，但每天最多只能75人登记（我这博客也没啥流量就是了）</p>
+<h2 id="biff-blog-bot给我的GitHub仓库stars了"><a href="#biff-blog-bot给我的GitHub仓库stars了" class="headerlink" title="biff.blog bot给我的GitHub仓库stars了"></a>biff.blog bot给我的GitHub仓库stars了</h2><p>这貌似是一个博客社区，收录博客RSS订阅的平台</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+]]></content>
+      <categories>
+        <category>博客发展历程</category>
+      </categories>
+      <tags>
+        <tag>博客发展历程</tag>
+        <tag>新功能添加</tag>
+        <tag>订阅功能上线</tag>
+      </tags>
+  </entry>
 </search>

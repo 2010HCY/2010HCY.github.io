@@ -6,7 +6,7 @@
   <link href="https://100713.xyz/atom.xml" rel="self"/>
   
   <link href="https://100713.xyz/"/>
-  <updated>2024-11-22T07:23:43.939Z</updated>
+  <updated>2024-11-22T08:54:35.815Z</updated>
   <id>https://100713.xyz/</id>
   
   <author>
@@ -17,11 +17,71 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>博客发展历程14-加入博客订阅功能</title>
+    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF"/>
+    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF</id>
+    <published>2024-11-22T15:51:39.000Z</published>
+    <updated>2024-11-22T08:54:35.815Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客发展历程" scheme="https://100713.xyz/categories/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
+    
+    
+    <category term="博客发展历程" scheme="https://100713.xyz/tags/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
+    
+    <category term="新功能添加" scheme="https://100713.xyz/tags/%E6%96%B0%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0/"/>
+    
+    <category term="订阅功能上线" scheme="https://100713.xyz/tags/%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>发疯的cloudflare</title>
+    <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/cloudflare%E4%BD%A0%E8%BF%98%E5%A5%BD%E5%90%97"/>
+    <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/cloudflare%E4%BD%A0%E8%BF%98%E5%A5%BD%E5%90%97</id>
+    <published>2024-11-22T08:37:35.000Z</published>
+    <updated>2024-11-22T08:40:44.467Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随记" scheme="https://100713.xyz/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="生活随记" scheme="https://100713.xyz/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/"/>
+    
+    <category term="故逝" scheme="https://100713.xyz/tags/%E6%95%85%E9%80%9D/"/>
+    
+    <category term="cloudflare" scheme="https://100713.xyz/tags/cloudflare/"/>
+    
+    <category term="邮件轰炸" scheme="https://100713.xyz/tags/%E9%82%AE%E4%BB%B6%E8%BD%B0%E7%82%B8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>历史上的今天</title>
     <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E4%BB%8A%E5%A4%A9%E4%B9%9F%E6%98%AF%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80%E7%9A%84%E4%B8%80%E5%A4%A9%E5%91%A2"/>
     <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E4%BB%8A%E5%A4%A9%E4%B9%9F%E6%98%AF%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80%E7%9A%84%E4%B8%80%E5%A4%A9%E5%91%A2</id>
     <published>2024-11-22T07:23:34.000Z</published>
-    <updated>2024-11-22T07:23:43.939Z</updated>
+    <updated>2024-11-22T08:41:45.722Z</updated>
     
     
       
@@ -531,64 +591,6 @@
     <category term="洋葱网络" scheme="https://100713.xyz/tags/%E6%B4%8B%E8%91%B1%E7%BD%91%E7%BB%9C/"/>
     
     <category term="暗网访问" scheme="https://100713.xyz/tags/%E6%9A%97%E7%BD%91%E8%AE%BF%E9%97%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客功能更新日志11</title>
-    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.23"/>
-    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/2024.9.23</id>
-    <published>2024-09-23T04:24:33.000Z</published>
-    <updated>2024-11-10T16:06:14.205Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="博客发展历程" scheme="https://100713.xyz/categories/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
-    
-    
-    <category term="博客发展历程" scheme="https://100713.xyz/tags/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
-    
-    <category term="新功能添加" scheme="https://100713.xyz/tags/%E6%96%B0%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0/"/>
-    
-    <category term="评论系统上线" scheme="https://100713.xyz/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%8A%E7%BA%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文具防御</title>
-    <link href="https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1"/>
-    <id>https://100713.xyz/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1</id>
-    <published>2024-09-21T14:03:21.000Z</published>
-    <updated>2024-09-28T05:38:23.410Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="在线小游戏" scheme="https://100713.xyz/categories/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/"/>
-    
-    
-    <category term="在线游戏" scheme="https://100713.xyz/tags/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="flash游戏" scheme="https://100713.xyz/tags/flash%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="轰炸机战争" scheme="https://100713.xyz/tags/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%89/"/>
     
   </entry>
   
