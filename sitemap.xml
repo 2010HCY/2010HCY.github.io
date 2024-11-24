@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://100713.xyz/%E7%BC%96%E7%A8%8B/%E6%88%91%E6%B1%89%E5%8C%96%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F</loc>
+    
+    <lastmod>2024-11-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://100713.xyz/books/</loc>
     
     <lastmod>2024-11-24</lastmod>
@@ -994,6 +1003,13 @@
   
   <url>
     <loc>https://100713.xyz/tags/%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF/</loc>
+    <lastmod>2024-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://100713.xyz/tags/%E6%B8%B8%E6%88%8F%E6%B1%89%E5%8C%96/</loc>
     <lastmod>2024-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -2888,4 +2888,54 @@
         <tag>订阅功能上线</tag>
       </tags>
   </entry>
+  <entry>
+    <title>我汉化的第一个游戏</title>
+    <url>/%E7%BC%96%E7%A8%8B/%E6%88%91%E6%B1%89%E5%8C%96%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="驾驶TU-95汉化版"><a href="#驾驶TU-95汉化版" class="headerlink" title="驾驶TU-95汉化版"></a>驾驶TU-95汉化版</h2><p>这个游戏我我小时候玩的，那时看不懂，只能一通瞎操作，坠机次数起码得有几十次，那时候百思不得其解，现在看得懂怎么操作了，成功过关，但因为英文看着实在难受，于是忍无可忍的我决定汉化它。</p>
+<h3 id="项目立项"><a href="#项目立项" class="headerlink" title="项目立项"></a>项目立项</h3><p>2024年11月24日下午16点28分，正式新建好了文件夹</p>
+<h3 id="汉化进度"><a href="#汉化进度" class="headerlink" title="汉化进度"></a>汉化进度</h3><p>16点29分，导入字体成功</p>
+<p>16点29分，首页汉化完毕</p>
+<p>16点59分，汉化第一个任务</p>
+<p>17点17分，掌握技巧，熟练度+1</p>
+<p>18点30分，汉化一半，吃饭</p>
+<p>19点14分17秒，汉化完毕！</p>
+<h2 id="成品"><a href="#成品" class="headerlink" title="成品"></a>成品</h2><blockquote>
+<p>你们可以在线游玩，也可以下载后用播放器打开</p>
+</blockquote>
+<p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E9%A9%BE%E9%A9%B6TU-95/%E9%A9%BE%E9%A9%B6TU-95.swf">原版 </a> </p>
+<p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E9%A9%BE%E9%A9%B6TU-95/%E9%A9%BE%E9%A9%B6TU-95%E6%B1%89%E5%8C%96%E7%89%88.swf">汉化版</a> </p>
+<p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/Falsh%E6%92%AD%E6%94%BE%E5%99%A8.exe">播放器</a></p>
+
+        <div id="aplayer-qjDDdZXc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-qjDDdZXc"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "游戏背景音乐",
+              author: "ConcernedApe",
+              url: "/images/在线游戏/驾驶TU-95/背景音乐.wav",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p>注：今天懒得弄在线播放，过几天再整（11月24日21点39分）</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>程序代码</tag>
+        <tag>编程</tag>
+        <tag>游戏汉化</tag>
+      </tags>
+  </entry>
 </search>
