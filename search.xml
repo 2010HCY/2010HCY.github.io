@@ -942,7 +942,13 @@
 </tr>
 </tbody></table>
 <p>注：不包含运费</p>
-]]></content>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
       <categories>
         <category>嘉立创开源工程</category>
       </categories>
@@ -955,11 +961,11 @@
   <entry>
     <title>文具防御</title>
     <url>/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="在线游戏"><a href="#在线游戏" class="headerlink" title="在线游戏"></a>在线游戏</h2><p>利用铅笔，橡皮，击沉来犯之敌！<br>（鼠标懂得用吧？长按蓄力）</p>
-<p><embed type="application/x-shockwave-flash"
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="在线游戏"><a href="#在线游戏" class="headerlink" title="在线游戏"></a>在线游戏</h2><p>利用铅笔，橡皮，击沉来犯之敌！<br>（鼠标懂得用吧？长按蓄力）<br><embed type="application/x-shockwave-flash"
        src="../images/在线游戏/文具防御/文具防御.swf"
        width="640" height="480"
-       wmode="transparent"><br></embed><br>这是flash游戏，2024年了，支持flash的浏览器一个巴掌也数的过来，如果无法游玩，试试以下方法</p>
+       wmode="transparent"><br></embed></p>
+<p>这是flash游戏，2024年了，支持flash的浏览器一个巴掌也数的过来，如果无法游玩，试试以下方法</p>
 <ul>
 <li><p>安装插件，安装这个浏览器插件就好了<a href="https://microsoftedge.microsoft.com/addons/detail/ruffle-flash-emulator/pipjjbgofgieknlpefmcckdmgaaegban">点击跳转</a></p>
 </li>
@@ -980,7 +986,7 @@
       <tags>
         <tag>在线游戏</tag>
         <tag>flash游戏</tag>
-        <tag>轰炸机战争</tag>
+        <tag>文具防御</tag>
       </tags>
   </entry>
   <entry>
@@ -1463,7 +1469,7 @@
   <entry>
     <title>自制小游戏合集</title>
     <url>/%E7%BC%96%E7%A8%8B/%E8%87%AA%E5%88%B6%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>这是我制作的小游戏，小程序。他们有的用HTML标记语言，有的是C++语言，有兴趣的可以看看，玩玩（除HTML其他编程语言的我想办法弄到浏览器里），我也会把代码贴出来。若有bug，或改进方案可以发邮件到<a href="mailto:&#x48;&#67;&#x59;&#50;&#48;&#x31;&#48;&#x30;&#x37;&#49;&#51;&#64;&#113;&#113;&#x2e;&#99;&#111;&#109;">&#x48;&#67;&#x59;&#50;&#48;&#x31;&#48;&#x30;&#x37;&#49;&#51;&#64;&#113;&#113;&#x2e;&#99;&#111;&#109;</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>这是我制作的小游戏，小程序。他们有的用HTML标记语言，有的是C++语言，有兴趣的可以看看，玩玩（除HTML其他编程语言的我想办法弄到浏览器里），我也会把代码贴出来。若有bug，或改进方案可以发邮件到<a href="mailto:&#69;&#x74;&#104;&#97;&#110;&#105;&#101;&#x6c;&#64;&#49;&#48;&#48;&#x37;&#49;&#51;&#46;&#x78;&#x79;&#x7a;">&#69;&#x74;&#104;&#97;&#110;&#105;&#101;&#x6c;&#64;&#49;&#48;&#48;&#x37;&#49;&#51;&#46;&#x78;&#x79;&#x7a;</a></p>
 <h3 id="1-跑酷游戏"><a href="#1-跑酷游戏" class="headerlink" title="1.跑酷游戏"></a>1.跑酷游戏</h3><p>这是一个跑酷小游戏吃操作，反正我折腾了好久，第三关才过了，早知道地图写简单的了，可直接跳转在线玩<a href="https://page.100713.xyz/%E8%B7%91%E9%85%B7%E6%B8%B8%E6%88%8F.html">在线游玩</a></p>
 <span id="more"></span>
 
@@ -2585,7 +2591,7 @@
 <td align="left">规定在文本中的何处适合添加换行符。</td>
 </tr>
 </tbody></table>
-<p>呼，爆肝55分钟，终于完成这个表格了，若有错误，请发邮件到<a href="mailto:&#50;&#48;&#x31;&#x30;&#x68;&#x63;&#121;&#x40;&#112;&#x72;&#111;&#x74;&#x6f;&#x6e;&#46;&#109;&#x65;">&#50;&#48;&#x31;&#x30;&#x68;&#x63;&#121;&#x40;&#112;&#x72;&#111;&#x74;&#x6f;&#x6e;&#46;&#109;&#x65;</a>,或评论留言</p>
+<p>呼，爆肝55分钟，终于完成这个表格了，若有错误，请发邮件到<a href="mailto:&#x32;&#x30;&#x31;&#x30;&#x68;&#99;&#121;&#x40;&#x70;&#x72;&#x6f;&#116;&#111;&#x6e;&#46;&#109;&#x65;">&#x32;&#x30;&#x31;&#x30;&#x68;&#99;&#121;&#x40;&#x70;&#x72;&#x6f;&#116;&#111;&#x6e;&#46;&#109;&#x65;</a>,或评论留言</p>
 <script src="https://utteranc.es/client.js"
         repo="2010HCY/utterances"
         issue-term="title"
@@ -2906,12 +2912,12 @@
 <p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E9%A9%BE%E9%A9%B6TU-95/%E9%A9%BE%E9%A9%B6TU-95%E6%B1%89%E5%8C%96%E7%89%88.swf">汉化版</a> </p>
 <p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/Falsh%E6%92%AD%E6%94%BE%E5%99%A8.exe">播放器</a></p>
 
-        <div id="aplayer-qjDDdZXc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-YwfCcUvr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-qjDDdZXc"),
+            element: document.getElementById("aplayer-YwfCcUvr"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -2928,7 +2934,13 @@
         </script>
 
 <p>注：今天懒得弄在线播放，过几天再整（11月24日21点39分）</p>
-]]></content>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
       <categories>
         <category>编程</category>
       </categories>
