@@ -2912,12 +2912,12 @@
 <p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E9%A9%BE%E9%A9%B6TU-95/%E9%A9%BE%E9%A9%B6TU-95%E6%B1%89%E5%8C%96%E7%89%88.swf">汉化版</a> </p>
 <p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/Falsh%E6%92%AD%E6%94%BE%E5%99%A8.exe">播放器</a></p>
 
-        <div id="aplayer-YwfCcUvr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-OKdHmEbf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-YwfCcUvr"),
+            element: document.getElementById("aplayer-OKdHmEbf"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -2934,6 +2934,7 @@
         </script>
 
 <p>注：今天懒得弄在线播放，过几天再整（11月24日21点39分）</p>
+<p>已经建立Flash纪念站–&gt;<a href="https://flash.100713.xyz/">https://flash.100713.xyz</a>&lt;–，可前往在线游玩（要装插件）</p>
 <script src="https://utteranc.es/client.js"
         repo="2010HCY/utterances"
         issue-term="title"
@@ -2948,6 +2949,41 @@
         <tag>程序代码</tag>
         <tag>编程</tag>
         <tag>游戏汉化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>更新博客音乐播放界面</title>
+    <url>/%E7%BC%96%E7%A8%8B/%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E9%A1%B5%E9%9D%A2.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="更新网页音乐播放！"><a href="#更新网页音乐播放！" class="headerlink" title="更新网页音乐播放！"></a>更新网页音乐播放！</h2><blockquote>
+<p>博客音乐播放器地址：<a href="https://music.100713.xyz/">https://music.100713.xyz</a></p>
+</blockquote>
+<p>看！</p>
+<img src="/images/播放器预览.png" style="zoom:67%;" />
+
+<p>这是我的在线音乐播放器界面同时还有一个导航页：</p>
+<img src="/images/导航页.png" style="zoom:67%;" />
+
+<p>这简洁优雅的界面，看着太舒服了，加加减减，还是现在这简约的风格好看，里面有星露谷物语、戴森球计划、三伏的原声音轨，还有改编于星露谷物语音乐的催眠曲，啊，完美。</p>
+<p>已经开源<a href="https://github.com/2010HCY/web-music-player">https://github.com/2010HCY/web-music-player</a></p>
+<h2 id="Flash纪念站成立"><a href="#Flash纪念站成立" class="headerlink" title="Flash纪念站成立"></a>Flash纪念站成立</h2><blockquote>
+<p>Flash纪念站地址：<a href="https://flash.100713.xyz/">https://flash.100713.xyz</a></p>
+</blockquote>
+<p>这里面收藏了我小时候最爱的游戏，并且每一个英文游戏都有人工汉化（我亲自汉化）</p>
+<p>而且我会同时收录原版，我汉化的版本，能够一键丝滑切换。</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>代码</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
 </search>
