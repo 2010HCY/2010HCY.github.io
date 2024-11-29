@@ -3,7 +3,4 @@ Disallow: /categories/
 Disallow: /friends/
 Disallow: /tags/
 
-User-agent: Googlebot
-Disallow: /*.#!$
-
 Sitemap: https://100713.xyz/sitemap.xml
