@@ -2986,4 +2986,25 @@
         <tag>博客</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Cloudflare人机验证插入测试</title>
+    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/Cloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E6%8F%92%E5%85%A5%E6%B5%8B%E8%AF%95.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>加入Cloudflare的人机验证很简单，添加以下代码即可</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;https://challenges.cloudflare.com/turnstile/v0/api.js&quot; async defer&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;cf-turnstile&quot; data-sitekey=&quot;你的KEY&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将其中的”你的KEY“替换成你的KEY，创建方法打开<a href="https://dash.cloudflare.com/%EF%BC%8C%E7%99%BB%E5%BD%95%E6%88%96%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AACloudflare%E8%B4%A6%E5%8F%B7%EF%BC%8C%E7%84%B6%E5%90%8E%E6%89%93%E5%BC%80Turnstile%E9%80%89%E9%A1%B9%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%B0%8F%E7%BB%84%E4%BB%B6%EF%BC%8C%E6%8C%89%E6%8F%90%E7%A4%BA%E5%A1%AB%E5%86%99%E5%8D%B3%E5%8F%AF">https://dash.cloudflare.com/，登录或注册一个Cloudflare账号，然后打开Turnstile选项，添加小组件，按提示填写即可</a></p>
+<p>效果：</p>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAA1QAvsdz0ogdqDl"></div>
+]]></content>
+      <categories>
+        <category>网站维护</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>Cloudflare</tag>
+        <tag>Cloudflare人机验证</tag>
+      </tags>
+  </entry>
 </search>
