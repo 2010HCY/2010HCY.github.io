@@ -3182,7 +3182,7 @@
 
 <script>
     // 获取文章 ID（假设文章的 URL 或 slug 是唯一的标识符）
-    const articleId = window.location.pathname.split('/').pop();  // 根据页面 URL 获取文章 ID
+    const articleId = window.location.pathname.split('/').filter(segment => segment.length > 0).slice(-1)[0];  // 获取路径最后一部分
 
     // 获取并显示当前点赞数
     function getLikeCount() {
@@ -3212,6 +3212,7 @@
     // 页面加载时获取当前点赞数
     window.onload = getLikeCount;
 </script>
+
 
 ]]></content>
       <categories>
