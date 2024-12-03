@@ -3171,4 +3171,56 @@
         <tag>本地AI</tag>
       </tags>
   </entry>
+  <entry>
+    <title>如何使用Cloudflare搭建hexo博客文章点赞功能？</title>
+    <url>/%E7%BC%96%E7%A8%8B/%E5%8A%A0%E5%85%A5%E6%96%87%E7%AB%A0%E7%82%B9%E8%B5%9E%E5%8A%9F%E8%83%BD.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>先看效果：</p>
+<div id="likeSection">
+    <button id="likeButton" onclick="likeArticle()">👍 点赞</button>
+    <span id="likeCount">0</span> <!-- 显示点赞数量 -->
+</div>
+
+<script>
+    // 获取文章 ID（假设文章的 URL 或 slug 是唯一的标识符）
+    const articleId = window.location.pathname.split('/').pop();  // 根据页面 URL 获取文章 ID
+
+    // 获取并显示当前点赞数
+    function getLikeCount() {
+        fetch(`https://likes.100713.xyz/${articleId}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('likeCount').innerText = data.likeCount;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // 处理点赞按钮点击
+    function likeArticle() {
+        fetch(`https://likes.100713.xyz/${articleId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('likeCount').innerText = data.newLikeCount;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    // 页面加载时获取当前点赞数
+    window.onload = getLikeCount;
+</script>
+
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>Cloudflare</tag>
+        <tag>点赞</tag>
+      </tags>
+  </entry>
 </search>
