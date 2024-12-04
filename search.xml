@@ -3010,13 +3010,17 @@
   <entry>
     <title>三步就能在低配机上运行一个本地AI？</title>
     <url>/%E7%BC%96%E7%A8%8B/%E8%BF%90%E8%A1%8C%E4%BD%A0%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B%EF%BC%81.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="第一步，下载Ollama框架"><a href="#第一步，下载Ollama框架" class="headerlink" title="第一步，下载Ollama框架"></a>第一步，下载Ollama框架</h2><p>前往官网下载<a href="https://ollama.com/download/windows">https://ollama.com/download/windows</a> ，根据你的系统选择对应的版本，下载后安装，安装完成后在系统托盘能看到一个羊驼图标，恭喜你，你完成了第一步（应该不会有人连第一步都完成不了吧？如果你连第一步都完成不了，请按<strong>CTRL+W</strong>）</p>
-<p>性能要求很低，你就算没有显卡也能运行，就比如我的电脑<strong>CPU是G4560</strong>无独显，跑Gemma2 9B慢了点，但<strong>20分钟</strong>内肯定能回答完</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="第一步，下载Ollama框架"><a href="#第一步，下载Ollama框架" class="headerlink" title="第一步，下载Ollama框架"></a>第一步，下载Ollama框架</h2><p>在本地跑开源大模型，目前最好的软件肯定是Ollama。</p>
+<p>不管你用的是PC、Mac，甚至是树莓派，都能通过Ollama运行大大小小的模型，而且扩展性极强，几乎没有什么设备不兼容。</p>
+<p>安装Ollama超级简单。到官网ollama.com或者ollama.ai下载对应版本就行。</p>
+<p>官网下载链接：<a href="https://ollama.com/download/windows">https://ollama.com/download/windows</a> ，根据你的系统选择对应的版本，下载后安装，安装完成后在系统托盘能看到一个羊驼图标，恭喜你，你完成了第一步（应该不会有人连第一步都完成不了吧？如果你连第一步都完成不了，请按<strong>CTRL+W</strong>）</p>
+<p>性能要求很低，你就算没有显卡也能运行，就比如我的电脑<strong>CPU是G4560</strong>无独显，跑Gemma2 9B慢了点，但<strong>20分钟</strong>内肯定能回答完。</p>
 <h2 id="第二步，下载你心仪的AI大模型"><a href="#第二步，下载你心仪的AI大模型" class="headerlink" title="第二步，下载你心仪的AI大模型"></a>第二步，下载你心仪的AI大模型</h2><p>如何安装模型？在这上面搜索：<a href="https://ollama.com/search">https://ollama.com/search</a> ，找到心仪的模型后到它的详情页，选择你要的型号，复制旁边的命令，Win+R打开CMD（不会开CMD自己搜一下，反省一下），右键粘贴命令安装</p>
 <img src="/images/运行本地大模型/安装模型.png" style="zoom:33%;" />
 
 <p>安装命令格式为：<code>ollama pull 模型名</code> ，运行命令<code>ollama run 模型名</code> ，停止命令<code>ollama stop 模型名</code> ，删除命令<code>ollama rm 模型名</code> </p>
 <p>（注：你直接使用ollama运行未下载的模型时会自动下载，下载完自动运行）</p>
+<p>一般来说，7b的模型至少需要8G RAM，13b需要16G，70b需要64G。大家量内存而为，不然跑起来真的非常卡顿。（因为要不断的读盘）</p>
 <p>以下是一些常用的模型，推荐选择</p>
 <p><a href="https://ollama.com/library/gemma2">Gemma2</a> （中规中矩，表现优秀，我的电脑跑9B两三秒吐一字）安装命令<code>ollama run gemma2</code></p>
 <p><a href="https://ollama.com/library/phi">phi2 </a> （低配机福音，吐字飞快，可惜不会中文，我的一秒三四个单词）安装命令<code>ollama run phi</code></p>
