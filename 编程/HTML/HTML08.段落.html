@@ -601,7 +601,8 @@
             <div id="articleContent">
                 <h2 id="HTML-段落"><a href="#HTML-段落" class="headerlink" title="HTML 段落"></a>HTML 段落</h2><p>HTML 可以将文档分割为若干段落。</p>
 <h2 id="HTML-段落-1"><a href="#HTML-段落-1" class="headerlink" title="HTML 段落"></a>HTML 段落</h2><p>段落是通过 <code>&lt;p&gt;</code> 标签定义的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落 &lt;/p&gt;</span><br><span class="line">&lt;p&gt;这是另一个段落&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;这是一个段落 &lt;&#x2F;p&gt;
+&lt;p&gt;这是另一个段落&lt;&#x2F;p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>效果：</p>
 <p>这是一个段落 </p>
@@ -609,12 +610,13 @@
 
 <p><strong>注意哈：</strong>浏览器会自动地在段落的前后添加空行。（<code>&lt;/p&gt; </code>是块级元素）</p>
 <h2 id="不要忘记结束标签"><a href="#不要忘记结束标签" class="headerlink" title="不要忘记结束标签"></a>不要忘记结束标签</h2><p>虽然像这样忘了使用结束标签，大多数浏览器也会正确地将 HTML 显示出来：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落</span><br><span class="line">&lt;p&gt;这是另一个段落</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;这是一个段落
+&lt;p&gt;这是另一个段落<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>上面的例子在大多数浏览器中都没问题，但不要这么做，忘记使用结束标签会产生意想不到的结果和错误，而且万一出啥问题你一个个改得累死</p>
 <p><strong>注:</strong> 在未来的 HTML 版本中，不允许省略结束标签。</p>
 <h2 id="HTML-换行"><a href="#HTML-换行" class="headerlink" title="HTML 换行"></a>HTML 换行</h2><p>如果你希望在不创建一个新段落的情况下进行换行（新行），请使用 <code>&lt;br&gt;</code> 标签，就像这样：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;门罗币钱包地址&lt;br&gt;47JGXgtfPvANa9b29RfGEGRpCsK6&lt;br&gt;2MtffCYvxfcpYBHpikUAxqTXLHs9o&lt;br&gt;XHT4bkszEL9HuDzw5mtkjDk4o2Kx&lt;br&gt;KQmRM6G4vv&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;门罗币钱包地址&lt;br&gt;47JGXgtfPvANa9b29RfGEGRpCsK6&lt;br&gt;2MtffCYvxfcpYBHpikUAxqTXLHs9o&lt;br&gt;XHT4bkszEL9HuDzw5mtkjDk4o2Kx&lt;br&gt;KQmRM6G4vv&lt;&#x2F;p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>效果</p>
 <p>门罗币钱包地址<br>47JGXgtfPvANa9b29RfGEGRpCsK6<br>2MtffCYvxfcpYBHpikUAxqTXLHs9o<br>XHT4bkszEL9HuDzw5mtkjDk4o2Kx<br>KQmRM6G4vv</p>
@@ -623,7 +625,7 @@
 <h2 id="HTML-输出-使用提醒"><a href="#HTML-输出-使用提醒" class="headerlink" title="HTML 输出- 使用提醒"></a>HTML 输出- 使用提醒</h2><p>我们在编辑时无法确定 HTML 页面显示的确切效果。屏幕的大小，以及对窗口的调整都可能导致不同的结果。同时，对于 HTML，你无法通过在 HTML 代码中用的空格或换行来改变输出的文字位置。</p>
 <p>当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。</p>
 <p>比如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;1&lt;br&gt;&lt;br&gt;&lt;br&gt;2                  3&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;1&lt;br&gt;&lt;br&gt;&lt;br&gt;2                  3&lt;&#x2F;p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>效果:</p>
 <p>1<br><br><br>2                  3</p>
@@ -912,12 +914,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A2%A6/">
-                        <span class="chip bg-color">梦</span>
-                    </a>
-                    
                     <a href="/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/">
                         <span class="chip bg-color">生活随记</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A2%A6/">
+                        <span class="chip bg-color">梦</span>
                     </a>
                     
                 </div>
@@ -1151,7 +1153,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">40.1k</span>&nbsp;字
+                class="white-color">39.5k</span>&nbsp;字
             
             
             

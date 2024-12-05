@@ -569,7 +569,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    874
+                    878
                 </div>
                 
 
@@ -643,25 +643,41 @@
 <h2 id="嵌套的-HTML-元素"><a href="#嵌套的-HTML-元素" class="headerlink" title="嵌套的 HTML 元素"></a>嵌套的 HTML 元素</h2><p>大多数 HTML 元素可以嵌套（HTML 元素可以包含其他 HTML 元素）。</p>
 <p>HTML 文档由相互嵌套的 HTML 元素构成。</p>
 <hr>
-<h2 id="HTML-文档实例"><a href="#HTML-文档实例" class="headerlink" title="HTML 文档实例"></a>HTML 文档实例</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;这是第一个段落。&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="HTML-文档实例"><a href="#HTML-文档实例" class="headerlink" title="HTML 文档实例"></a>HTML 文档实例</h2><pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;body&gt;
+&lt;p&gt;这是第一个段落。&lt;&#x2F;p&gt;
+&lt;&#x2F;body&gt;
+
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>以上实例包含了三个 HTML 元素。</p>
 <hr>
 <h2 id="HTML-实例解析"><a href="#HTML-实例解析" class="headerlink" title="HTML 实例解析"></a>HTML 实例解析</h2><p> <strong><code>&lt;p&gt;</code></strong> 元素：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是第一个段落。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;这是第一个段落。&lt;&#x2F;p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这个 <code>&lt;p&gt;</code> 元素定义了 HTML 文档中的一个段落。<br>这个元素拥有一个开始标签 <code>&lt;p&gt;</code> 以及一个结束标签 <code>&lt;/p&gt;</code>.<br>元素内容是: 这是第一个段落。</p>
 <p><strong><code>&lt;body&gt;</code> 元素:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;这是第一个段落。&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;
+&lt;p&gt;这是第一个段落。&lt;&#x2F;p&gt;
+&lt;&#x2F;body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p><code>&lt;body&gt;</code> 元素定义了 HTML 文档的主体。<br>这个元素拥有一个开始标签 <code>&lt;body&gt;</code> 以及一个结束标签 <code>&lt;/body&gt;</code>。<br>元素内容是另一个 HTML 元素（p 元素）。</p>
 <p><strong><code>&lt;html&gt;</code> 元素：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;这是第一个段落。&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;html&gt;
+
+&lt;body&gt;
+&lt;p&gt;这是第一个段落。&lt;&#x2F;p&gt;
+&lt;&#x2F;body&gt;
+
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>&lt;html&gt;</code> 元素定义了整个 HTML 文档。<br>这个元素拥有一个开始标签 <code>&lt;html&gt;</code> ，以及一个结束标签 <code>&lt;/html&gt;</code>.<br>元素内容是另一个 HTML 元素（body 元素）。</p>
 <hr>
 <h2 id="不要忘记结束标签"><a href="#不要忘记结束标签" class="headerlink" title="不要忘记结束标签"></a>不要忘记结束标签</h2><p>即使你忘记了使用结束标签，大多数浏览器也会正确地显示 HTML：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落</span><br><span class="line">&lt;p&gt;这是一个段落</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;这是一个段落
+&lt;p&gt;这是一个段落<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>以上实例在浏览器中也能正常显示，因为关闭标签是可选的。</p>
 <p>但不要依赖这种做法。忘记使用结束标签会产生不可预料的结果或错误。</p>
@@ -1009,7 +1025,7 @@ HTML 元素可以设置属性
 你将在下面的章节中学到它们。
 
 HTML 标题HTML 标题（Heading）是通过
-1&lt;h1&gt; - &lt;h6&gt;
+&lt;h1&gt; - &lt;h6&gt;
 
  标签来定义的。
                         
@@ -1216,7 +1232,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">40.1k</span>&nbsp;字
+                class="white-color">39.5k</span>&nbsp;字
             
             
             

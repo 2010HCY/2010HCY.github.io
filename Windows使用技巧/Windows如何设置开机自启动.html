@@ -565,7 +565,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    925
+                    931
                 </div>
                 
 
@@ -620,11 +620,19 @@
 <blockquote>
 <p>（有能力的自己编辑程序使其不输出）</p>
 </blockquote>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">if</span> &quot;%<span class="number">1</span>&quot;==&quot;h&quot; <span class="keyword">goto</span> begin</span><br><span class="line"><span class="built_in">start</span> mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&quot;%~nx0&quot;&quot; h&quot;,<span class="number">0</span>)(window.close)&amp;&amp;<span class="keyword">exit</span></span><br><span class="line">:begin</span><br><span class="line">你要启动的应用程序名.exe</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bat" data-language="bat"><code class="language-bat">@echo off
+if &quot;%1&quot;&#x3D;&#x3D;&quot;h&quot; goto begin
+start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&quot;%~nx0&quot;&quot; h&quot;,0)(window.close)&amp;&amp;exit
+:begin
+你要启动的应用程序名.exe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>把这段代码复制到记事本，将里面的应用名更改成你要启动的程序名，将其与你要启动的程序放在同一个文件夹，将后缀改成.bat，创建快捷方式放到启动文件夹。当然，也可以用绝对路径：</p>
 <p>在启动文件夹里创建文本文档，将上面的代码改成：</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="keyword">if</span> &quot;%<span class="number">1</span>&quot;==&quot;h&quot; <span class="keyword">goto</span> begin</span><br><span class="line"><span class="built_in">start</span> mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&quot;%~nx0&quot;&quot; h&quot;,<span class="number">0</span>)(window.close)&amp;&amp;<span class="keyword">exit</span></span><br><span class="line">:begin</span><br><span class="line">程序路径，例如C:\Users\你的用户名\server\server.exe</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bat" data-language="bat"><code class="language-bat">@echo off
+if &quot;%1&quot;&#x3D;&#x3D;&quot;h&quot; goto begin
+start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&quot;%~nx0&quot;&quot; h&quot;,0)(window.close)&amp;&amp;exit
+:begin
+程序路径，例如C:\Users\你的用户名\server\server.exe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>复制进去，然后改后缀即可。</p>
 <script src="https://utteranc.es/client.js"
@@ -971,12 +979,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A2%A6/">
-                        <span class="chip bg-color">梦</span>
-                    </a>
-                    
                     <a href="/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/">
                         <span class="chip bg-color">生活随记</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A2%A6/">
+                        <span class="chip bg-color">梦</span>
                     </a>
                     
                 </div>
@@ -1150,7 +1158,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">40.1k</span>&nbsp;字
+                class="white-color">39.5k</span>&nbsp;字
             
             
             

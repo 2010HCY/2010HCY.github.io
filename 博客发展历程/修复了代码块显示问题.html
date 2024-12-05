@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <meta charset="utf-8">
-    <meta name="keywords" content="tor网络, 洋葱网络, 暗网访问">
+    <meta name="keywords" content="代码块显示问题, 修复代码块显示问题, 博客发展历程, hexo博客matery主题代码块显示异常, matery代码块显示异常, hexo博客代码块行号对不上内容, hexo博客代码块字符有的大有的小">
     <meta name="description" content="Ethaniel的个人博客，包含技术内容，生活记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 
   gtag('config', 'G-0P4JLHJL9R');
 </script>
-    <title>连接tor网络 | 静水深流</title>
+    <title>博客功能更新日志15 | 静水深流</title>
     <link rel="icon" type="image/svg+xml" href="/H.svg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -406,12 +406,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/../images/tor.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">连接tor网络</h1>
+                    <h1 class="description center-align post-title">博客功能更新日志15</h1>
                 </div>
             </div>
         </div>
@@ -527,16 +527,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/tor%E7%BD%91%E7%BB%9C/">
-                                <span class="chip bg-color">tor网络</span>
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/">
+                                <span class="chip bg-color">博客发展历程</span>
                             </a>
                         
-                            <a href="/tags/%E6%B4%8B%E8%91%B1%E7%BD%91%E7%BB%9C/">
-                                <span class="chip bg-color">洋葱网络</span>
+                            <a href="/tags/%E4%BF%AE%E5%A4%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">
+                                <span class="chip bg-color">修复显示问题</span>
                             </a>
                         
-                            <a href="/tags/%E6%9A%97%E7%BD%91%E8%AE%BF%E9%97%AE/">
-                                <span class="chip bg-color">暗网访问</span>
+                            <a href="/tags/%E4%BF%AE%E5%A4%8DBUG/">
+                                <span class="chip bg-color">修复BUG</span>
                             </a>
                         
                     </div>
@@ -547,8 +547,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/" class="post-category">
-                                tor网络系列
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" class="post-category">
+                                博客发展历程
                             </a>
                         
                     </div>
@@ -560,7 +560,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-09-26
+                    2024-12-05
                 </div>
                 
 
@@ -569,14 +569,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    920
+                    203
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -599,41 +599,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-下载Tor浏览器"><a href="#1-下载Tor浏览器" class="headerlink" title="1.下载Tor浏览器"></a>1.下载Tor浏览器</h2><p>Tor网络需要用特点浏览器才能进入（当然，Tor浏览器是基于现代浏览器开发的，你可以在自己的浏览器上安装Tor内核，不过不安全，而且无法规避追踪），<a target="_blank" rel="noopener" href="https://www.torproject.org/">Tor官方网站</a> 不过嘛，有意思的是中国大陆是没有<a target="_blank" rel="noopener" href="http://www.torproject.org/">www.torproject.org</a> 这个网站的</p>
-<img src="/images/我FFF.webp" style="zoom:50%;" />
+                <h2 id="1-修复代码块显示异常"><a href="#1-修复代码块显示异常" class="headerlink" title="1.修复代码块显示异常"></a>1.修复代码块显示异常</h2><p>修改步骤很简单，打开博客根目录下的_config.yml配置文件（不是主题的），然后将其中配置highlight配置项修改成以下样子：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Writing</span>
+<span class="token key atrule">new_post_name</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>title.md <span class="token comment"># File name of new posts</span>
+<span class="token key atrule">default_layout</span><span class="token punctuation">:</span> post
+<span class="token key atrule">titlecase</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># Transform title into titlecase</span>
+<span class="token key atrule">external_link</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Open external links in new tab</span>
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> site <span class="token comment"># Apply to the whole site</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span> <span class="token string">''</span>
+<span class="token key atrule">filename_case</span><span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token key atrule">render_drafts</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">post_asset_folder</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">relative_link</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">future</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">syntax_highlighter</span><span class="token punctuation">:</span> prismjs
+<span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
 
-<p>嗯……除非翻墙，否则休想下载，为了照顾不会翻墙的人，我已经下载好了Windows系统13.5.4版本的Tor浏览器，但因为博客有单文件大小限制，所以我分卷压缩成两份。未来我会不定期更新，你也可以下载好后连上Tor网络下载最新版</p>
-<p>点击下载 <a href="/images/Tor/tor-windows64-13.5.7z.001" target="_blank">Tor浏览器分卷压缩包1</a> <a href="/images/Tor/tor-windows64-13.5.7z.002" target="_blank">Tor浏览器分卷压缩包2</a></p>
-<p>下载完两个压缩包后将其放在同一个文件夹里，右键tor-windows64-13.5.7z.001选择解压，解压后双击tor-windows64-13.5.exe安装，默认安装路径是桌面，可以自行更改，稍等片刻即可安装成功</p>
-<h2 id="2-连接Tor网络"><a href="#2-连接Tor网络" class="headerlink" title="2.连接Tor网络"></a>2.连接Tor网络</h2><p>安装好后双击打开，点击那个紫色的连接Tor网络</p>
-<img src="/images/Tor/connect.png" style="zoom:90%;" />
+<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">' '</span>
+  <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>如果几秒钟后顶上的进度条跑满了，出现以下界面，恭喜，你接下来步骤都不用看了，你可以跳转到最后面去看看有哪些有意思的Tor网站，以及注意事项，爽去吧!</p>
-<img src="/images/Tor/Tor4.png" style="zoom:80%;" />
+<p>关键修改点：将highlight关掉，syntax_highlighter设置成prismjs，prismjs要选择主题（我当时没选择折腾了半天）</p>
+<h2 id="把博客的logo换成了svg"><a href="#把博客的logo换成了svg" class="headerlink" title="把博客的logo换成了svg"></a>把博客的logo换成了svg</h2><p>之前使用的是jpg，虽然猛地一看察觉不出什么变化，但仔细看还是很难受，现在换成了svg格式，更清晰，体积更小。</p>
+  <img src="/H.svg" alt="Hlogo" style="max-width: 45%; margin-right: 10px; background-color: #f0f0f0;"/>
+  <img src="/medias/Hlogo徽章.svg" alt="Hlogo徽章" style="max-width: 45%; background-color: #f0f0f0;"/>
 
-<p>如果连接失败，不用慌，中国大陆几乎不可能裸连，这时你可以连接网桥，开代理（也就是翻墙）</p>
-<h2 id="3-连接网桥或代理"><a href="#3-连接网桥或代理" class="headerlink" title="3.连接网桥或代理"></a>3.连接网桥或代理</h2><h3 id="1-网桥"><a href="#1-网桥" class="headerlink" title="1.网桥"></a>1.网桥</h3><h4 id="1-什么是网桥？"><a href="#1-什么是网桥？" class="headerlink" title="1.什么是网桥？"></a>1.什么是网桥？</h4><p>Tor网络中每一个节点的IP都是公开的，这也使得封锁IP极为容易，这时候就需要网桥了，网桥会代你访问Tor网络（就像代理一样），同时网桥的IP是不公开的，这也使得封锁变得困难，当然，因为在原有的洋葱路线中又加了一层网桥，这也使得访问速度与延迟更慢更高</p>
-<h4 id="2-连接网桥"><a href="#2-连接网桥" class="headerlink" title="2.连接网桥"></a>2.连接网桥</h4><p>首先打开配置连接，</p>
-<img src="/images/Tor/Tor1.png" style="zoom:67%;" />
-
-<p>然后滑动到下面选择内置网桥，推荐先试第一个obfs4模式，不行再试试其他的</p>
-<img src="/images/Tor/Tor2.png" style="zoom:70%;" />
-
-<img src="/images/Tor/Tor3.png" style="zoom:80%;" />
-
-<p>一般来说第一个就会连接成功，如果连接成功，将会出现以下界面</p>
-<img src="/images/Tor/Tor4.png" style="zoom:80%;" />
-
-<p>如果不行，可更换网桥试试</p>
-<h3 id="2-代理"><a href="#2-代理" class="headerlink" title="2.代理"></a>2.代理</h3><p>配置代理就比较简单了，同样，打开配置连接，拉到最底下点击设置，</p>
-<img src="/images/Tor/Tor5.png" style="zoom:80%;" />
-
-<p>在里面选择socks5连接，IP填127.0.0.1，端口则是你代理软件的端口，我的是10808，大家看自己端口设置</p>
-<img src="/images/Tor/Tor6.png" style="zoom:80%;" />
-
-<p>然后保存，连接试试，如果连不上就是你代理软件开了流量探测，在代理软件的参数设置里关闭就好了，当然，你代理服务器也要关闭流量探测</p>
-<h2 id="4-使用教程"><a href="#4-使用教程" class="headerlink" title="4.使用教程"></a>4.使用教程</h2><p>当你成功连上Tor网络后，你会发现Tor浏览器好像和普通浏览器一样，你可以在下面的搜索框正常的搜索浏览网页，不过网站是无法得知你的信息，同时你也可以在上方的地址栏输入56位的洋葱地址（应该不会有人一个个打吧，这地址不是给人记的，复制粘贴就好哈），加上.onion的后缀访问洋葱站点，访问洋葱站点时，我们双方都不知道对方的IP的，因为洋葱站点和我直接至少隔了6个节点</p>
-<p>我明天会更新一些有趣的暗网洋葱站点及其介绍</p>
+<p><strong><a target="_blank" rel="noopener" href="https://page.100713.xyz/%E5%8D%9A%E5%AE%A2/Page/svg%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/">svg在线预览工具</a></strong></p>
 <script src="https://utteranc.es/client.js"
         repo="2010HCY/utterances"
         issue-term="title"
@@ -666,7 +662,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E8%BF%9E%E6%8E%A5tor%E7%BD%91%E7%BB%9C">https://100713.xyz/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E8%BF%9E%E6%8E%A5tor%E7%BD%91%E7%BB%9C</a>
+                    <a href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%A3%E7%A0%81%E5%9D%97%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98">https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%A3%E7%A0%81%E5%9D%97%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -704,16 +700,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/tor%E7%BD%91%E7%BB%9C/">
-                                    <span class="chip bg-color">tor网络</span>
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/">
+                                    <span class="chip bg-color">博客发展历程</span>
                                 </a>
                             
-                                <a href="/tags/%E6%B4%8B%E8%91%B1%E7%BD%91%E7%BB%9C/">
-                                    <span class="chip bg-color">洋葱网络</span>
+                                <a href="/tags/%E4%BF%AE%E5%A4%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">
+                                    <span class="chip bg-color">修复显示问题</span>
                                 </a>
                             
-                                <a href="/tags/%E6%9A%97%E7%BD%91%E8%AE%BF%E9%97%AE/">
-                                    <span class="chip bg-color">暗网访问</span>
+                                <a href="/tags/%E4%BF%AE%E5%A4%8DBUG/">
+                                    <span class="chip bg-color">修复BUG</span>
                                 </a>
                             
                         </div>
@@ -884,16 +880,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/25%E4%B8%AA%E6%B4%8B%E8%91%B1%E7%AB%99%E7%82%B9%E6%8E%A8%E8%8D%90">
+                <a href="/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%A3%E7%A0%81%E5%9D%97%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98">
                     <div class="card-image">
                         
-                        <img src="/../images/tor.png" class="responsive-img" alt="25个洋葱站点推荐">
                         
-                        <span class="card-title">25个洋葱站点推荐</span>
+                        <img src="/medias/featureimages/16.webp" class="responsive-img" alt="博客功能更新日志15">
+                        
+                        <span class="card-title">博客功能更新日志15</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -903,34 +901,35 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-09-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/" class="post-category">
-                                    tor网络系列
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/" class="post-category">
+                                    博客发展历程
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tor%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">tor网络</span>
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/">
+                        <span class="chip bg-color">博客发展历程</span>
                     </a>
                     
-                    <a href="/tags/%E6%B4%8B%E8%91%B1%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">洋葱网络</span>
+                    <a href="/tags/%E4%BF%AE%E5%A4%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">修复显示问题</span>
                     </a>
                     
-                    <a href="/tags/%E6%9A%97%E7%BD%91%E8%AE%BF%E9%97%AE/">
-                        <span class="chip bg-color">暗网访问</span>
+                    <a href="/tags/%E4%BF%AE%E5%A4%8DBUG/">
+                        <span class="chip bg-color">修复BUG</span>
                     </a>
                     
                 </div>
@@ -944,12 +943,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E4%BB%80%E4%B9%88%E6%98%AFtor%E7%BD%91%E7%BB%9C">
+                <a href="/%E7%BC%96%E7%A8%8B/%E8%BF%90%E8%A1%8C%E4%BD%A0%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B%EF%BC%81">
                     <div class="card-image">
                         
-                        <img src="/../images/tor.png" class="responsive-img" alt="什么是tor网络">
                         
-                        <span class="card-title">什么是tor网络</span>
+                        <img src="/medias/featureimages/22.webp" class="responsive-img" alt="三步就能在低配机上运行一个本地AI？">
+                        
+                        <span class="card-title">三步就能在低配机上运行一个本地AI？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -960,14 +960,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-12-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/" class="post-category">
-                                    tor网络系列
+                            <a href="/categories/programming/" class="post-category">
+                                    编程
                                 </a>
                             
                             
@@ -977,16 +977,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/tor%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">tor网络</span>
+                    <a href="/tags/AI/">
+                        <span class="chip bg-color">AI</span>
                     </a>
                     
-                    <a href="/tags/%E6%B4%8B%E8%91%B1%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">洋葱网络</span>
+                    <a href="/tags/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+                        <span class="chip bg-color">AI大模型</span>
                     </a>
                     
-                    <a href="/tags/%E6%9A%97%E7%BD%91%E8%AE%BF%E9%97%AE/">
-                        <span class="chip bg-color">暗网访问</span>
+                    <a href="/tags/%E6%9C%AC%E5%9C%B0AI/">
+                        <span class="chip bg-color">本地AI</span>
                     </a>
                     
                 </div>
