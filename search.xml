@@ -4625,4 +4625,58 @@ int main()
         <tag>修复BUG</tag>
       </tags>
   </entry>
+  <entry>
+    <title>如何制作一个刷流量脚本</title>
+    <url>/%E7%BC%96%E7%A8%8B/%E5%88%B7%E6%B5%81%E9%87%8F%E8%84%9A%E6%9C%AC%E5%88%B6%E4%BD%9C.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="关于脚本"><a href="#关于脚本" class="headerlink" title="关于脚本"></a>关于脚本</h2><p>适合PCDN用户平衡上下行流量（我不跑PCDN，但我看跑PCDN的有需求才写这个脚本），或者是闲着无聊的人，想把流量卡流量刷光的，想刷对家网站流量的人使用</p>
+<p><strong>脚本特点：</strong></p>
+<ol>
+<li>不会保存到硬盘，而是保存到内存</li>
+<li>不会塞爆内存，每轮脚本执行会清理垃圾</li>
+<li>可以将url改成页面，不一定要是文件</li>
+<li>简单，无需下载其他软件应用，开箱即用</li>
+</ol>
+<p>注：想要效果好点建议找个大文件，比如视频啦，WindowsIOS文件啦，用大文件记得把执行时间调长</p>
+<h2 id="PowerShell脚本实现"><a href="#PowerShell脚本实现" class="headerlink" title="PowerShell脚本实现"></a>PowerShell脚本实现</h2><p>以下为脚本源码</p>
+<pre class="line-numbers language-none"><code class="language-none"># 设置目标 URL
+$url &#x3D; &quot;https:&#x2F;&#x2F;www.travellings.cn&#x2F;assets&#x2F;travelling.png&quot;  # 替换为你希望访问的文件或页面
+
+# 消耗流量的函数
+function Consume-Traffic &#123;
+    try &#123;
+        # 发送一个 HTTP 请求
+        Invoke-WebRequest -Uri $url -Method GET
+        Write-Host &quot;HTTP 请求已发送，流量已消耗&quot;
+    &#125; catch &#123;
+        Write-Host &quot;HTTP 请求失败: $_&quot;
+    &#125;
+
+    # 强制垃圾回收
+    [System.GC]::Collect()
+&#125;
+
+# 定时循环消耗流量
+while ($true) &#123;
+    Consume-Traffic
+    Start-Sleep -Seconds 0.1 # 每 0.1 秒执行一次（你可以根据需要调整时间）
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>新建个文本文档，把以下内容复制进去，修改好文件url和执行时间后，复制修改好后的源码，右键左下角的Windows徽标键或者按Win+X，在弹出的对话框中选择<strong>Windows PowerShell （管理员）</strong> 在Windows PowerShell 中右键粘贴脚本代码，回车即开始刷流量</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>刷流量</tag>
+        <tag>PowerShell脚本</tag>
+        <tag>源码</tag>
+      </tags>
+  </entry>
 </search>
