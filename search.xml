@@ -4679,4 +4679,65 @@ while ($true) &#123;
         <tag>源码</tag>
       </tags>
   </entry>
+  <entry>
+    <title>厦门地铁图开源预告</title>
+    <url>/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E5%8E%A6%E9%97%A8%E5%9C%B0%E9%93%81%E5%9B%BE.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="厦门地铁图1-0（标准版-专业版）1-1（专业版）-喷锡版（专业版）制作完毕！"><a href="#厦门地铁图1-0（标准版-专业版）1-1（专业版）-喷锡版（专业版）制作完毕！" class="headerlink" title="厦门地铁图1.0（标准版&amp;专业版）1.1（专业版） 喷锡版（专业版）制作完毕！"></a>厦门地铁图1.0（标准版&amp;专业版）1.1（专业版） 喷锡版（专业版）制作完毕！</h2><p>此工程一共有四个版本，分别是：</p>
+<ol>
+<li><strong>1.0版本</strong> ，此版本有标准版和专业版的，区别在于专业版的用了布尔运算合并了填充区域；</li>
+<li><strong>1.1版本</strong> ，此版本将字符位置移动到了地图上的陆地地区，微调客编区，并将顶上的厦门地铁图及其英文纵向放置；</li>
+<li><strong>喷锡版</strong> ，此版本在1.1版本上将海洋区域放置开窗区喷锡，让锡模拟波光粼粼的大海。</li>
+</ol>
+<p>以下是三个版本的截图，我建议1.0、1.1版本用沉金工艺做比较好看，喷锡版建议用喷锡就好，当然，你也可以用沉金（要是能地铁路线用沉金，海洋部分用喷锡就好了）</p>
+<p>啥？你问我什么时候开源？明年，因为今年开源的话积分会过期（悲~）</p>
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.0.png" alt="1.0版本" style="zoom:67%;" />
+
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.1.png" alt="1.1版本" style="zoom:67%;" />
+
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图喷锡版.png" alt="喷锡版" style="zoom:67%;" />
+
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>嘉立创开源工程</category>
+      </categories>
+      <tags>
+        <tag>嘉立创</tag>
+        <tag>PCB</tag>
+        <tag>硬件开源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何更改网卡MAC地址？</title>
+    <url>/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E7%BD%91%E5%8D%A1MAC%E5%9C%B0%E5%9D%80%EF%BC%9F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="如何更改网卡MAC地址"><a href="#如何更改网卡MAC地址" class="headerlink" title="如何更改网卡MAC地址"></a>如何更改网卡MAC地址</h1><p>有的时候你成功连上了邻居家的Wifi，但没多久因为流量过大啦，或者其他原因被发现并被封了MAC地址，想重连就要改MAC，遂出此教程</p>
+<p>更改MAC很简单：</p>
+<p>首先按Win+R打开运行框，输入regedit回车打开<strong>注册表编辑器</strong>；</p>
+<p>然后打开以下路径： HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class{4D36E972-E325-11CE-BFC1-08002bE10318} ；</p>
+<p>在此项下面有14个子项，我们要找到自己使用的网卡的那一项，</p>
+<p>这时候右键桌面此电脑图标，点击管理，在管理中打开设备管理器，查看自己的网卡，我的网卡叫 Intel(R) Dual Band Wireless-AC 8265 ，这<strong>每个人都不一样</strong>啊，网卡名就是你买的网卡的型号名；</p>
+<p>这时候在注册表编辑器中依次点击0000～0014项，找到右侧窗口中DriverDesc数值数据为Intel(R) Dual Band Wireless-AC 8265的那一项，我的网卡是在0003项下（每个人的不一定一样）；</p>
+<p>这时候右键0003项（每个人的不一定一样），新建字符串值，将其命名为: NetworkAddress （如果已经有了此项就直接更改值），双击NetworkAddress，在弹出的编辑字符串值对话框中输入你想更改的MAC地址，比如006666666666，保存并退出。</p>
+<p>最后，重启电脑或重启网卡，再次查看即可发现MAC地址修改成功了</p>
+<p>注：修改的MAC地址<strong>第二位不能为2、6、A、E</strong>，否则无法修改成功</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>Windows的使用技巧</category>
+      </categories>
+      <tags>
+        <tag>注册表编辑</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
 </search>
