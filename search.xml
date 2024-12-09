@@ -1550,6 +1550,14 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <div class="cf-turnstile" data-sitekey="0x4AAAAAAA1QAvsdz0ogdqDl"></div>
+
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
 ]]></content>
       <categories>
         <category>网站维护</category>
@@ -4849,6 +4857,108 @@ while ($true) &#123;
         <tag>生活随记</tag>
         <tag>论文</tag>
         <tag>狐狸</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Security.txt创建和使用</title>
+    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/Security.txt%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="1-什么是Security-txt"><a href="#1-什么是Security-txt" class="headerlink" title="1.什么是Security.txt"></a>1.什么是Security.txt</h2><p>Security.txt文件是一种标准方法，用于让网站管理员、所有者在站点上发布安全联系信息，以便安全研究人员和用户报告漏洞或安全问题。这种文件通常放在网站的.well-known目录下，可以被自动化工具和搜索引擎找到。</p>
+<p>一个完整的Security.txt包含以下信息：</p>
+<pre class="line-numbers language-none"><code class="language-none"># security.txt
+# 信息安全联系文件
+
+Contact:   
+Encryption: 
+Acknowledgements: 
+Preferred-Languages: 
+Policy: 
+Hiring: 
+Expires: 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>解释</strong></p>
+<p><strong>Contact</strong>: 安全联系信息，例如你的电子邮件地址。</p>
+<p><strong>Encryption</strong>: 放置公钥的 URL，用于安全地发送敏感信息。</p>
+<p><strong>Acknowledgements</strong>: 感谢页面的 URL，用于致谢报告漏洞的人员。（连声感谢都没人家干嘛给你报告漏洞）</p>
+<p><strong>Preferred-Languages</strong>: 首选语言，用逗号分隔。（例如：<code>zh, en</code> ）</p>
+<p><strong>Policy</strong>: 安全政策的 URL，包含如何报告漏洞的详细信息。（可有可无吧）</p>
+<p><strong>Hiring</strong>: 安全职位招聘的 URL，若你希望雇佣安全研究人员或有空缺职位。（没有就别填，省的让费人家时间）</p>
+<p><strong>Expires</strong>: 信息的过期日期和时间，用于指明该文件何时不再有效。（例如 2100-01-01T00:00:00.000Z）</p>
+<p>注：公钥使用PGP公钥， <a href="./%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%B8%8E%E4%BB%96%E4%BA%BA%E4%BA%A4%E6%B5%81%E4%BD%BF%E7%94%A8PGP%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86%EF%BC%9F">如何创建并与他人交流使用PGP密钥加密？</a></p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>网站维护</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>Security.txt</tag>
+        <tag>Security.txt怎么用</tag>
+        <tag>Security.txt如何使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何创建并与他人交流使用PGP密钥加密？</title>
+    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%B8%8E%E4%BB%96%E4%BA%BA%E4%BA%A4%E6%B5%81%E4%BD%BF%E7%94%A8PGP%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86%EF%BC%9F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="如何创建并与他人交流使用PGP密钥加密？"><a href="#如何创建并与他人交流使用PGP密钥加密？" class="headerlink" title="如何创建并与他人交流使用PGP密钥加密？"></a>如何创建并与他人交流使用PGP密钥加密？</h2><p>GPG，又称为GnuPG，全称是Gnu Private Guard，即GNU隐私卫士。GPG是以PGP算法为核心的强大的加密软件。但GPG项目是一套命令行程序，而且是为 Linux 等开源操作系统设计的。那么在Windows平台下如何使用GPG呢？不用担心，Gpg4win就是Windows平台GPG及图形前端的集合安装包。</p>
+<p>简单介绍一下，Gpg4win是一款非对称加密方式软件。简单来讲，就是用公钥加密文件，用私钥解密文件。如果你需要发送加密信息，首先获取接收者的公钥，然后利用该公钥加密后传递，对方利用公钥对应的私钥就可解密。也就是说，公钥是锁，私钥是钥匙。非对称加密方式很好地解决了传递机密信息的问题。</p>
+<h2 id="下载安装Gpg4win"><a href="#下载安装Gpg4win" class="headerlink" title="下载安装Gpg4win"></a>下载安装Gpg4win</h2><p>请到官方网站下载：<a href="http://www.gpg4win.org/">http://www.gpg4win.org/</a><br>之后运行安装程序，保持默认设置即可。安装完成后会要求设置信任的根证书，勾选下方的Root certificate defined or skip configuration（根证书已定义或跳过设置）即可。安装好后叫Kleopatra</p>
+<h2 id="创建密钥对"><a href="#创建密钥对" class="headerlink" title="创建密钥对"></a>创建密钥对</h2><ol>
+<li>运行Kleopatra，点击: 新建OpenPGP密钥对，会弹出OpenPGP证书创建向导</li>
+<li>填入名字、电子邮箱地址。（填写了电子邮件就可以在后面上传密钥服务器让别人搜邮箱地址到你的证书）</li>
+<li>点击Advanced Settings，可以进行高级设置，为了增强安全性，建议Key Material栏选择最长的4096 bits，你也可以勾选使用密码句保护生成的密钥，当然，可有可无</li>
+<li>点击OK，如果你勾选使用密码句保护生成的密钥，那么这一步会要求你输入密码，请一定要牢记！以后使用都要密钥！</li>
+<li>在创建的过程中，可以在随便上网读写磁盘，电脑将利用IO生成随机数。</li>
+<li>创建完成！</li>
+</ol>
+<h2 id="上传公钥到PGP公钥服务器"><a href="#上传公钥到PGP公钥服务器" class="headerlink" title="上传公钥到PGP公钥服务器"></a>上传公钥到PGP公钥服务器</h2><p>公钥加密信息发给私钥持有人，私钥持有人使用私钥解密。如果想要别人给你发送加密信息，别人就要知道你的公钥才行。公钥之所以称为公钥，就是因为它是公开的。接下来，我们需要把自己的公钥公之于众，上传到专门的服务器上。这里以上传到MIT的PGP公钥服务器为例。</p>
+<ol>
+<li>在Kleopatra主界面右键点击要导出的秘钥，点击导出或按CTRL+E，输入保存路径和文件名，点击保存后会得到一个asc文件。</li>
+<li>使用文本编辑器（记事本、Visual Code）打开刚才生成的asc文件，复制全部内容。</li>
+<li>使用浏览器访问MIT的PGP公钥服务器<a href="http://pgp.mit.edu/%EF%BC%8C%E5%B0%86%E5%88%9A%E6%89%8D%E5%A4%8D%E5%88%B6%E7%9A%84%E5%86%85%E5%AE%B9%E9%BB%8F%E8%B4%B4%E5%88%B0%E2%80%9CSubmit">http://pgp.mit.edu/，将刚才复制的内容黏贴到“Submit</a> a key”下方的文本框里，点击Submit this key to the key server!。上传成功后，别人搜索你的邮箱即可获取你的公钥。</li>
+</ol>
+<p>反过来，如果你想给别人发送加密信息，就需要获取他的公钥。假如我想发送给<a href="mailto:&#x45;&#x74;&#x68;&#x61;&#x6e;&#x69;&#x65;&#108;&#x40;&#49;&#x30;&#x30;&#x37;&#49;&#x33;&#46;&#120;&#x79;&#122;">&#x45;&#x74;&#x68;&#x61;&#x6e;&#x69;&#x65;&#108;&#x40;&#49;&#x30;&#x30;&#x37;&#49;&#x33;&#46;&#120;&#x79;&#122;</a>，则需要通过以下步骤获取相应的公钥。</p>
+<ol>
+<li>使用浏览器访问MIT的PGP公钥服务器<a href="http://pgp.mit.edu/%EF%BC%8C%E5%9C%A8%E2%80%9CExtract">http://pgp.mit.edu/，在“Extract</a> a key”下方的文本框输入<a href="mailto:&#69;&#x74;&#104;&#97;&#x6e;&#x69;&#x65;&#x6c;&#64;&#49;&#x30;&#x30;&#x37;&#x31;&#51;&#x2e;&#x78;&#x79;&#x7a;">&#69;&#x74;&#104;&#97;&#x6e;&#x69;&#x65;&#x6c;&#64;&#49;&#x30;&#x30;&#x37;&#x31;&#51;&#x2e;&#x78;&#x79;&#x7a;</a>，如下图所示。之后点击Do the search!。</li>
+<li>在搜索结果页中点击相应的keyID，会进入一个有一长串乱码的页面。复制该页面的全部内容。</li>
+<li>新建并打开文本文档，粘贴刚才复制的内容，保存。文件名随意，例如“123.asc”。</li>
+<li>在Kleopatra主界面点击左上角的文件——导入或按CTRL+I，选择刚才保存的文件，点击打开。这样就成功导入了一个公钥。或者直接拖动刚刚保存的文件到Kleopatra</li>
+</ol>
+<h2 id="加密文本"><a href="#加密文本" class="headerlink" title="加密文本"></a>加密文本</h2><p>下面的例子将演示如何加密一段文本并通过邮件发送给别人。</p>
+<ol>
+<li>新建并打开文本文档，输入你想要加密的文本（即原文），保存。文件名随意，例如“666.txt”。（你也可以加密其他已有文件哦，直接跳过该步骤）</li>
+<li>在Kleopatra主界面点击签名&#x2F;加密，选择刚才保存的文本文档或其他你想加密的文件。</li>
+<li>之后弹出的窗口中间有3个可勾选的选项，分别是签名身份、为我加密、为他人加密。这里勾选为我加密就好。</li>
+<li>点击加密，出现“加密成功”就是成功了（废话）</li>
+<li>加密后的文件会在文件的同一路径生成一个相同名称后缀是gpg的文件，将这个文件发给目标即可，你也可以用文本编辑器（记事本、Visual Code）打开该文件复制里面的密文发送</li>
+</ol>
+<h2 id="解密文本"><a href="#解密文本" class="headerlink" title="解密文本"></a>解密文本</h2><p>下面的例子将演示如何解密一封收到的密文。</p>
+<ol>
+<li>复制收到的密文，新建并打开文本文档，粘贴，保存。文件名随意，例如“999.txt”。（如果是gpg文件跳过该步骤）</li>
+<li>在Kleopatra主界面点击 解密&#x2F;校验，选择刚才保存的文本文档或gpg文件。</li>
+<li>点击解密（如果没有刚刚创建密钥没设密码那么跳过下一步）</li>
+<li>之后会要求你输入密码，就是你刚刚创建密钥时输入的那个，点击解密。</li>
+<li>解密完成后，点击OK。</li>
+<li>在输出路径找到解密后的文件（和原文件同名）解密前是啥样解密后就啥样。</li>
+</ol>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>网站维护</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>PGP密钥</tag>
       </tags>
   </entry>
 </search>

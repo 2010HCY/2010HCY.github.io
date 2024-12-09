@@ -1,6 +1,3 @@
 User-agent: *
-Disallow: /categories/
-Disallow: /friends/
-Disallow: /tags/
-
+Allow: /
 Sitemap: https://100713.xyz/sitemap.xml
