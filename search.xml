@@ -59,6 +59,34 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
+    <title>如何更改网卡MAC地址？</title>
+    <url>/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E7%BD%91%E5%8D%A1MAC%E5%9C%B0%E5%9D%80%EF%BC%9F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="如何更改网卡MAC地址"><a href="#如何更改网卡MAC地址" class="headerlink" title="如何更改网卡MAC地址"></a>如何更改网卡MAC地址</h1><p>有的时候你成功连上了邻居家的Wifi，但没多久因为流量过大啦，或者其他原因被发现并被封了MAC地址，想重连就要改MAC，遂出此教程</p>
+<p>更改MAC很简单：</p>
+<p>首先按Win+R打开运行框，输入regedit回车打开<strong>注册表编辑器</strong>；</p>
+<p>然后打开以下路径： HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class{4D36E972-E325-11CE-BFC1-08002bE10318} ；</p>
+<p>在此项下面有14个子项，我们要找到自己使用的网卡的那一项，</p>
+<p>这时候右键桌面此电脑图标，点击管理，在管理中打开设备管理器，查看自己的网卡，我的网卡叫 Intel(R) Dual Band Wireless-AC 8265 ，这<strong>每个人都不一样</strong>啊，网卡名就是你买的网卡的型号名；</p>
+<p>这时候在注册表编辑器中依次点击0000～0014项，找到右侧窗口中DriverDesc数值数据为Intel(R) Dual Band Wireless-AC 8265的那一项，我的网卡是在0003项下（每个人的不一定一样）；</p>
+<p>这时候右键0003项（每个人的不一定一样），新建字符串值，将其命名为: NetworkAddress （如果已经有了此项就直接更改值），双击NetworkAddress，在弹出的编辑字符串值对话框中输入你想更改的MAC地址，比如006666666666，保存并退出。</p>
+<p>最后，重启电脑或重启网卡，再次查看即可发现MAC地址修改成功了</p>
+<p>注：修改的MAC地址<strong>第二位不能为2、6、A、E</strong>，否则无法修改成功</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>Windows的使用技巧</category>
+      </categories>
+      <tags>
+        <tag>注册表编辑</tag>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>25个洋葱站点推荐</title>
     <url>/tor%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/25%E4%B8%AA%E6%B4%8B%E8%91%B1%E7%AB%99%E7%82%B9%E6%8E%A8%E8%8D%90.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="25个洋葱站点推荐"><a href="#25个洋葱站点推荐" class="headerlink" title="25个洋葱站点推荐"></a>25个洋葱站点推荐</h2><h3 id="1-The-Hidden-Wiki"><a href="#1-The-Hidden-Wiki" class="headerlink" title="1.The Hidden Wiki"></a>1.<strong>The Hidden Wiki</strong></h3><p><img src="/images/Tor/Tor%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/01.jpg"></p>
@@ -463,6 +491,56 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
+    <title>博客功能更新日志15</title>
+    <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%A3%E7%A0%81%E5%9D%97%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="1-修复代码块显示异常"><a href="#1-修复代码块显示异常" class="headerlink" title="1.修复代码块显示异常"></a>1.修复代码块显示异常</h2><p>修改步骤很简单，打开博客根目录下的_config.yml配置文件（不是主题的），然后将其中配置highlight配置项修改成以下样子：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Writing</span>
+<span class="token key atrule">new_post_name</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>title.md <span class="token comment"># File name of new posts</span>
+<span class="token key atrule">default_layout</span><span class="token punctuation">:</span> post
+<span class="token key atrule">titlecase</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># Transform title into titlecase</span>
+<span class="token key atrule">external_link</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Open external links in new tab</span>
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> site <span class="token comment"># Apply to the whole site</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span> <span class="token string">''</span>
+<span class="token key atrule">filename_case</span><span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token key atrule">render_drafts</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">post_asset_folder</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">relative_link</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">future</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">syntax_highlighter</span><span class="token punctuation">:</span> prismjs
+<span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">' '</span>
+  <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>关键修改点：将highlight关掉，syntax_highlighter设置成prismjs，prismjs要选择主题（我当时没选择折腾了半天）</p>
+<h2 id="把博客的logo换成了svg"><a href="#把博客的logo换成了svg" class="headerlink" title="把博客的logo换成了svg"></a>把博客的logo换成了svg</h2><p>之前使用的是jpg，虽然猛地一看察觉不出什么变化，但仔细看还是很难受，现在换成了svg格式，更清晰，体积更小。</p>
+  <img src="/H.svg" alt="Hlogo" style="max-width: 45%; margin-right: 10px; background-color: #f0f0f0;"/>
+  <img src="/medias/Hlogo徽章.svg" alt="Hlogo徽章" style="max-width: 45%; background-color: #f0f0f0;"/>
+
+<p><strong><a href="https://page.100713.xyz/%E5%8D%9A%E5%AE%A2/Page/svg%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/">svg在线预览工具</a></strong></p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>博客发展历程</category>
+      </categories>
+      <tags>
+        <tag>博客发展历程</tag>
+        <tag>修复显示问题</tag>
+        <tag>修复BUG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>添加原声音轨分享</title>
     <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E5%81%9A%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%A4%A9.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="今日添加原声音轨分享"><a href="#今日添加原声音轨分享" class="headerlink" title="今日添加原声音轨分享"></a>今日添加原声音轨分享</h2><p>今天将星露谷物语原声音轨添加到了音乐界面，它是从服务器内部存储加载的，可能有点慢，未来会上传网站托管</p>
@@ -613,77 +691,6 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
-    <title>博客发展历程14-加入博客订阅功能</title>
-    <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="今日上线订阅功能"><a href="#今日上线订阅功能" class="headerlink" title="今日上线订阅功能"></a>今日上线订阅功能</h2><p>看到上面的表格了吗？这是满客电子邮件的登记表格，仅需填写电子邮件即可以每15天收到更新的邮件，我把它也放在了<a href="/contact">访客等级处</a>，名字不是必填项，但每天最多只能75人登记（我这博客也没啥流量就是了）</p>
-<p>订阅功能挂了</p>
-<h2 id="biff-blog-bot给我的GitHub仓库stars了"><a href="#biff-blog-bot给我的GitHub仓库stars了" class="headerlink" title="biff.blog bot给我的GitHub仓库stars了"></a>biff.blog bot给我的GitHub仓库stars了</h2><p>这貌似是一个博客社区，收录博客RSS订阅的平台</p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
-]]></content>
-      <categories>
-        <category>博客发展历程</category>
-      </categories>
-      <tags>
-        <tag>博客发展历程</tag>
-        <tag>新功能添加</tag>
-        <tag>订阅功能上线</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>首次加入在线flash游戏</title>
-    <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E9%A6%96%E6%AC%A1%E5%8A%A0%E5%85%A5%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="在线游戏"><a href="#在线游戏" class="headerlink" title="在线游戏"></a>在线游戏</h2><p>这是flash游戏，2024年了，支持flash的浏览器一个巴掌也数的过来，如果无法游玩，试试以下方法</p>
-<ul>
-<li><p>安装插件，安装这个浏览器插件就好了<a href="https://microsoftedge.microsoft.com/addons/detail/ruffle-flash-emulator/pipjjbgofgieknlpefmcckdmgaaegban">点击跳转</a></p>
-</li>
-<li><p>下载<a href="https://ethaniel.lanzouq.com/ili8W2a1b4dc">游戏</a>，然后用<a href="https://ethaniel.lanzouq.com/i36kz2a1au8h">flash播放器</a>打开（游戏密码：eppq，flash播放器密码:98kj）</p>
-</li>
-</ul>
-<h3 id="轰炸机战争1"><a href="#轰炸机战争1" class="headerlink" title="轰炸机战争1"></a>轰炸机战争1</h3><p>WASD控制空格机枪，C丢炸弹，祝玩的开心</p>
-<p><a href="/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891/">点击跳转</a></p>
-<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891.1.png"></p>
-<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891.2.png"></p>
-<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891.3.png"></p>
-<h3 id="轰炸机战争2加强版"><a href="#轰炸机战争2加强版" class="headerlink" title="轰炸机战争2加强版"></a>轰炸机战争2加强版</h3><p>WASD控制空格机枪，C丢炸弹，祝玩的开心</p>
-<p><a href="/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88">点击跳转</a></p>
-<p><img src="/images%5C%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892.1.png"></p>
-<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892.2.png"></p>
-<h3 id="轰炸机战争2无敌版"><a href="#轰炸机战争2无敌版" class="headerlink" title="轰炸机战争2无敌版"></a>轰炸机战争2无敌版</h3><p>WASD控制空格机枪，C丢炸弹，祝玩的开心<br>（按4血量无限，按5加钱，按6炸弹无限，按7加血）</p>
-<p><a href="/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E6%97%A0%E6%95%8C%E7%89%88">点击跳转</a></p>
-<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892.1.png"></p>
-<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892.2.png"></p>
-<h3 id="文具防御"><a href="#文具防御" class="headerlink" title="文具防御"></a>文具防御</h3><p>利用铅笔，橡皮，击沉来犯之敌！<br>（鼠标懂得用吧？长按蓄力）</p>
-<p><a href="/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1">点击跳转</a></p>
-<p>游戏截图：</p>
-<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A11.png"></p>
-<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A12.png"></p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
-<p>​        </p>
-]]></content>
-      <categories>
-        <category>博客发展历程</category>
-      </categories>
-      <tags>
-        <tag>博客发展历程</tag>
-        <tag>新功能添加</tag>
-        <tag>在线游戏</tag>
-        <tag>flash游戏</tag>
-        <tag>轰炸机战争</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客发展历程13-佛祖保佑，永无BUG</title>
     <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="江城子-·-站长之歌"><a href="#江城子-·-站长之歌" class="headerlink" title="江城子 · 站长之歌"></a>江城子 · 站长之歌</h2><blockquote>
@@ -755,6 +762,77 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
         <tag>赛博佛祖</tag>
         <tag>程序代码</tag>
         <tag>代码护符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客发展历程14-加入博客订阅功能</title>
+    <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD%E4%B8%8A%E7%BA%BF.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="今日上线订阅功能"><a href="#今日上线订阅功能" class="headerlink" title="今日上线订阅功能"></a>今日上线订阅功能</h2><p>看到上面的表格了吗？这是满客电子邮件的登记表格，仅需填写电子邮件即可以每15天收到更新的邮件，我把它也放在了<a href="/contact">访客等级处</a>，名字不是必填项，但每天最多只能75人登记（我这博客也没啥流量就是了）</p>
+<p>订阅功能挂了</p>
+<h2 id="biff-blog-bot给我的GitHub仓库stars了"><a href="#biff-blog-bot给我的GitHub仓库stars了" class="headerlink" title="biff.blog bot给我的GitHub仓库stars了"></a>biff.blog bot给我的GitHub仓库stars了</h2><p>这貌似是一个博客社区，收录博客RSS订阅的平台</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+]]></content>
+      <categories>
+        <category>博客发展历程</category>
+      </categories>
+      <tags>
+        <tag>博客发展历程</tag>
+        <tag>新功能添加</tag>
+        <tag>订阅功能上线</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>首次加入在线flash游戏</title>
+    <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E9%A6%96%E6%AC%A1%E5%8A%A0%E5%85%A5%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="在线游戏"><a href="#在线游戏" class="headerlink" title="在线游戏"></a>在线游戏</h2><p>这是flash游戏，2024年了，支持flash的浏览器一个巴掌也数的过来，如果无法游玩，试试以下方法</p>
+<ul>
+<li><p>安装插件，安装这个浏览器插件就好了<a href="https://microsoftedge.microsoft.com/addons/detail/ruffle-flash-emulator/pipjjbgofgieknlpefmcckdmgaaegban">点击跳转</a></p>
+</li>
+<li><p>下载<a href="https://ethaniel.lanzouq.com/ili8W2a1b4dc">游戏</a>，然后用<a href="https://ethaniel.lanzouq.com/i36kz2a1au8h">flash播放器</a>打开（游戏密码：eppq，flash播放器密码:98kj）</p>
+</li>
+</ul>
+<h3 id="轰炸机战争1"><a href="#轰炸机战争1" class="headerlink" title="轰炸机战争1"></a>轰炸机战争1</h3><p>WASD控制空格机枪，C丢炸弹，祝玩的开心</p>
+<p><a href="/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891/">点击跳转</a></p>
+<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891.1.png"></p>
+<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891.2.png"></p>
+<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%891.3.png"></p>
+<h3 id="轰炸机战争2加强版"><a href="#轰炸机战争2加强版" class="headerlink" title="轰炸机战争2加强版"></a>轰炸机战争2加强版</h3><p>WASD控制空格机枪，C丢炸弹，祝玩的开心</p>
+<p><a href="/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88">点击跳转</a></p>
+<p><img src="/images%5C%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892.1.png"></p>
+<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892.2.png"></p>
+<h3 id="轰炸机战争2无敌版"><a href="#轰炸机战争2无敌版" class="headerlink" title="轰炸机战争2无敌版"></a>轰炸机战争2无敌版</h3><p>WASD控制空格机枪，C丢炸弹，祝玩的开心<br>（按4血量无限，按5加钱，按6炸弹无限，按7加血）</p>
+<p><a href="/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E6%97%A0%E6%95%8C%E7%89%88">点击跳转</a></p>
+<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892.1.png"></p>
+<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892%E5%8A%A0%E5%BC%BA%E7%89%88/%E8%BD%B0%E7%82%B8%E6%9C%BA%E6%88%98%E4%BA%892.2.png"></p>
+<h3 id="文具防御"><a href="#文具防御" class="headerlink" title="文具防御"></a>文具防御</h3><p>利用铅笔，橡皮，击沉来犯之敌！<br>（鼠标懂得用吧？长按蓄力）</p>
+<p><a href="/%E5%9C%A8%E7%BA%BF%E5%B0%8F%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1">点击跳转</a></p>
+<p>游戏截图：</p>
+<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A11.png"></p>
+<p><img src="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A1/%E6%96%87%E5%85%B7%E9%98%B2%E5%BE%A12.png"></p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+<p>​        </p>
+]]></content>
+      <categories>
+        <category>博客发展历程</category>
+      </categories>
+      <tags>
+        <tag>博客发展历程</tag>
+        <tag>新功能添加</tag>
+        <tag>在线游戏</tag>
+        <tag>flash游戏</tag>
+        <tag>轰炸机战争</tag>
       </tags>
   </entry>
   <entry>
@@ -868,6 +946,39 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </categories>
       <tags>
         <tag>古诗词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>厦门地铁图开源预告</title>
+    <url>/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E5%8E%A6%E9%97%A8%E5%9C%B0%E9%93%81%E5%9B%BE.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="厦门地铁图1-0（标准版-专业版）1-1（专业版）-喷锡版（专业版）制作完毕！"><a href="#厦门地铁图1-0（标准版-专业版）1-1（专业版）-喷锡版（专业版）制作完毕！" class="headerlink" title="厦门地铁图1.0（标准版&amp;专业版）1.1（专业版） 喷锡版（专业版）制作完毕！"></a>厦门地铁图1.0（标准版&amp;专业版）1.1（专业版） 喷锡版（专业版）制作完毕！</h2><p>此工程一共有四个版本，分别是：</p>
+<ol>
+<li><strong>1.0版本</strong> ，此版本有标准版和专业版的，区别在于专业版的用了布尔运算合并了填充区域；</li>
+<li><strong>1.1版本</strong> ，此版本将字符位置移动到了地图上的陆地地区，微调客编区，并将顶上的厦门地铁图及其英文纵向放置；</li>
+<li><strong>喷锡版</strong> ，此版本在1.1版本上将海洋区域放置开窗区喷锡，让锡模拟波光粼粼的大海。</li>
+</ol>
+<p>以下是三个版本的截图，我建议1.0、1.1版本用沉金工艺做比较好看，喷锡版建议用喷锡就好，当然，你也可以用沉金（要是能地铁路线用沉金，海洋部分用喷锡就好了）</p>
+<p>啥？你问我什么时候开源？明年，因为今年开源的话积分会过期（悲~）</p>
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.0.png" alt="1.0版本" style="zoom:67%;" />
+
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.1.png" alt="1.1版本" style="zoom:67%;" />
+
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图喷锡版.png" alt="喷锡版" style="zoom:67%;" />
+
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>嘉立创开源工程</category>
+      </categories>
+      <tags>
+        <tag>嘉立创</tag>
+        <tag>PCB</tag>
+        <tag>硬件开源</tag>
       </tags>
   </entry>
   <entry>
@@ -1444,6 +1555,97 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
+    <title>中国-陶瓷的故事</title>
+    <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E4%B8%AD%E5%9B%BD-%E9%99%B6%E7%93%B7%E7%9A%84%E6%95%85%E4%BA%8B.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="陶瓷的故事"><a href="#陶瓷的故事" class="headerlink" title="陶瓷的故事"></a>陶瓷的故事</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p><strong>中国最早用于做容器陶器</strong>可以追溯至两万年前旧石器时代，在经历了历代匠人、数千年的技术革新，发展出举世闻名的唐三彩、白瓷、青瓷、青花瓷等种类繁多瓷器，以至于有人说中国的英文名“<strong>China</strong>”来自于“瓷器”（这个说法其实并不对，目前较为可信的是来源于“晋”这个字的读音），由此也可看出中国与陶瓷之间的密切关系。</p>
+<p>中国瓷器不仅在古代宫廷中被大量使用，从东南沿海里发现的南宋古沉船中（南海Ⅰ号），发现大量青釉瓷，可以看出在当时陶瓷器已被作为主要贸易品之一，并出口至亚洲、伊斯兰文化圈、以及欧洲各国，对中国的象征意义可与丝绸齐名，瓷器还为当时的欧洲人提供了一个了解中国文化和审美价值的窗口。时至今日，瓷器还作为中国的国礼频频出现。</p>
+<img src="/images/中国-陶瓷的故事/国礼瓷.jpg" alt="国礼瓷" style="zoom:67%;" />
+
+<blockquote>
+<p>瓷器和陶瓷都是啥？<strong>用陶土烧制的器皿叫陶器，用瓷土烧制的器皿叫瓷器，陶瓷则是陶器和瓷器的总称</strong>。</p>
+<p> 陶与瓷的区别：陶器烧成温度低于瓷器，最低甚至达到850℃以下，最高可达1150℃左右。 瓷器烧成温度则比较高，大都在1250℃以上，甚至有的达到1380℃左右，</p>
+<p>且陶器表面粗糙，易吸水，而瓷器一般都有上釉，表面光滑不吸水</p>
+</blockquote>
+<h3 id="陶瓷的发展史"><a href="#陶瓷的发展史" class="headerlink" title="陶瓷的发展史"></a>陶瓷的发展史</h3><h4 id="旧石器时代"><a href="#旧石器时代" class="headerlink" title="旧石器时代"></a><strong>旧石器时代</strong></h4><p>目前考古发现的最古老陶制容器是位于中国江西仙人洞、吊桶环遗址中的陶罐碎片，可以追溯到前20,000年至前19,000年，而在该遗址3B1层出土的条纹陶罐，至少有13000年的历史，这是人类最早烧制的陶器，陶器种类有釜和深腹钵两种，很可能与采集经济有关。早期的陶器像小孩捏的泥坯烧干烧硬了一样不甚美观，长时间受潮的话表面还会一层层的脱落，制作粗糙，器形不均，毕竟早期制作水平属实不佳。</p>
+<h4 id="新石器时代"><a href="#新石器时代" class="headerlink" title="新石器时代"></a><strong>新石器时代</strong></h4><p>在这个时代，人们开始从事农业和畜牧，石器的制作从打制变磨制， 将种子种植食用，把野生动物驯服以供食用，人们不再只依赖大自然提供食物，因此其食物来源变得稳定，同时农业与畜牧的经营也使人类由逐水草而居变为定居下来，节省下更多的时间和精力。</p>
+<p>新石器时代早期的陶器宛如半成品，好想把泥坯烧干烧硬了一样，长时间受潮的话表面还会一层层的脱落，制作粗糙，器形不均，后期制作工艺慢慢上去了，出现了各式各样的彩绘陶器。例如：</p>
+<img src="/images/中国-陶瓷的故事/龟形壶.jpg" alt="龟形壶" style="zoom:50%;" />
+
+<img src="/images/中国-陶瓷的故事/船形网纹壶.jpg" alt="船形网纹壶" style="zoom:50%;" />
+
+<img src="/images/中国-陶瓷的故事/人头形器口彩陶瓶.png" alt="人头形器口彩陶瓶" style="zoom:50%;" />
+
+<p>在这时期陶器民用的较多，多半是自产自销，自娱自乐的东西。</p>
+<h4 id="殷周时期陶瓷"><a href="#殷周时期陶瓷" class="headerlink" title="殷周时期陶瓷"></a><strong>殷周时期陶瓷</strong></h4><p>殷商时代在是陶瓷史的一个历史节点，在这个时代，人工施釉的原始瓷器的出现，从这时起，光洁美丽的瓷器正式踏上历史的舞台。</p>
+<p>在此之前由于温度不够只能烧制陶器，随着时代的变迁，人们制造出了窑炉，在高温燃烧的窑炉中，将燃料木材的灰与土胎中的硅酸结合，会在陶器表面产生玻璃状的薄膜，这被称为“自然釉”。与朝鲜半岛和日本的陶器不同的是，朝鲜半岛和日本首先经历了窑内木灰的自然釉阶段才进入施釉陶时代，但中国各地绝大多数都没有经过自然釉阶段，而是直接出现了人工施釉并长时间高火烧成的原始瓷器。</p>
+<blockquote>
+<p>细心的人应该发现了，我在上面的叙述中没有用<strong>“瓷器”</strong>来称呼殷商时期<strong>人工施釉的原始陶器</strong>，而是加上了“原始”二字，这是因为：</p>
+<ol>
+<li>殷代的原始瓷器是由粘土烧制的，制作工序简单，烧制温度低；</li>
+<li>而后来出现的瓷器则是由高岭土、长石和石英等材料制成，硬度更高，烧制温度更高更光洁。</li>
+</ol>
+<p>通俗来说就是殷代的原始瓷器是刷了釉的陶器</p>
+</blockquote>
+<h4 id="春秋战国时期陶瓷"><a href="#春秋战国时期陶瓷" class="headerlink" title="春秋战国时期陶瓷"></a><strong>春秋战国时期陶瓷</strong></h4><p>春秋战国时期的江浙一带出土了大量的原始瓷器，但同时期的华北地区却几乎没有发现同类陶器。浙江德清县发现了40多处烧制春秋时期原始瓷器的窑炉遗址，皇坟堆出土了27件原始瓷器，却没有发现任何青铜器。由此可以看出，当时华北地区主要关注青铜器生产，而华南地区主要生产原始瓷器。</p>
+<blockquote>
+<p>注：从南朝起到唐代，江浙一带就是生产越州窑青瓷的主要地区，因此而研究认为，春秋战国时期的原始瓷器就是后代青瓷的起源</p>
+</blockquote>
+<p>战国时代的陶器除了原始瓷器外，还出现了华北地区的加彩灰陶。灰陶是在高温的还原气氛下烧成的，其历史可以追溯至新石器时代，但在灰陶的器表面用红、白、黑等颜料绘画或刻入纹样的加彩灰陶则出现在春秋时代。</p>
+<blockquote>
+<p>春秋战国的加彩灰陶与新石器时代彩绘陶器不同的是，新石器时代彩绘陶器烧成前就画上图案，加彩灰陶是在烧成后才进行着色和绘图的。</p>
+</blockquote>
+<h4 id="秦汉时期陶瓷"><a href="#秦汉时期陶瓷" class="headerlink" title="秦汉时期陶瓷"></a><strong>秦汉时期陶瓷</strong></h4><h5 id="秦"><a href="#秦" class="headerlink" title="秦"></a>秦</h5><p>虽然秦朝历时仅十五年 <del>我都比秦朝还大</del>，但仍在中国陶瓷史上留下了浓墨重彩的一笔，即举世闻名的秦皇兵马俑。<del>(应该不会有人不知道兵马俑是陶器吧……)</del></p>
+<p>坐落于西安郊外骊山脚下的秦始皇陵以东发现的三个兵马俑坑中挖掘出了陶制战车百余乘、陶马约600匹、兵俑约8,000座，所有兵马向东排列整齐，气势恢宏。从工艺上分析兵马俑，兵马俑属于加彩灰陶。兵俑身高在1.75~1.86米之间，陶马高约1.6米左右。尽管出土后因为氧化导致兵马俑表面均呈灰色，但制作当时均以多种色彩绘制（刚刚出土的时候就是彩色的）。兵马俑从衣着、武器、容貌和表情上都因人而异，用色丰富多彩，体现了当时高水平的陶瓷烧制技术，相较于春秋战国时期有着极大的进步。</p>
+<h5 id="汉"><a href="#汉" class="headerlink" title="汉"></a>汉</h5><p>进入汉代后，中国陶瓷史上诞生了真正意义的瓷器——青瓷(我最喜欢的一种瓷器)。此外，原始瓷器、加彩灰陶等陶器也在继续发展。从殷周直至春秋战国，中国主要以发展青铜器为主，陶瓷的生产技术并没有取得显著的进步。但到了汉代之后，由于出现了青瓷这一划时代的技术革新，陶瓷的发展史也翻开了崭新的一页。</p>
+<blockquote>
+<p>我们现在所说的瓷器终于出现了，瓷器出现后原始瓷器并没有就此消声觅迹，原始瓷器在汉代仍有生产，但公元前3世纪左右曾出现过原始瓷器消失的真空期。此外，一部分研究认为，汉代原始瓷器在技术上与战国时代相比出现了倒退。</p>
+</blockquote>
+<h4 id="三国南北朝时期陶瓷"><a href="#三国南北朝时期陶瓷" class="headerlink" title="三国南北朝时期陶瓷"></a><strong>三国南北朝时期陶瓷</strong></h4><p>汉代发明的的<strong>青瓷</strong>在三国南北朝时期得到了进一步的发展和革新。以浙江为中心的地带出土的<strong>青瓷</strong>中可以发现从三国时代直至西晋、东晋时期的物品。这类青瓷被称为“古越瓷”以便与越瓷相区分（<strong>越瓷</strong>是<strong>晚唐</strong>到<strong>北宋</strong>时期的越州窑青瓷)。</p>
+<p>从这一时期发掘出的青瓷主要以墓穴中的<strong>随葬品</strong>为主，尚不清楚青瓷作为日用品的主要用途(或许青瓷在这时期是专门用于陪葬的？)。在种类方面，一般以壶、盘居多，也有一种特殊的“魂瓶”（堆塑罐）。魂瓶就是即在容器上绘有动物或者楼阁人物等图案的陶壶，是这一时期特有的瓷器。</p>
+<img src="/images/中国-陶瓷的故事/堆塑罐.jpg" alt="堆塑罐" style="zoom:50%;" />
+
+<p>上述用于随葬品的瓷器从<strong>吴国</strong>到<strong>西晋</strong>非常发达，从<strong>东晋</strong>以后此类随葬品开始减少，而生活实用品则逐渐增加。在短命的东魏灭亡后，北齐开始出现了白瓷，但在西魏及其后的北周都没有发现有大规模的制陶活动。白瓷是在精炼的白色胎土上刷透明釉用高火烧成的瓷器，为了掩盖胎色较暗的缺点，北方陶工学习南方制瓷经验，在瓷胎上抹白色土修饰。</p>
+<h4 id="隋唐时期陶瓷"><a href="#隋唐时期陶瓷" class="headerlink" title="隋唐时期陶瓷"></a><strong>隋唐时期陶瓷</strong></h4><p>隋唐两个朝代继续生产发展前朝的青瓷、白瓷等。到了8世纪末，陶瓷器已经进入了普通民众的日常生活。同时，陶瓷器也开始成为出口海外的商品之一。从东南亚和西亚等地的考古中，发现了大量唐代青瓷和白瓷，由此可见唐朝的陶瓷器已经在国际上具有相当高的知名度和商用价值。</p>
+<p>唐代陶瓷器的代表作之一就是色彩华丽的三彩陶器（又称“唐三彩”），这种陶器有各种形式，人物、马匹、罐子等，用小火烧成，主要还是用于随葬品，并不是日常生活中广泛使用的陶器。(其实唐三彩就是专门用于随葬的瓷器，家里摆个唐三彩&#x3D;家里摆个兵马俑)</p>
+<img src="/images/中国-陶瓷的故事/唐三彩.jpg" alt="唐三彩" style="zoom:50%;" />
+
+<h5 id="青瓷"><a href="#青瓷" class="headerlink" title="青瓷"></a>青瓷</h5><p>唐代著名的瓷窑之一：越州窑简称称越窑，代表了中国当时青瓷生产的最高水平，主要分布在浙江省慈溪、上虞、余姚、镇海、黄岩、绍兴、湖州等地，晚唐、五代时期最上品的越窑千峰翠色青瓷专门作为贡品,平民不得用，因此称为“<strong>秘色</strong>”。五代时期闽国国王<strong>王审知</strong>曾派<strong>徐寅</strong>贡秘色瓷,<strong>徐寅</strong>作诗:《<strong>贡余秘色瓷器</strong>》：</p>
+<p>捩翠融青瑞色新，陶成先得贡吾君；</p>
+<p>巧剜明月染春水，轻旋薄冰盛绿云；</p>
+<p>古镜破苔当席上，嫩荷涵露别江𣸣；</p>
+<p>中山竹叶醅初发，多病那堪中十分?</p>
+<p>由此可见当时制作青瓷的工艺高超。 <del>啊啊啊，好想要啊</del></p>
+<img src="/images/中国-陶瓷的故事/越窑千峰翠色青瓷.jpg" alt="越窑千峰翠色青瓷" style="zoom:67%;" />
+
+<blockquote>
+<p>唐代七大瓷窑</p>
+<p>唐代陆羽的《茶经》一书中，就品质优良的茶器用瓷，列举了唐代七大瓷窑：越州、鼎州、婺州、岳州、寿州、洪州、邢州。</p>
+</blockquote>
+<h5 id="白瓷"><a href="#白瓷" class="headerlink" title="白瓷"></a>白瓷</h5><p>唐代的中国形成了“南青北白”的陶瓷行业格局，南方各地多以青瓷为主，而北方则主要生产白瓷。</p>
+<p>生产白瓷的窑址除了源自北朝时代的邢州窑（今河北省邢台市临城县、内丘县）外，还有河北省保定市曲阳县定窑和河南省巩义县的巩县窑。其中的定窑在北宋时代发展成为白瓷最重要的生产地。</p>
+<p>唐代的另一个重要瓷窑是长沙窑（又称瓦渣坪窑）。位于湖南省长沙市望城区铜官镇。该瓷窑被认为是《茶经》中提及的岳州窑的延续，以大量生产出口海外的白瓷而著称。</p>
+<p>长沙窑瓷胎呈灰白色，也有青灰、灰黄和酱色，火候在1200度左右。其最为经典的作品为在灰白色胎土上添加白土修饰后施加灰釉的黄釉陶。尽管釉质本身与青瓷相似，但由于在氧化焰下烧成，釉显得略微发黄。种类方面，虽有多种器形，但以茶壶居多。</p>
+<p>在工艺方面，长沙窑的特点是<strong>釉下彩</strong>。后世的五彩（色绘）是在挂透明釉高火烧成的瓷器釉面上绘画并二次烧制的，而釉下彩是在无釉的胎瓷上直接进行彩绘，然后再挂透明釉进行烧制。釉下彩包括使用钴做颜料的青花瓷；使用铁的黑花以及使用铜的釉里红等。长沙窑中的色釉种类丰富，是早期釉下彩瓷器中的杰出代表。此外，长沙窑瓷器大量出口到海外，目前在日本、东南亚和西亚等地都发现了其作品。</p>
+<h4 id="宋辽金时期陶瓷"><a href="#宋辽金时期陶瓷" class="headerlink" title="宋辽金时期陶瓷"></a><strong>宋辽金时期陶瓷</strong></h4><p>中国陶瓷的工艺也在悠久的国际贸易中逐渐转播到全球各地，对世界陶瓷生产技术的发展产生了深远的影响。</p>
+<p>参考资料</p>
+<p>《手铲下的文明·江西重大考古发现》</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>生活随记</category>
+      </categories>
+      <tags>
+        <tag>生活随记</tag>
+        <tag>论文</tag>
+        <tag>陶瓷发展史</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>历史上的今天</title>
     <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E4%BB%8A%E5%A4%A9%E4%B9%9F%E6%98%AF%E8%84%91%E6%B4%9E%E5%A4%A7%E5%BC%80%E7%9A%84%E4%B8%80%E5%A4%A9%E5%91%A2.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="脑洞大开！"><a href="#脑洞大开！" class="headerlink" title="脑洞大开！"></a>脑洞大开！</h2><img src="/images/历史上的今天.jpg" style="zoom:80%;" />
@@ -1471,29 +1673,6 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
-    <title>昨晚的噩梦：长满头发的猫</title>
-    <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E6%9C%80%E8%BF%91%E5%81%9A%E7%9A%84%E6%A2%A6.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="长满头发的猫"><a href="#长满头发的猫" class="headerlink" title="长满头发的猫"></a>长满头发的猫</h2><p>昨晚做了个梦，梦见在一个下午，阳光透过玻璃照进来，我正一边撸着一只小猫，一边和人聊天（不记得聊啥了）。</p>
-<p>撸着撸着，我发现猫的手感变了，原本是毛绒绒的，带有一点温度，现在慢慢的变了，变成了冰冰的，油油的，毛发变得细长，我转过头一看，小猫原本身上的毛变成了一根根乌黑的长发，因为油油的所以带着反光，而小猫却仍然闭着眼睛享受，仿佛它身上什么变化也没有。</p>
-<img src="/images/长满头发的猫.webp" alt="AI生成的，完全不像，我梦到的是没有绒毛的，猫身上的头发是长发" style="zoom:60%;" />
-
-<p>这个噩梦好像也不算噩梦，因为我并没有被吓到（要是我被吓到了就不会写出来了），但醒来后我却百思不得其解，我从未见过长满头发的猫，甚至我很难将猫和头发联系起来，但我是怎么在梦中梦到的呢？醒来后感觉这样的猫十分的怪诞，令人不安。</p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>生活随记</category>
-      </categories>
-      <tags>
-        <tag>生活随记</tag>
-        <tag>梦</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>天凉了</title>
     <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%A4%A9%E5%87%89%E4%BA%86.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="天凉了"><a href="#天凉了" class="headerlink" title="天凉了"></a>天凉了</h2><p>今年秋天热啊，都过完立冬十一月份了还在穿短袖，前天我还在这么抱怨，昨天，一拉开门，阴沉沉的天空带着一股凉气袭来，嘶~~</p>
@@ -1518,6 +1697,29 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
+    <title>昨晚的噩梦：长满头发的猫</title>
+    <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E6%9C%80%E8%BF%91%E5%81%9A%E7%9A%84%E6%A2%A6.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="长满头发的猫"><a href="#长满头发的猫" class="headerlink" title="长满头发的猫"></a>长满头发的猫</h2><p>昨晚做了个梦，梦见在一个下午，阳光透过玻璃照进来，我正一边撸着一只小猫，一边和人聊天（不记得聊啥了）。</p>
+<p>撸着撸着，我发现猫的手感变了，原本是毛绒绒的，带有一点温度，现在慢慢的变了，变成了冰冰的，油油的，毛发变得细长，我转过头一看，小猫原本身上的毛变成了一根根乌黑的长发，因为油油的所以带着反光，而小猫却仍然闭着眼睛享受，仿佛它身上什么变化也没有。</p>
+<img src="/images/长满头发的猫.webp" alt="AI生成的，完全不像，我梦到的是没有绒毛的，猫身上的头发是长发" style="zoom:60%;" />
+
+<p>这个噩梦好像也不算噩梦，因为我并没有被吓到（要是我被吓到了就不会写出来了），但醒来后我却百思不得其解，我从未见过长满头发的猫，甚至我很难将猫和头发联系起来，但我是怎么在梦中梦到的呢？醒来后感觉这样的猫十分的怪诞，令人不安。</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>生活随记</category>
+      </categories>
+      <tags>
+        <tag>生活随记</tag>
+        <tag>梦</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《灰姑娘的故逝》</title>
     <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E7%81%B0%E5%A7%91%E5%A8%98%E7%9A%84%E6%95%85%E9%80%9D.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="灰姑娘的故逝》"><a href="#灰姑娘的故逝》" class="headerlink" title="灰姑娘的故逝》"></a>灰姑娘的故逝》</h2><p>从前，有一位长得很漂亮的女孩，她有一位恶毒的继母与两位邪恶的继姐。自从她的父亲过世之后，她便经常受到继母与两位姐姐的欺负，被逼做苦工，经常弄得全身满是灰尘，因此被戏称为“灰姑娘”。有一天，城里的王子举行舞会，邀请全城的女孩参加，但继母与两位姐姐却不让灰姑娘参加，还要她做很多工作。这时，有一位仙女出现了，帮助她摇身一变成为高贵的千金小姐，将老鼠变成仆人，南瓜变成马车，又变了一个<strong>断头台</strong>灰姑娘带上。灰姑娘很开心，赶快前往皇宫参加舞会。仙女在她出发前提醒她，不可逗留至午夜十二点，十二点以后魔法会自动解除。灰姑娘答应了，她出席了舞会，王子一看到她便被她迷住了，立即邀她共舞。欢乐的时光过得很快，眼看就要午夜十二时了，灰姑娘不得已要马上离开，在仓皇间掉下了<strong>断头台</strong>。王子很伤心，于是派大臣至全国探访，找出适合这个<strong>断头台</strong>的女孩，于是，<strong>全王国的人都死了</strong>。</p>
@@ -1537,182 +1739,91 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
-    <title>Cloudflare人机验证插入测试</title>
-    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/Cloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E6%8F%92%E5%85%A5%E6%B5%8B%E8%AF%95.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>加入Cloudflare的人机验证很简单，添加以下代码即可</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;challenges.cloudflare.com&#x2F;turnstile&#x2F;v0&#x2F;api.js&quot; async defer&gt;&lt;&#x2F;script&gt;
+    <title>狐狸-在历史的长河中逐渐污名化</title>
+    <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E7%8B%90%E7%8B%B8-%E5%9C%A8%E5%8E%86%E5%8F%B2%E7%9A%84%E9%95%BF%E6%B2%B3%E4%B8%AD%E9%80%90%E6%B8%90%E6%B1%A1%E5%90%8D%E5%8C%96.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="狐狸-在历史的长河中逐渐污名化"><a href="#狐狸-在历史的长河中逐渐污名化" class="headerlink" title="狐狸-在历史的长河中逐渐污名化"></a>狐狸-在历史的长河中逐渐污名化</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>近来互联网上开始流传一个热梗：狐主任。</p>
+<img src="/images/人们对狐狸的印象/狐主任.jpg" style="zoom:80%;" />
 
-&lt;div class&#x3D;&quot;cf-turnstile&quot; data-sitekey&#x3D;&quot;你的KEY&quot;&gt;&lt;&#x2F;div&gt;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>将其中的”你的KEY“替换成你的KEY，创建方法打开<a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a> ，登录或注册一个Cloudflare账号，然后打开Turnstile选项，添加小组件，按提示填写即可</p>
-<p>效果：</p>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
-<div class="cf-turnstile" data-sitekey="0x4AAAAAAA1QAvsdz0ogdqDl"></div>
-
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
-]]></content>
-      <categories>
-        <category>网站维护</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>Cloudflare</tag>
-        <tag>Cloudflare人机验证</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>各大搜索引擎的提交入口</title>
-    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8F%90%E4%BA%A4.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="各大搜索引擎导航站提交入口"><a href="#各大搜索引擎导航站提交入口" class="headerlink" title="各大搜索引擎导航站提交入口"></a>各大搜索引擎导航站提交入口</h2><p>当你有了个网站，想要让大家知道，想要流量，应该怎么做？</p>
-<p><strong>1.</strong> 搜索引擎：</p>
-<ul>
-<li><del>百毒</del>，呸，是百度在中文区市场份额最大，但要有备案才能提交</li>
-<li>bing（必应）是微软家的搜索引擎，有国内外两个版本</li>
-<li>360搜索，不温不火，但鉴于360经常劫持主页，估计用过的人不少（我小时候特喜欢用….）</li>
-<li>谷歌，只有你会翻墙，那你一定用过，推荐</li>
-<li>Yandex是俄罗斯最大的搜索引擎，类似俄罗斯的百度</li>
-</ul>
-<p><strong>2.</strong> 各大导航站，例如以前的hao123。</p>
-<p><strong>3.</strong> 博客区，例如萌备，交换友链</p>
-<p><strong>4.</strong>  广告，不推荐</p>
-<p>下面是我爬取的各大搜索引擎，导航站，博客社区的提交链接：</p>
-<blockquote>
-<p>像Tor浏览器用的<a href="https://duckduckgo.com/"><strong>DuckDuckGo</strong></a>隐私搜索引擎使用的是Bing（必应）的索引，也就是你的网站被必应收录了，用<strong>DuckDuckGo</strong>也能搜索到了</p>
+<p>狐主任其实就是藏狐，藏狐靠着一张国字脸火遍全国，那一张写满对世俗的不屑的方脸在搭配那“淡定”的眼神，引得人们自发将其做成表情包。藏狐靠着一张方脸让人们对狐狸的形象有所改观，而在此之前，狐狸的形象一直都不好，人们对狐狸的看法都是狡猾，阴险，比如著名的《狐狸列那的故事》就刻画了一只狡猾至极，死不悔改的狐狸，由此可见狐狸的形象属实不佳，但在以前狐狸可是祥瑞的象征，甚至与王位关联，只不过在历史的长河里慢慢污名化了</p>
+<h3 id="狐狸形象的演变"><a href="#狐狸形象的演变" class="headerlink" title="狐狸形象的演变"></a>狐狸形象的演变</h3><p>在中国古代<strong>夏</strong>至<strong>汉魏</strong>时期，那时候狐狸在人民心中的形象是吉祥的、护佑人的正面形象。</p>
+<h4 id="1-夏朝"><a href="#1-夏朝" class="headerlink" title="1.夏朝"></a>1.夏朝</h4><p>在《山海经》《淮南子》《吴越春秋》等古籍中，狐狸被描述为神兽、大禹之妻。比如《吴越春秋》中：<code>大禹向天祝告求妻时，一只九条巨尾的白狐，优雅缓行出现在他的面前。大禹见状，心下了然：我族尚白，我身着白衣，白狐之色与之相应；九为至尊之数，白狐九尾，昭示我族王者气象， “绥绥白狐，九尾痝痝。···成家成室，我造彼昌。”于是，大禹遵从上天的安排，娶涂山女娇为妻。</code><del>嗯…咋感觉涂山女娇就是那只白狐呢…</del></p>
+<h4 id="2-秦汉时期"><a href="#2-秦汉时期" class="headerlink" title="2.秦汉时期"></a>2.秦汉时期</h4><p>《<strong>史记</strong>》中记载，陈胜和吴广为煽动戍卒反秦，在驻地旁的丛祠中以狐鸣，呼曰：“大楚兴，陈胜王！”，引得戍卒惶恐不已，使得后来戍卒愿意与陈胜吴广一同起义。</p>
+<p>汉代石刻画像及砖画中，常有九尾狐与白兔、蟾蜍、三足乌之属列于西王母座旁，以示祯祥。</p>
+<h4 id="3-南北朝"><a href="#3-南北朝" class="headerlink" title="3.南北朝"></a>3.南北朝</h4><p>李暹在注《千字文》“周伐殷汤”一句时，率先提出妲己为九尾狐。与此同时，动物通过长时间修炼化身为妖也就是”物老成精“的观点逐渐被人们所接受，这个观点的出现对狐狸的瑞兽形象产生了极大的冲击，因为之前只有特殊的动物才会化成人形，而现在所有动物都有了这个能力，这也让狐狸的形象走上了下坡路。</p>
+<h4 id="4-唐宋时期"><a href="#4-唐宋时期" class="headerlink" title="4.唐宋时期"></a>4.唐宋时期</h4><blockquote>
+<p>到了唐宋时期，狐狸的形象开始发生变化。人们开始相信狐狸可以修炼成精，幻化成人形。再加上一些文学作品的渲染，狐狸的形象逐渐变得复杂起来，既有善良美丽的狐仙，也有迷惑人心的妖狐。</p>
 </blockquote>
-<h3 id="1-网站管理员工具大全（主流搜索引擎）："><a href="#1-网站管理员工具大全（主流搜索引擎）：" class="headerlink" title="1.网站管理员工具大全（主流搜索引擎）："></a>1.网站管理员工具大全（主流搜索引擎）：</h3><p>Google网站管理员工具：<a href="http://www.google.com/webmasters/">http://www.google.com/webmasters/</a></p>
-<p>微软Bing管理员工具地址：<a href="http://www.bing.com/toolbox/webmaster/">http://www.bing.com/toolbox/webmaster/</a></p>
-<p>百度站长平台：<a href="http://zhanzhang.baidu.com/">http://zhanzhang.baidu.com/</a></p>
-<p>360搜索站长平台：<a href="http://zhanzhang.so.com/">http://zhanzhang.so.com/</a></p>
-<p>Yandex搜索提交：<a href="http://webmaster.yandex.com/site">http://webmaster.yandex.com/site</a></p>
-<h3 id="2-搜索引擎提交"><a href="#2-搜索引擎提交" class="headerlink" title="2.搜索引擎提交"></a>2.搜索引擎提交</h3><p>360搜索引擎登录入口：<a href="http://info.so.360.cn/site_submit.html">http://info.so.360.cn/site_submit.html</a></p>
-<p>即刻搜索网站提交入口：<a href="http://zz.jike.com/submit/genUrlForm">http://zz.jike.com/submit/genUrlForm</a></p>
-<p>盘古数据开放平台：<a href="http://open.panguso.com/data/resource/url/new">http://open.panguso.com/data/resource/url/new</a></p>
-<p>百度搜索网站登录口：<a href="http://www.baidu.com/search/url_submit.html">http://www.baidu.com/search/url_submit.html</a></p>
-<p>百度单个网页提交入口：<a href="http://zhanzhang.baidu.com/sitesubmit">http://zhanzhang.baidu.com/sitesubmit</a></p>
-<p>Google网站登录口：<a href="https://www.google.com/webmasters/tools/submit-url">https://www.google.com/webmasters/tools/submit-url</a></p>
-<p>Google新闻网站内容：<a href="http://www.google.com/support/news_pub/bin/request.py?contact_type=suggest_content&hl=cn">http://www.google.com/support/news_pub/bin/request.py?contact_type=suggest_content&amp;hl=cn</a></p>
-<p>bing(必应)网页提交登录入口：<a href="http://www.bing.com/toolbox/submit-site-url">http://www.bing.com/toolbox/submit-site-url</a></p>
-<p>简搜搜索引擎登陆口：<a href="http://www.jianso.com/add_site.html">http://www.jianso.com/add_site.html</a></p>
-<p>搜狗网站收录提交入口:<a href="http://www.sogou.com/feedback/urlfeedback.php">http://www.sogou.com/feedback/urlfeedback.php</a></p>
-<p>SOSO搜搜网站收录提交入口:<a href="http://www.soso.com/help/usb/urlsubmit.shtml">http://www.soso.com/help/usb/urlsubmit.shtml</a></p>
-<p>雅虎中国网站登录口：<a href="http://sitemap.cn.yahoo.com/">http://sitemap.cn.yahoo.com/</a></p>
-<p>网易有道搜索引擎登录口：<a href="http://tellbot.youdao.com/report">http://tellbot.youdao.com/report</a></p>
-<p>中搜免费登录服务：<a href="http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm">http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm</a></p>
-<p>MSN必应网站登录口：<a href="http://cn.bing.com/docs/submit.aspx?FORM=WSDD2">http://cn.bing.com/docs/submit.aspx?FORM=WSDD2</a></p>
-<p>Alexa网站登录入口：<a href="http://www.alexa.com/help/webmasters">http://www.alexa.com/help/webmasters</a></p>
-<p>TOM搜索网站登录口：<a href="http://search.tom.com/tools/weblog/log.php">http://search.tom.com/tools/weblog/log.php</a></p>
-<p>铭万网B2B(必途)网址登陆口：<a href="http://search.b2b.cn/pageIncluded/AddPage.php">http://search.b2b.cn/pageIncluded/AddPage.php</a></p>
-<p>蚁搜搜索网站登录口：<a href="http://www.antso.com/apply.asp">http://www.antso.com/apply.asp</a></p>
-<p>快搜搜索网站登录口：<a href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp</a></p>
-<p>汕头搜索登录口：<a href="http://www.stsou.com/join.asp">http://www.stsou.com/join.asp</a></p>
-<p>孙悟空搜索网站登录：<a href="http://www.swkong.com/add.php">http://www.swkong.com/add.php</a></p>
-<p>天网网站登陆口：<a href="http://home.tianwang.com/denglu.htm">http://home.tianwang.com/denglu.htm</a></p>
-<p>速搜全球登陆口：<a href="http://www.suso.com.cn/suso/link.asp">http://www.suso.com.cn/suso/link.asp</a></p>
-<p>酷帝网站目录提交入口：<a href="http://www.coodir.com/accounts/addsite.asp">http://www.coodir.com/accounts/addsite.asp</a></p>
-<p>快搜网站登陆口：<a href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp</a></p>
-<p>搜猫搜索引擎登录入口：<a href="http://test.somao123.com/search/url_submit.php">http://test.somao123.com/search/url_submit.php</a></p>
-<p>泽许搜索网站登录入口：<a href="http://www.zxyt.cn/guide/?m=adc4&Nsid=a3c6847db163587d&wver=t">http://www.zxyt.cn/guide/?m=adc4&amp;Nsid=a3c6847db163587d&amp;wver=t</a></p>
-<p>一淘网开放搜索申请入口：<a href="http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ">http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ</a></p>
-<h3 id="3-独立博客收录提交网址"><a href="#3-独立博客收录提交网址" class="headerlink" title="3.独立博客收录提交网址"></a>3.独立博客收录提交网址</h3><p>博客大全提交：<a href="https://daohang.lusongsong.com/login.html">https://daohang.lusongsong.com/login.html</a></p>
-<p>萌备<a href="https://icp.gov.moe/join.php">https://icp.gov.moe/join.php</a></p>
-<h3 id="4-英文搜索网站收录地址"><a href="#4-英文搜索网站收录地址" class="headerlink" title="4.英文搜索网站收录地址"></a>4.英文搜索网站收录地址</h3><p>Dmoz网站登录入口：<a href="http://www.dmoz.org/World/Chinese_Simplified">http://www.dmoz.org/World/Chinese_Simplified</a></p>
-<p>NetSearch登陆口：<a href="http://intelseek.com/add_url_form.asp">http://intelseek.com/add_url_form.asp</a></p>
-<p>Freewebsubmission.com 搜索引擎批量提交：<a href="http://www.freewebsubmission.com/">http://www.freewebsubmission.com/</a></p>
-<p>快速登录20个搜索引擎：<a href="http://www.trafficzap.com/searchsubmit.php">http://www.trafficzap.com/searchsubmit.php</a></p>
-<p>HotBot登录口：<a href="http://www.hotbot.com/prefs_filters.asp?prov=Inktomifilter=web">http://www.hotbot.com/prefs_filters.asp?prov=Inktomifilter=web</a></p>
-<p>netscape登录口：<a href="http://about.netscape.com/">http://about.netscape.com/</a></p>
-<p>AddMe登陆口 ：<a href="http://www.addme.com/submission/free-submission-start.php">http://www.addme.com/submission/free-submission-start.php</a></p>
-<p>NetSearch登录口：<a href="http://www.netsearch.org/promo/submit.htm">http://www.netsearch.org/promo/submit.htm</a></p>
-<p>AddMe登录口：<a href="http://www.addme.com/s0new.htm">http://www.addme.com/s0new.htm</a></p>
-<p>Link it All登录口：<a href="http://www.that-special-gift.com/ffa/links.html">http://www.that-special-gift.com/ffa/links.html</a></p>
-<p>Voyager登录口：<a href="http://www.voyagersearch.com/cgi-bin/q/search.cgi?NAVG=AddURL">http://www.voyagersearch.com/cgi-bin/q/search.cgi?NAVG=AddURL</a></p>
-<p>Gigablast登录口：<a href="http://www.gigablast.com/addurl">http://www.gigablast.com/addurl</a></p>
-<p>Aeiwei登录口：<a href="http://www.aeiwi.com/submit.html">http://www.aeiwi.com/submit.html</a></p>
-<p>Infotiger登录口：<a href="http://www.infotiger.com/addurl.html">http://www.infotiger.com/addurl.html</a></p>
-<p>Nationaldirectory登录口：<a href="http://www.nationaldirectory.com/addurl/">http://www.nationaldirectory.com/addurl/</a></p>
-<p>WhatUseek登录口：<a href="http://www.whatuseek.com/addurl-secondary.shtml">http://www.whatuseek.com/addurl-secondary.shtml</a></p>
-<p>Exactseek登录口：<a href="http://www.exactseek.com/add.html">http://www.exactseek.com/add.html</a></p>
-<p>Walhello登录口：<a href="http://www.walhello.com/addlinkgl.html">http://www.walhello.com/addlinkgl.html</a></p>
-<p>Scrubtheweb登录口：<a href="http://www.scrubtheweb.com/addurl.html">http://www.scrubtheweb.com/addurl.html</a></p>
-<h3 id="5-网址导航站收录申请接口大全"><a href="#5-网址导航站收录申请接口大全" class="headerlink" title="5.网址导航站收录申请接口大全"></a>5.网址导航站收录申请接口大全</h3><p>hao123网址收录：<a href="http://submit.hao123.com/static/auditSys/wztj.htm">http://submit.hao123.com/static/auditSys/wztj.htm</a></p>
-<p>360网址导航收录入口：<a href="http://hao.360.cn/url.html">http://hao.360.cn/url.html</a></p>
-<p>谷歌265上网导航网站提交：<a href="http://www.265.com/submit.html">http://www.265.com/submit.html</a></p>
-<p>百度网址导航提交入口：<a href="http://site.baidu.com/quality/quality_form.php">http://site.baidu.com/quality/quality_form.php</a></p>
-<p>2345网址导航申请收录入口：<a href="http://www.2345.com/help/submitweb.htm">http://www.2345.com/help/submitweb.htm</a></p>
-<p>必应网址导航提交：<a href="https://feedback.discoverbing.com/default.aspx?locale=zh-CN&productkey=bingweb&scrx=1">https://feedback.discoverbing.com/default.aspx?locale=zh-CN&amp;productkey=bingweb&amp;scrx=1</a></p>
-<p>搜狗网址导航收录入口：<a href="http://123.sogou.com/about/shoulu.html">http://123.sogou.com/about/shoulu.html</a></p>
-<p>博客大全申请收录入口：<a href="http://lusongsong.com/daohang/login.asp">http://lusongsong.com/daohang/login.asp</a></p>
-<p>QQ导航网站收录申请规则：<a href="http://support.qq.com/cgi-bin/content">http://support.qq.com/cgi-bin/content</a>_…</p>
-<p>搜狗网址导航收录申请：<a href="http://123.sogou.com/shoulu.html">http://123.sogou.com/shoulu.html</a></p>
-<p>114啦网址收录：<a href="http://url.114la.com/">http://url.114la.com/</a></p>
-<p>金山网址导航收录申请：<a href="http://123.duba.net/apply/">http://123.duba.net/apply/</a></p>
-<p>瑞星网址导航收录申请：<a href="http://hao.rising.cn/catalog/slsq.html">http://hao.rising.cn/catalog/slsq.html</a></p>
-<p>好看123网址导航收录申请：<a href="http://www.haokan123.com/urlsubmit/url_submit.html">http://www.haokan123.com/urlsubmit/url_submit.html</a></p>
-<p>466傲游网址导航申请收录网站：<a href="http://bbs.maxthon.cn/viewthread.php?tid=584498&extra=">http://bbs.maxthon.cn/viewthread.php?tid=584498&amp;extra=</a></p>
-<p>1616网址导航收录：<a href="http://www.1616.net/jd/misc/coop.htm">http://www.1616.net/jd/misc/coop.htm</a></p>
-<p>淘网址(tao123)收录申请：<a href="http://krq.tao123.com/collectsite/">http://krq.tao123.com/collectsite/</a></p>
-<p>0460网站之家收录：<a href="http://www.0460.com/member/login.aspx">http://www.0460.com/member/login.aspx</a></p>
-<p>赶驴啊网站收录提交入口：<a href="http://www.ganlva.com/url-submit/">http://www.ganlva.com/url-submit/</a></p>
-<p>hao123网站收录规则：<a href="http://www.hao123.cn/hezuo.htm">http://www.hao123.cn/hezuo.htm</a></p>
-<p>114网址导航收录申请：<a href="http://www.114.com.cn/index.php?view=websubmit">http://www.114.com.cn/index.php?view=websubmit</a></p>
-<p>726网址收录口：<a href="http://www.726.com/url-submit/">http://www.726.com/url-submit/</a></p>
-<p>1166网址收录口：<a href="http://www.1166.com/tool/add.html">http://www.1166.com/tool/add.html</a></p>
-<p>中商网址导航链接提交：<a href="http://www.cb114.cn/apps/about.html">http://www.cb114.cn/apps/about.html</a></p>
-<p>7999网址收录口：<a href="http://7999.com/misc/coop.htm">http://7999.com/misc/coop.htm</a></p>
-<p>369网址大全新站提交：<a href="http://wvw.369.com/us/url.htm">http://wvw.369.com/us/url.htm</a></p>
-<p>568网址导航网址提交：<a href="http://www.568.cc/abc/website-add.html">http://www.568.cc/abc/website-add.html</a></p>
-<p>找军事网址提交：<a href="http://www.zhaojunshi.com/url-submit/">http://www.zhaojunshi.com/url-submit/</a></p>
-<p>19687网站大全网址提交：<a href="http://www.19687.com/apps/about.html#add">http://www.19687.com/apps/about.html#add</a></p>
-<p>易看网址大全：<a href="http://www.ekan123.com/shoulu.htm">http://www.ekan123.com/shoulu.htm</a></p>
-<p>1181网址登陆：<a href="http://link.1181.com/adduser.asp">http://link.1181.com/adduser.asp</a></p>
-<p>57616网址导航登陆：<a href="http://www.57616.com/apps/about.html#add">http://www.57616.com/apps/about.html#add</a></p>
-<p>Jia123网址网址提交：<a href="http://bbs.jia123.com/index.asp?boardid=2">http://bbs.jia123.com/index.asp?boardid=2</a></p>
-<h3 id="6-开放平台注册应用大全："><a href="#6-开放平台注册应用大全：" class="headerlink" title="6.开放平台注册应用大全："></a>6.开放平台注册应用大全：</h3><p>搜搜论坛开放计划：<a href="http://open.soso.com/datacoop/bbs/submitbbs.html">http://open.soso.com/datacoop/bbs/submitbbs.html</a> （仅适用于Discus，会带来大量外链）</p>
-<p>百度数据开放平台：<a href="http://open.baidu.com/data/">http://open.baidu.com/data/</a></p>
-<p>新浪微博开放平台：<a href="http://open.weibo.com/">http://open.weibo.com/</a></p>
-<p>腾讯微博开放平台：<a href="http://dev.open.t.qq.com/">http://dev.open.t.qq.com/</a></p>
-<p>QQ互联：<a href="http://connect.qq.com/">http://connect.qq.com/</a></p>
-<p>百度链接开放平台：<a href="http://dev.baidu.com/connect/">http://dev.baidu.com/connect/</a></p>
-<p>人人网开放平台：<a href="http://dev.renren.com/">http://dev.renren.com/</a></p>
-<p>网易微博开放平台：<a href="http://open.t.163.com/">http://open.t.163.com/</a></p>
-<p>搜狐微博开放平台：<a href="http://open.t.sohu.com/">http://open.t.sohu.com/</a></p>
-<p>淘宝开放平台：<a href="http://open.taobao.com/">http://open.taobao.com</a></p>
-<p>支付好开放平台：<a href="http://bizpartner.alipay.com/denglu/index.htm">http://bizpartner.alipay.com/denglu/index.htm</a></p>
-<p>豆瓣API key：<a href="http://www.douban.com/service/apikey/apply">http://www.douban.com/service/apikey/apply</a></p>
-<p>天涯开放平台：<a href="http://open.tianya.cn/">http://open.tianya.cn/</a></p>
-<p>Google站长开发者：<a href="https://www.google.com/accounts/ManageDomains">https://www.google.com/accounts/ManageDomains</a></p>
-<p>开心开放平台：<a href="http://open.kaixin001.com/">http://open.kaixin001.com/</a></p>
-<p>天翼开放平台：<a href="http://open.189.cn/">http://open.189.cn/</a></p>
-<p>360应用开放平台：<a href="http://dev.app.360.cn/">http://dev.app.360.cn/</a></p>
-<p>雅虎开放平台：<a href="https://developer.apps.yahoo.com/projects">https://developer.apps.yahoo.com/projects</a></p>
-<p>Twitter开放平台：<a href="https://dev.twitter.com/">https://dev.twitter.com/</a></p>
-<p>Facebook开放平台：<a href="https://developers.facebook.com/">https://developers.facebook.com/</a></p>
-<h3 id="7-向搜索引擎递交sitemap大全（网站地图）："><a href="#7-向搜索引擎递交sitemap大全（网站地图）：" class="headerlink" title="7.向搜索引擎递交sitemap大全（网站地图）："></a>7.向搜索引擎递交sitemap大全（网站地图）：</h3><p>腾讯搜搜：<a href="http://open.soso.com/sitemap/">http://open.soso.com/sitemap/</a> 搜搜开放平台提供了提交sitemap的功能。</p>
-<p>百度：<a href="http://sitemap.baidu.com/">http://sitemap.baidu.com/</a> 百度站长平台，期待很久了，可惜一直在内测中。暂时无法提交。</p>
-<p>雅虎中国：<a href="http://sitemap.cn.yahoo.com/">http://sitemap.cn.yahoo.com/</a> 雅虎中国的站长工具很早就提供了提交sitemap的功能，还支持rss。</p>
-<p>Google：<a href="https://www.google.com/webmasters/tools/">https://www.google.com/webmasters/tools/</a> 可谓最强大的网站管理员工具，提交sitemap当然是最基本的。</p>
-<p>Yandex：<a href="http://webmaster.yandex.com/">http://webmaster.yandex.com/</a> Yandex是俄罗斯最大的搜索引擎，相对于俄罗斯的百度。管理员工具提供了类似Google Webmaster的功能，非常强大。</p>
-<p>Bing：<a href="http://www.bing.com/toolbox/webmaster/">http://www.bing.com/toolbox/webmaster/</a> 微软的强力产品，在美国市场占有一定搜索份额。管理员工具功能也很强大。</p>
-<p>Yahoo!：<a href="https://siteexplorer.search.yahoo.com/">https://siteexplorer.search.yahoo.com/</a> 雅虎英文站，因为同微软的bing合作关系，提交sitemap后提示已经提交给了微软。</p>
-<p>Ask：<a href="http://submissions.ask.com/ping?sitemap=http://www.YourWebSite.com/sitemap.xml">http://submissions.ask.com/ping?sitemap=http://www.YourWebSite.com/sitemap.xml</a> 修改红色部分的url为自己的sitemap地址，直接在浏览器提交。</p>
-<p>最后，在robots.txt文件中添加sitemap，搜索引擎抓取robots.txt的时候就可以获取sitemap。方法非常简单，只要在robots.txt的第一行或者最后一行按以下格式加入sitemap地址即可。</p>
-<p>Sitemap: <a href="http://www.example.com/sitemap.xml">http://www.example.com/sitemap.xml</a></p>
-<h3 id="8-网站被K申诉通道"><a href="#8-网站被K申诉通道" class="headerlink" title="8.网站被K申诉通道"></a>8.网站被K申诉通道</h3><p>百度网页申诉：<a href="http://zhanzhang.baidu.com/feedback">http://zhanzhang.baidu.com/feedback</a></p>
-<p>腾讯QQ电脑管家网站申诉：<a href="http://guanjia.qq.com/complaint.html">http://guanjia.qq.com/complaint.html</a></p>
-<p>Google网站申诉：<a href="http://www.google.com/webmasters/">http://www.google.com/webmasters/</a></p>
-<p>雅虎网站申诉：<a href="http://help.cn.yahoo.com/feedback.html?product=onesearch&source=1W5">http://help.cn.yahoo.com/feedback.html?product=onesearch&amp;source=1W5</a></p>
-<p>知道创宇（Scanv）安全联盟申诉通道：<a href="http://www.scanv.com/seccenter/appeal/?domain=">http://www.scanv.com/seccenter/appeal/?domain=</a></p>
-<p>360网盾申诉：<a href="http://wd.360.cn/appeal/appeal.html">http://wd.360.cn/appeal/appeal.html</a></p>
-<p>金山云安全网站申诉：<a href="http://fish.ijinshan.com/Kws/appeal">http://fish.ijinshan.com/Kws/appeal</a> (注：搜狗浏览器遇到拦截，也可在金山申诉)</p>
-<p>瑞星卡卡网站申诉：<a href="http://tool.ikaka.com/ssinfo.asp">http://tool.ikaka.com/ssinfo.asp</a></p>
+<h5 id="唐朝"><a href="#唐朝" class="headerlink" title="唐朝"></a>唐朝</h5><p><strong>唐期初期，狐灵信仰在民间流传，设庙参拜狐仙的现象屡见不鲜。</strong>张鷟的《朝野佥载》记载到：初唐以来，百姓流行信仰狐仙，甚至流传出了“无狐魅，不成村”的谚语；</p>
+<p>但与此同时，在文人圈子里，或许受到前面所提的“物老成精”观念的影响，汉代以后，狐仙开始跌落神坛，妖性渐显，形象也开始负面化。众多狐仙中尤为出名的九尾狐，首当其冲成为口诛笔伐的对象。唐代白居易在《古冢狐》中，写下“女为狐媚害即深，日长月增溺人心。何况褒妲之色善蛊惑，能丧人家覆人国“等诗句。</p>
+<h5 id="宋朝"><a href="#宋朝" class="headerlink" title="宋朝"></a>宋朝</h5><p>吕希哲的《吕氏杂记》记载，宋代邠地（今陕西省彬县）出现狐王庙，能施福降祸，深得百姓敬畏。但妲己也开始频繁以狐妖的形象出现在各种平话小说之中，这也对后来明代小说《封神演义》产生了一定影响。</p>
+<h4 id="5-元、明朝"><a href="#5-元、明朝" class="headerlink" title="5.元、明朝"></a>5.元、明朝</h4><p>伴随着元代话本《武王伐纣书》和明代长篇章回小说《封神演义》的问世，进一步坐实了妲己是千年九尾金狐的化身。故事中妲己把商纣迷惑得神魂颠倒，丧失真性，原本外有忠臣良将、内有贤后淑妃的大好江山被推上改君易代的悬崖。《封神演义》的风行让狐妖的魅惑形象深入人心，狐媚祸国的观念被推向极致，让狐仙形象几乎在大众认知中被完全黑化，<strong>一句“狐狸精”，是将女子咒为娼妓的最恶毒的诅咒。</strong></p>
+<p>除了《封神演义》之外，《西游记》中的形象也是此类狐妖传说的代表，牛魔王的小妾玉面狐狸令牛魔王和铁扇公主关系恶化，应对了前面白居易所说的“覆家”之言。随着封建社会的日益衰落，人们对鬼神之说更加迷信，狐狸的形象也变得更加妖魔化。很多流传广泛小说、戏曲中也都越来越频繁出现了狐狸精迷惑害人的故事。</p>
+<h4 id="6-清朝"><a href="#6-清朝" class="headerlink" title="6.清朝"></a>6.清朝</h4><p>狐狸的污名一直延续到清代，《狐狸缘》、《九尾狐》小说中的狐妖，不是被收服割掉尾巴，就是被拿来比拟坏透的娼妓。</p>
+<p>但在漫天贬斥中，有些人们的观念发生了变化，部分小说作者已经厌倦了用刻板印象描绘故事中的狐狸形象，他们开始尝试赋予小说中的人物更丰富人性，创作《聊斋志异》的蒲松龄便是其中代表，《聊斋志异》的出现，里面《<strong>王成</strong>》、《<strong>狐女</strong>》等几个勾勒出狐灵亦正亦邪的形象，给人们狐狸<strong>有仙有妖有善恶</strong>的观念。</p>
+<p>在蒲松龄笔下，狐妖人性化的一面成为了描述的重点，这也意味着当时文人阶级自我意识的觉醒，这让他们能够用更加多元化的方式来构建笔下的人物。</p>
+<p>但无奈《聊斋志异》中短篇故事的影响力远不及《封神演义》和《西游记》等著作，因此民间对于狐妖的看法并没有发生扭转。</p>
+<h4 id="7-现代"><a href="#7-现代" class="headerlink" title="7.现代"></a>7.现代</h4><p>及至今日，东北地区“狐黄白柳灰”（狐、黄鼠狼、刺猬、蛇、鼠）五仙信仰中还有狐仙的一席之地。</p>
+<p>尽管提到对狐狸的印象，大家首先想到的词肯定还是狡猾，不少小说也经常描述狐狸怎样用阴谋诡计害人，但现在小说里不再只有负面印象了，更多的描述了狐狸的家庭生存遇到的困难，狐狸妈妈的母爱，一家狐的团结互助，《再被狐狸骗一次》、《猎狐》等故事描写了狐狸家庭的亲情，在新兴的文艺作品中，狐狸的形象愈发丰满，相信在新的时代文化背景下，狐狸的形象一定会有的新的内涵，不再是污名。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>在我写这篇文章时，我查阅了大量资料（浏览器挂着36个还未关闭的页面，全是维基、电子书），从狐狸的形象演变中，我仿佛看到每个时代人们的内心诉求和当时社会中的流行文化，而狐狸作为一个有着悠久历史的意象，也从瑞兽变成了害人的妖怪，人们对于狐狸的形象过于片面，在全面了解狐狸后，你会发现其实狐狸也是地球的一份子，它们外貌各异，有的圆滚滚毛茸茸，有的凭借着自身奇特的长相获得人们的喜爱，而且狐狸会猎捕仓鼠做为食物，对农业可是大有助益呢。</p>
+<h3 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h3><table>
+  <tr>
+    <td colspan="3">
+      <img src="/images/人们对狐狸的印象/中国历史.png" style="zoom:100%;" /><br />
+    </td>
+  </tr>
+  <tr>
+    <th><b>夏</b> 前21世纪 | 前17世纪</th>
+    <th><b>商</b> 前17世纪 | 前11世纪</th>
+    <th><b>秦</b> 前221年 | 前207年</th>
+  </tr>
+  <tr>
+    <td><b>汉</b> 前202年 ︱ 220年</td>
+    <td><b>南 北 朝</b> 420年 ︱ 589年</td>
+    <td><b>唐</b> 618年 | 907年</td>
+  </tr>
+  <tr>
+    <td><b>宋</b> 960年 ︱ 1279年</td>
+    <td><b>南宋</b> 1127年 | 1279年</td>
+    <td><b>元</b> 1260年/1271年 | 1368年</td>
+  </tr>
+  <tr>
+    <td><b>明</b> 1368年 | 1644年</td>
+    <td><b>清</b> 1636年/1644年 | 1912年</td>
+    <td></td>
+  </tr>
+</table>
+
+<p>参考书籍文章：</p>
+<p><em>《山海经》《淮南子》《吴越春秋》《史记》《千字文》《古冢狐》《吕氏杂记》《武王伐纣书》《封神演义》《西游记》《狐狸缘》《九尾狐》《聊斋志异》《王成》《狐女》《再被狐狸骗一次》《猎狐》《以文学发展的视角论狐狸文化符号的认知变迁》</em></p>
+<h3 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h3><h4 id="狐狸与神仙的关系"><a href="#狐狸与神仙的关系" class="headerlink" title="狐狸与神仙的关系"></a>狐狸与神仙的关系</h4><p>在道教和民间信仰中，狐狸被认为是具有灵性的动物，可以修炼成仙。修炼成仙的狐狸被称为狐仙。狐仙通常被认为具有法力，可以帮助人们实现愿望，但也有可能迷惑人心。</p>
+<p>狐仙与神仙的关系比较复杂。一方面，狐仙被认为是神仙的追随者，可以向神仙求助。另一方面，狐仙也可能被视为妖邪，受到神仙的制约。</p>
+<h4 id="狐狸的生物学特征"><a href="#狐狸的生物学特征" class="headerlink" title="狐狸的生物学特征"></a>狐狸的生物学特征</h4><ul>
+<li><strong>分类地位：</strong> 犬科动物，与狼、豺的关系</li>
+<li><strong>形态特征：</strong> 外形、毛色、体型等方面的多样性</li>
+<li><strong>生理特征：</strong> 感官、适应环境的能力</li>
+<li><strong>分布范围：</strong> 全球分布，不同种类的分布特点</li>
+</ul>
+<h4 id="狐狸的生态习性（赤狐）"><a href="#狐狸的生态习性（赤狐）" class="headerlink" title="狐狸的生态习性（赤狐）"></a>狐狸的生态习性（赤狐）</h4><ul>
+<li><strong>生活习性：</strong> 通常成对或以家庭为单位组成小团体</li>
+<li><strong>食性：</strong> 赤狐主要以啮齿类为食，但有时也捕食兔子、松鼠、禽类、爬行动物、无脊椎动物和有蹄类幼崽，它们偶尔也吃水果和植物。（想不到吧，它还会吃素）</li>
+<li><strong>繁殖：</strong> 赤狐的繁殖期在每年春季，孕期49-58天，一胎可产4-6崽，偶尔一胎多达13个幼崽</li>
+<li><strong>肢体语言：</strong> 赤狐的肢体语言由耳朵、尾巴的活动以及不同的身体姿态组成。</li>
+</ul>
+<h4 id="狐狸与人类的关系"><a href="#狐狸与人类的关系" class="headerlink" title="狐狸与人类的关系"></a>狐狸与人类的关系</h4><ul>
+<li><strong>历史上的狐狸：</strong> <ul>
+<li>希腊神话中曾描绘了一只身形巨大，永远无法被捕捉的透墨索斯恶狐</li>
+<li>在凯尔特神话中，赤狐是一种重要的动物。例如在英国科茨沃尔德，当地人相信巫师会化身为赤狐偷取邻居家的黄油。</li>
+</ul>
+</li>
+<li><strong>狐狸与人类的冲突：</strong> 赤狐偶尔会捕食小鸡、羊羔，它们通常不会捕食人工饲养的动物，除非饿的不行</li>
+<li><strong>狐狸保护：</strong> 赤狐，属于<strong>国家二级保护动物</strong></li>
+</ul>
+<h4 id="狐狸在文学艺术中的形象"><a href="#狐狸在文学艺术中的形象" class="headerlink" title="狐狸在文学艺术中的形象"></a>狐狸在文学艺术中的形象</h4><ul>
+<li><strong>文学作品中的狐狸：</strong> 在欧洲民俗中，列那狐的形象象征了狡诈与欺骗。列那狐最初是公元1150年的诗歌《Ysengrimus》里的一个次要角色，而后在1175年被皮埃尔·圣克劳德编入了小说《狐狸列那》，后来又出现在杰弗里·乔叟的《修女牧师故事集》中。许多有关列那狐的冒险故事都取材于赤狐在野外的真实习性，例如列那狐与狼为敌，喜爱黑莓与葡萄。</li>
+<li><strong>艺术作品中的狐狸：</strong> 德国表现主义画家弗兰兹‧马尔克油曾绘制过一副油画《狐狸》，该画最终以4265.45万英镑拍卖成交</li>
+</ul>
+<img src="/images/人们对狐狸的印象/狐狸油画.webp" style="zoom:80%;" />
+
 <script src="https://utteranc.es/client.js"
         repo="2010HCY/utterances"
         issue-term="title"
@@ -1721,11 +1832,95 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
         async>
 </script>]]></content>
       <categories>
-        <category>网站维护</category>
+        <category>生活随记</category>
       </categories>
       <tags>
+        <tag>生活随记</tag>
+        <tag>论文</tag>
+        <tag>狐狸</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何制作一个刷流量脚本</title>
+    <url>/%E7%BC%96%E7%A8%8B/%E5%88%B7%E6%B5%81%E9%87%8F%E8%84%9A%E6%9C%AC%E5%88%B6%E4%BD%9C.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="关于脚本"><a href="#关于脚本" class="headerlink" title="关于脚本"></a>关于脚本</h2><p>适合PCDN用户平衡上下行流量（我不跑PCDN，但我看跑PCDN的有需求才写这个脚本），或者是闲着无聊的人，想把流量卡流量刷光的，想刷对家网站流量的人使用</p>
+<p><strong>脚本特点：</strong></p>
+<ol>
+<li>不会保存到硬盘，而是保存到内存</li>
+<li>不会塞爆内存，每轮脚本执行会清理垃圾</li>
+<li>可以将url改成页面，不一定要是文件</li>
+<li>简单，无需下载其他软件应用，开箱即用</li>
+</ol>
+<p>注：想要效果好点建议找个大文件，比如视频啦，WindowsIOS文件啦，用大文件记得把执行时间调长</p>
+<h2 id="PowerShell脚本实现"><a href="#PowerShell脚本实现" class="headerlink" title="PowerShell脚本实现"></a>PowerShell脚本实现</h2><p>以下为脚本源码</p>
+<pre class="line-numbers language-none"><code class="language-none"># 设置目标 URL
+$url &#x3D; &quot;https:&#x2F;&#x2F;www.travellings.cn&#x2F;assets&#x2F;travelling.png&quot;  # 替换为你希望访问的文件或页面
+
+# 消耗流量的函数
+function Consume-Traffic &#123;
+    try &#123;
+        # 发送一个 HTTP 请求
+        Invoke-WebRequest -Uri $url -Method GET
+        Write-Host &quot;HTTP 请求已发送，流量已消耗&quot;
+    &#125; catch &#123;
+        Write-Host &quot;HTTP 请求失败: $_&quot;
+    &#125;
+
+    # 强制垃圾回收
+    [System.GC]::Collect()
+&#125;
+
+# 定时循环消耗流量
+while ($true) &#123;
+    Consume-Traffic
+    Start-Sleep -Seconds 0.1 # 每 0.1 秒执行一次（你可以根据需要调整时间）
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>新建个文本文档，把以下内容复制进去，修改好文件url和执行时间后，复制修改好后的源码，右键左下角的Windows徽标键或者按Win+X，在弹出的对话框中选择<strong>Windows PowerShell （管理员）</strong> 在Windows PowerShell 中右键粘贴脚本代码，回车即开始刷流量</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>刷流量</tag>
+        <tag>PowerShell脚本</tag>
+        <tag>源码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大文件生成二维码</title>
+    <url>/%E7%BC%96%E7%A8%8B/%E5%A4%A7%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="大文件生成二维码"><a href="#大文件生成二维码" class="headerlink" title="大文件生成二维码"></a>大文件生成二维码</h2><img src="/images/大二维码.webp" style="zoom:75%;" />
+
+<p>以后看见这种二维码一定要注意，这可不是一个普通的二维码，而是被精心设计出来的码</p>
+<img src="/images/二维码.png" style="zoom:75%;" />
+
+<p>我们平时生活中看见的二维码，它通常只能容纳几KB的数据（最大2.3KB），所以通常只会用来存放文本或网址，而这个二维码，足足能容纳33MB的数据！也就是说，我们常见的很多资源，比如小说，漫画，音乐，视频，都能压缩到这一个码里面，扫一扫就能分享。</p>
+<p>而且它传输速度也不慢，仅使用计算机显示器和智能手机摄像头，它就能维持 850 千比特&#x2F;秒 (~106 KB&#x2F;秒) 的速度！不使用互联网&#x2F;蓝牙&#x2F;NFC&#x2F;等，所有数据都通过相机镜头传输哦。<a href="https://page.100713.xyz/%E8%B6%85%E5%A4%A7%E4%BA%8C%E7%BB%B4%E7%A0%81/">在线体验</a></p>
+<h2 id="它是如何工作的？"><a href="#它是如何工作的？" class="headerlink" title="它是如何工作的？"></a>它是如何工作的？</h2><p><code>cimbar</code>是一种高密度 2D 条形码格式。数据存储在彩色图块网格中 — 根据所选图块以及所选绘制图块的颜色对位进行编码。对数据应用 Reed Solomon 错误校正，以解决视频 -&gt; 数字解码的有损性质。预计错误率低于 1%，并已得到纠正。</p>
+<p><code>libcimbar</code>，这一优化的实现包括基于喷泉码 ( <code>wirehair</code>) 和 zstd 压缩的简单文件编码协议。最大 33MB 的文件（压缩后！）被编码为一系列 cimbar 代码，可以输出为图像或实时视频源。一旦成功解码了足够多的不同图像帧，文件就会被成功重建和解压缩。即使图像接收顺序错误，或者某些图像已损坏或丢失，情况也是如此。</p>
+<h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p>感兴趣的可以去<a href="https://github.com/sz3/libcimbar">项目地址</a>给个starred，这是中文版<a href="https://page.100713.xyz/%E8%B6%85%E5%A4%A7%E4%BA%8C%E7%BB%B4%E7%A0%81/">在线体验</a>链接，这是手机<a href="/images/cfc_arm64-v8a_0.6.1.apk">扫码应用</a></p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
         <tag>工具</tag>
-        <tag>网站提交</tag>
+        <tag>二维码生成器</tag>
       </tags>
   </entry>
   <entry>
@@ -1763,35 +1958,6 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
-    <title>大文件生成二维码</title>
-    <url>/%E7%BC%96%E7%A8%8B/%E5%A4%A7%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="大文件生成二维码"><a href="#大文件生成二维码" class="headerlink" title="大文件生成二维码"></a>大文件生成二维码</h2><img src="/images/大二维码.webp" style="zoom:75%;" />
-
-<p>以后看见这种二维码一定要注意，这可不是一个普通的二维码，而是被精心设计出来的码</p>
-<img src="/images/二维码.png" style="zoom:75%;" />
-
-<p>我们平时生活中看见的二维码，它通常只能容纳几KB的数据（最大2.3KB），所以通常只会用来存放文本或网址，而这个二维码，足足能容纳33MB的数据！也就是说，我们常见的很多资源，比如小说，漫画，音乐，视频，都能压缩到这一个码里面，扫一扫就能分享。</p>
-<p>而且它传输速度也不慢，仅使用计算机显示器和智能手机摄像头，它就能维持 850 千比特&#x2F;秒 (~106 KB&#x2F;秒) 的速度！不使用互联网&#x2F;蓝牙&#x2F;NFC&#x2F;等，所有数据都通过相机镜头传输哦。<a href="https://page.100713.xyz/%E8%B6%85%E5%A4%A7%E4%BA%8C%E7%BB%B4%E7%A0%81/">在线体验</a></p>
-<h2 id="它是如何工作的？"><a href="#它是如何工作的？" class="headerlink" title="它是如何工作的？"></a>它是如何工作的？</h2><p><code>cimbar</code>是一种高密度 2D 条形码格式。数据存储在彩色图块网格中 — 根据所选图块以及所选绘制图块的颜色对位进行编码。对数据应用 Reed Solomon 错误校正，以解决视频 -&gt; 数字解码的有损性质。预计错误率低于 1%，并已得到纠正。</p>
-<p><code>libcimbar</code>，这一优化的实现包括基于喷泉码 ( <code>wirehair</code>) 和 zstd 压缩的简单文件编码协议。最大 33MB 的文件（压缩后！）被编码为一系列 cimbar 代码，可以输出为图像或实时视频源。一旦成功解码了足够多的不同图像帧，文件就会被成功重建和解压缩。即使图像接收顺序错误，或者某些图像已损坏或丢失，情况也是如此。</p>
-<h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p>感兴趣的可以去<a href="https://github.com/sz3/libcimbar">项目地址</a>给个starred，这是中文版<a href="https://page.100713.xyz/%E8%B6%85%E5%A4%A7%E4%BA%8C%E7%BB%B4%E7%A0%81/">在线体验</a>链接，这是手机<a href="/images/cfc_arm64-v8a_0.6.1.apk">扫码应用</a></p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>编程</tag>
-        <tag>二维码生成器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我汉化的第一个游戏</title>
     <url>/%E7%BC%96%E7%A8%8B/%E6%88%91%E6%B1%89%E5%8C%96%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="驾驶TU-95汉化版"><a href="#驾驶TU-95汉化版" class="headerlink" title="驾驶TU-95汉化版"></a>驾驶TU-95汉化版</h2><p>这个游戏我我小时候玩的，那时看不懂，只能一通瞎操作，坠机次数起码得有几十次，那时候百思不得其解，现在看得懂怎么操作了，成功过关，但因为英文看着实在难受，于是忍无可忍的我决定汉化它。</p>
@@ -1809,12 +1975,12 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
 <p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/%E9%A9%BE%E9%A9%B6TU-95/%E9%A9%BE%E9%A9%B6TU-95%E6%B1%89%E5%8C%96%E7%89%88.swf">汉化版</a> </p>
 <p><a href="/images/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F/Falsh%E6%92%AD%E6%94%BE%E5%99%A8.exe">播放器</a></p>
 
-        <div id="aplayer-sNlHFkAI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-iJgZnuzT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-sNlHFkAI"),
+            element: document.getElementById("aplayer-iJgZnuzT"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -2460,174 +2626,6 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
       </tags>
   </entry>
   <entry>
-    <title>三步就能在低配机上运行一个本地AI？</title>
-    <url>/%E7%BC%96%E7%A8%8B/%E8%BF%90%E8%A1%8C%E4%BD%A0%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B%EF%BC%81.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="第一步，下载Ollama框架"><a href="#第一步，下载Ollama框架" class="headerlink" title="第一步，下载Ollama框架"></a>第一步，下载Ollama框架</h2><p>在本地跑开源大模型，目前最好的软件肯定是Ollama。</p>
-<p>不管你用的是PC、Mac，甚至是树莓派，都能通过Ollama运行大大小小的模型，而且扩展性极强，几乎没有什么设备不兼容。</p>
-<p>安装Ollama超级简单。到官网ollama.com或者ollama.ai下载对应版本就行。</p>
-<p>官网下载链接：<a href="https://ollama.com/download/windows">https://ollama.com/download/windows</a> ，根据你的系统选择对应的版本，下载后安装，安装完成后在系统托盘能看到一个羊驼图标，恭喜你，你完成了第一步（应该不会有人连第一步都完成不了吧？如果你连第一步都完成不了，请按<strong>CTRL+W</strong>）</p>
-<p>性能要求很低，你就算没有显卡也能运行，就比如我的电脑<strong>CPU是G4560</strong>无独显，跑Gemma2 9B慢了点，但<strong>20分钟</strong>内肯定能回答完。</p>
-<h2 id="第二步，下载你心仪的AI大模型"><a href="#第二步，下载你心仪的AI大模型" class="headerlink" title="第二步，下载你心仪的AI大模型"></a>第二步，下载你心仪的AI大模型</h2><p>如何安装模型？在这上面搜索：<a href="https://ollama.com/search">https://ollama.com/search</a> ，找到心仪的模型后到它的详情页，选择你要的型号，复制旁边的命令，Win+R打开CMD（不会开CMD自己搜一下，反省一下），右键粘贴命令安装</p>
-<img src="/images/运行本地大模型/安装模型.png" style="zoom:33%;" />
-
-<p>安装命令格式为：<code>ollama pull 模型名</code> ，运行命令<code>ollama run 模型名</code> ，停止命令<code>ollama stop 模型名</code> ，删除命令<code>ollama rm 模型名</code> </p>
-<p>（注：你直接使用ollama运行未下载的模型时会自动下载，下载完自动运行）</p>
-<p>一般来说，7b的模型至少需要8G RAM，13b需要16G，70b需要64G。大家量内存而为，不然跑起来真的非常卡顿。（因为要不断的读盘）</p>
-<p>以下是一些常用的模型，推荐选择</p>
-<p><a href="https://ollama.com/library/gemma2">Gemma2</a> （中规中矩，表现优秀，我的电脑跑9B两三秒吐一字）安装命令<code>ollama run gemma2</code></p>
-<p><a href="https://ollama.com/library/phi">phi2 </a> （低配机福音，吐字飞快，可惜不会中文，我的一秒三四个单词）安装命令<code>ollama run phi</code></p>
-<p><a href="https://ollama.com/library/mixtral">mixtral </a> （土豪用的，有8x7b和8x22b两款，22GB和80GB，我的电脑跑不动，嘶~~）安装命令<code>ollama run mixtral</code>	</p>
-<table>
-<thead>
-<tr>
-<th>模型</th>
-<th>参数</th>
-<th>大小</th>
-<th><code>模型名</code></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Gemma2（谷歌推出的，配置不差的家用电脑推荐用它）</td>
-<td>9B</td>
-<td>5.5G</td>
-<td><code>gemma2</code></td>
-</tr>
-<tr>
-<td>phi2（微软推出的，4 GB 内存即可运行，吐字速度飞快，不懂中文）</td>
-<td>2.7B</td>
-<td>1.6G</td>
-<td><code>phi</code></td>
-</tr>
-<tr>
-<td>Llama3.1</td>
-<td>8B</td>
-<td>4.7G</td>
-<td><code>llama3.1</code></td>
-</tr>
-<tr>
-<td>Llama3.1</td>
-<td>405B</td>
-<td>231G</td>
-<td><code>llama3.1:405b</code></td>
-</tr>
-<tr>
-<td>GLM4</td>
-<td>9B</td>
-<td>5.5G</td>
-<td><code>glm4</code></td>
-</tr>
-<tr>
-<td>Qwen2</td>
-<td>7B</td>
-<td>4.4G</td>
-<td><code>qwen2</code></td>
-</tr>
-<tr>
-<td>Qwen2</td>
-<td>72B</td>
-<td>41G</td>
-<td><code>qwen2:72b</code></td>
-</tr>
-<tr>
-<td>Llama3</td>
-<td>8B</td>
-<td>4.7G</td>
-<td><code>llama3</code></td>
-</tr>
-<tr>
-<td>Llama3</td>
-<td>70B</td>
-<td>40G</td>
-<td><code>llama3:70b</code></td>
-</tr>
-<tr>
-<td>Phi3</td>
-<td>3.8B</td>
-<td>2.3G</td>
-<td><code>phi3</code></td>
-</tr>
-<tr>
-<td>Phi3</td>
-<td>14B</td>
-<td>7.9G</td>
-<td><code>phi3:medium</code></td>
-</tr>
-<tr>
-<td>Gemma2</td>
-<td>27B</td>
-<td>16G</td>
-<td><code>gemma2:27b</code></td>
-</tr>
-<tr>
-<td>Mistral</td>
-<td>7B</td>
-<td>4.1G</td>
-<td><code>mistral</code></td>
-</tr>
-<tr>
-<td>Starling</td>
-<td>7B</td>
-<td>4.1G</td>
-<td><code>starling-lm</code></td>
-</tr>
-<tr>
-<td>CodeLlama</td>
-<td>7B</td>
-<td>3.8G</td>
-<td><code>codellama</code></td>
-</tr>
-<tr>
-<td>LLaVA</td>
-<td>7B</td>
-<td>4.5G</td>
-<td><code>llava</code></td>
-</tr>
-<tr>
-<td>Solar</td>
-<td>10.7B</td>
-<td>6.1G</td>
-<td><code>solar</code></td>
-</tr>
-</tbody></table>
-<p>安装完了吧？装完了往下看</p>
-<h2 id="第三步，运行大模型，并与之对话"><a href="#第三步，运行大模型，并与之对话" class="headerlink" title="第三步，运行大模型，并与之对话"></a>第三步，运行大模型，并与之对话</h2><p>使用<code>ollama run 模型名</code>运行你下载的大模型并与之交互式对话，你也可以用<code>ollama run 模型名 &quot;你的问题&quot;</code>来问问题，该命令不会进入交互式输入模式。以下是我的电脑跑Gemma2的效果和性能开销，在跑的时候CPU占用60%左右</p>
-<img src="/images/运行本地大模型/Gemma2.png" style="zoom:50%;" />
-
-<img src="/images/运行本地大模型/性能开销.png" style="zoom:50%;" />
-
-<p>你以为折腾这些就只能聊天吗，不止！往下看！</p>
-<h2 id="在生活中运用大模型"><a href="#在生活中运用大模型" class="headerlink" title="在生活中运用大模型"></a>在生活中运用大模型</h2><p>在此之前，你可以给Ollama开启跨域访问功能（Ollama默认API只能用127.0.0.1访问，要在别的电脑上使用需要设置跨域访问，若你只想在当前电脑上使用则跳过当前步骤）</p>
-<p>设置跨域访问</p>
-<ol>
-<li>右键此电脑图标，点击属性</li>
-<li>在系统关于界面，下滑到最下面，点击高级系统设置</li>
-<li>在弹出的窗口中点击环境变量</li>
-<li>在上方的用户环境变量新建两个用户变量，变量名OLLAMA_ORIGINS和OLLAMA_HOST，变量值设为*和0.0.0.0:11434。</li>
-<li>按确定保存，然后在托盘找到羊驼图标，右键退出重新打开</li>
-</ol>
-<h3 id="1-网页翻译"><a href="#1-网页翻译" class="headerlink" title="1.网页翻译"></a>1.网页翻译</h3><blockquote>
-<p>请使用Gemma2模型，Phi不会外语</p>
-</blockquote>
-<p>先安装沉浸式翻译插件：<a href="https://immersivetranslate.com/zh-Hans/">https://immersivetranslate.com/zh-Hans/</a></p>
-<p>安装好后到插件设置里，点击翻译服务，将其他的服务都关掉，将OpenAI设为默认，然后点击OpenAI名字进到设置，将沉浸式翻译API改为自定义API Key，API Key随便输几个字，自定义接口地址协议从https改成http，将地址改为http:&#x2F;&#x2F;你的IP&#x2F;v1&#x2F;chat&#x2F;completions。这里IP设置成你的IP，如果服务在本机运行可以设置成127.0.0.1，然后勾选输入自定义模型名称，将其改为你运行的模型名，最后拉到最上面，点击“点击测试服务”，提示验证成功你就大功告成了。</p>
-<p>如果遇到问题，欢迎留言反馈！</p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>AI大模型</tag>
-        <tag>本地AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>更新博客音乐播放界面</title>
     <url>/%E7%BC%96%E7%A8%8B/%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E9%A1%B5%E9%9D%A2.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="更新网页音乐播放！"><a href="#更新网页音乐播放！" class="headerlink" title="更新网页音乐播放！"></a>更新网页音乐播放！</h2><blockquote>
@@ -2665,7 +2663,7 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
   <entry>
     <title>自制小游戏合集</title>
     <url>/%E7%BC%96%E7%A8%8B/%E8%87%AA%E5%88%B6%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>这是我制作的小游戏，小程序。他们有的用HTML标记语言，有的是C++语言，有兴趣的可以看看，玩玩（除HTML其他编程语言的我想办法弄到浏览器里），我也会把代码贴出来。若有bug，或改进方案可以发邮件到<a href="mailto:&#x45;&#116;&#x68;&#97;&#x6e;&#105;&#101;&#x6c;&#x40;&#49;&#48;&#x30;&#x37;&#49;&#51;&#x2e;&#x78;&#x79;&#x7a;">&#x45;&#116;&#x68;&#97;&#x6e;&#105;&#101;&#x6c;&#x40;&#49;&#48;&#x30;&#x37;&#49;&#51;&#x2e;&#x78;&#x79;&#x7a;</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>这是我制作的小游戏，小程序。他们有的用HTML标记语言，有的是C++语言，有兴趣的可以看看，玩玩（除HTML其他编程语言的我想办法弄到浏览器里），我也会把代码贴出来。若有bug，或改进方案可以发邮件到<a href="mailto:&#x45;&#116;&#104;&#97;&#x6e;&#x69;&#x65;&#108;&#64;&#49;&#48;&#x30;&#x37;&#49;&#x33;&#46;&#120;&#121;&#122;">&#x45;&#116;&#104;&#97;&#x6e;&#x69;&#x65;&#108;&#64;&#49;&#48;&#x30;&#x37;&#49;&#x33;&#46;&#120;&#121;&#122;</a></p>
 <h3 id="1-跑酷游戏"><a href="#1-跑酷游戏" class="headerlink" title="1.跑酷游戏"></a>1.跑酷游戏</h3><p>这是一个跑酷小游戏吃操作，反正我折腾了好久，第三关才过了，早知道地图写简单的了，可直接跳转在线玩<a href="https://page.100713.xyz/%E8%B7%91%E9%85%B7%E6%B8%B8%E6%88%8F.html">在线游玩</a></p>
 <span id="more"></span>
 
@@ -3401,6 +3399,468 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>三步就能在低配机上运行一个本地AI？</title>
+    <url>/%E7%BC%96%E7%A8%8B/%E8%BF%90%E8%A1%8C%E4%BD%A0%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B%EF%BC%81.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="第一步，下载Ollama框架"><a href="#第一步，下载Ollama框架" class="headerlink" title="第一步，下载Ollama框架"></a>第一步，下载Ollama框架</h2><p>在本地跑开源大模型，目前最好的软件肯定是Ollama。</p>
+<p>不管你用的是PC、Mac，甚至是树莓派，都能通过Ollama运行大大小小的模型，而且扩展性极强，几乎没有什么设备不兼容。</p>
+<p>安装Ollama超级简单。到官网ollama.com或者ollama.ai下载对应版本就行。</p>
+<p>官网下载链接：<a href="https://ollama.com/download/windows">https://ollama.com/download/windows</a> ，根据你的系统选择对应的版本，下载后安装，安装完成后在系统托盘能看到一个羊驼图标，恭喜你，你完成了第一步（应该不会有人连第一步都完成不了吧？如果你连第一步都完成不了，请按<strong>CTRL+W</strong>）</p>
+<p>性能要求很低，你就算没有显卡也能运行，就比如我的电脑<strong>CPU是G4560</strong>无独显，跑Gemma2 9B慢了点，但<strong>20分钟</strong>内肯定能回答完。</p>
+<h2 id="第二步，下载你心仪的AI大模型"><a href="#第二步，下载你心仪的AI大模型" class="headerlink" title="第二步，下载你心仪的AI大模型"></a>第二步，下载你心仪的AI大模型</h2><p>如何安装模型？在这上面搜索：<a href="https://ollama.com/search">https://ollama.com/search</a> ，找到心仪的模型后到它的详情页，选择你要的型号，复制旁边的命令，Win+R打开CMD（不会开CMD自己搜一下，反省一下），右键粘贴命令安装</p>
+<img src="/images/运行本地大模型/安装模型.png" style="zoom:33%;" />
+
+<p>安装命令格式为：<code>ollama pull 模型名</code> ，运行命令<code>ollama run 模型名</code> ，停止命令<code>ollama stop 模型名</code> ，删除命令<code>ollama rm 模型名</code> </p>
+<p>（注：你直接使用ollama运行未下载的模型时会自动下载，下载完自动运行）</p>
+<p>一般来说，7b的模型至少需要8G RAM，13b需要16G，70b需要64G。大家量内存而为，不然跑起来真的非常卡顿。（因为要不断的读盘）</p>
+<p>以下是一些常用的模型，推荐选择</p>
+<p><a href="https://ollama.com/library/gemma2">Gemma2</a> （中规中矩，表现优秀，我的电脑跑9B两三秒吐一字）安装命令<code>ollama run gemma2</code></p>
+<p><a href="https://ollama.com/library/phi">phi2 </a> （低配机福音，吐字飞快，可惜不会中文，我的一秒三四个单词）安装命令<code>ollama run phi</code></p>
+<p><a href="https://ollama.com/library/mixtral">mixtral </a> （土豪用的，有8x7b和8x22b两款，22GB和80GB，我的电脑跑不动，嘶~~）安装命令<code>ollama run mixtral</code>	</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>参数</th>
+<th>大小</th>
+<th><code>模型名</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gemma2（谷歌推出的，配置不差的家用电脑推荐用它）</td>
+<td>9B</td>
+<td>5.5G</td>
+<td><code>gemma2</code></td>
+</tr>
+<tr>
+<td>phi2（微软推出的，4 GB 内存即可运行，吐字速度飞快，不懂中文）</td>
+<td>2.7B</td>
+<td>1.6G</td>
+<td><code>phi</code></td>
+</tr>
+<tr>
+<td>Llama3.1</td>
+<td>8B</td>
+<td>4.7G</td>
+<td><code>llama3.1</code></td>
+</tr>
+<tr>
+<td>Llama3.1</td>
+<td>405B</td>
+<td>231G</td>
+<td><code>llama3.1:405b</code></td>
+</tr>
+<tr>
+<td>GLM4</td>
+<td>9B</td>
+<td>5.5G</td>
+<td><code>glm4</code></td>
+</tr>
+<tr>
+<td>Qwen2</td>
+<td>7B</td>
+<td>4.4G</td>
+<td><code>qwen2</code></td>
+</tr>
+<tr>
+<td>Qwen2</td>
+<td>72B</td>
+<td>41G</td>
+<td><code>qwen2:72b</code></td>
+</tr>
+<tr>
+<td>Llama3</td>
+<td>8B</td>
+<td>4.7G</td>
+<td><code>llama3</code></td>
+</tr>
+<tr>
+<td>Llama3</td>
+<td>70B</td>
+<td>40G</td>
+<td><code>llama3:70b</code></td>
+</tr>
+<tr>
+<td>Phi3</td>
+<td>3.8B</td>
+<td>2.3G</td>
+<td><code>phi3</code></td>
+</tr>
+<tr>
+<td>Phi3</td>
+<td>14B</td>
+<td>7.9G</td>
+<td><code>phi3:medium</code></td>
+</tr>
+<tr>
+<td>Gemma2</td>
+<td>27B</td>
+<td>16G</td>
+<td><code>gemma2:27b</code></td>
+</tr>
+<tr>
+<td>Mistral</td>
+<td>7B</td>
+<td>4.1G</td>
+<td><code>mistral</code></td>
+</tr>
+<tr>
+<td>Starling</td>
+<td>7B</td>
+<td>4.1G</td>
+<td><code>starling-lm</code></td>
+</tr>
+<tr>
+<td>CodeLlama</td>
+<td>7B</td>
+<td>3.8G</td>
+<td><code>codellama</code></td>
+</tr>
+<tr>
+<td>LLaVA</td>
+<td>7B</td>
+<td>4.5G</td>
+<td><code>llava</code></td>
+</tr>
+<tr>
+<td>Solar</td>
+<td>10.7B</td>
+<td>6.1G</td>
+<td><code>solar</code></td>
+</tr>
+</tbody></table>
+<p>安装完了吧？装完了往下看</p>
+<h2 id="第三步，运行大模型，并与之对话"><a href="#第三步，运行大模型，并与之对话" class="headerlink" title="第三步，运行大模型，并与之对话"></a>第三步，运行大模型，并与之对话</h2><p>使用<code>ollama run 模型名</code>运行你下载的大模型并与之交互式对话，你也可以用<code>ollama run 模型名 &quot;你的问题&quot;</code>来问问题，该命令不会进入交互式输入模式。以下是我的电脑跑Gemma2的效果和性能开销，在跑的时候CPU占用60%左右</p>
+<img src="/images/运行本地大模型/Gemma2.png" style="zoom:50%;" />
+
+<img src="/images/运行本地大模型/性能开销.png" style="zoom:50%;" />
+
+<p>你以为折腾这些就只能聊天吗，不止！往下看！</p>
+<h2 id="在生活中运用大模型"><a href="#在生活中运用大模型" class="headerlink" title="在生活中运用大模型"></a>在生活中运用大模型</h2><p>在此之前，你可以给Ollama开启跨域访问功能（Ollama默认API只能用127.0.0.1访问，要在别的电脑上使用需要设置跨域访问，若你只想在当前电脑上使用则跳过当前步骤）</p>
+<p>设置跨域访问</p>
+<ol>
+<li>右键此电脑图标，点击属性</li>
+<li>在系统关于界面，下滑到最下面，点击高级系统设置</li>
+<li>在弹出的窗口中点击环境变量</li>
+<li>在上方的用户环境变量新建两个用户变量，变量名OLLAMA_ORIGINS和OLLAMA_HOST，变量值设为*和0.0.0.0:11434。</li>
+<li>按确定保存，然后在托盘找到羊驼图标，右键退出重新打开</li>
+</ol>
+<h3 id="1-网页翻译"><a href="#1-网页翻译" class="headerlink" title="1.网页翻译"></a>1.网页翻译</h3><blockquote>
+<p>请使用Gemma2模型，Phi不会外语</p>
+</blockquote>
+<p>先安装沉浸式翻译插件：<a href="https://immersivetranslate.com/zh-Hans/">https://immersivetranslate.com/zh-Hans/</a></p>
+<p>安装好后到插件设置里，点击翻译服务，将其他的服务都关掉，将OpenAI设为默认，然后点击OpenAI名字进到设置，将沉浸式翻译API改为自定义API Key，API Key随便输几个字，自定义接口地址协议从https改成http，将地址改为http:&#x2F;&#x2F;你的IP&#x2F;v1&#x2F;chat&#x2F;completions。这里IP设置成你的IP，如果服务在本机运行可以设置成127.0.0.1，然后勾选输入自定义模型名称，将其改为你运行的模型名，最后拉到最上面，点击“点击测试服务”，提示验证成功你就大功告成了。</p>
+<p>如果遇到问题，欢迎留言反馈！</p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>AI大模型</tag>
+        <tag>本地AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cloudflare人机验证插入测试</title>
+    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/Cloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E6%8F%92%E5%85%A5%E6%B5%8B%E8%AF%95.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>加入Cloudflare的人机验证很简单，添加以下代码即可</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;challenges.cloudflare.com&#x2F;turnstile&#x2F;v0&#x2F;api.js&quot; async defer&gt;&lt;&#x2F;script&gt;
+
+&lt;div class&#x3D;&quot;cf-turnstile&quot; data-sitekey&#x3D;&quot;你的KEY&quot;&gt;&lt;&#x2F;div&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>将其中的”你的KEY“替换成你的KEY，创建方法打开<a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a> ，登录或注册一个Cloudflare账号，然后打开Turnstile选项，添加小组件，按提示填写即可</p>
+<p>效果：</p>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAA1QAvsdz0ogdqDl"></div>
+
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+]]></content>
+      <categories>
+        <category>网站维护</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>Cloudflare</tag>
+        <tag>Cloudflare人机验证</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Security.txt创建和使用</title>
+    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/Security.txt%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="1-什么是Security-txt"><a href="#1-什么是Security-txt" class="headerlink" title="1.什么是Security.txt"></a>1.什么是Security.txt</h2><p>Security.txt文件是一种标准方法，用于让网站管理员、所有者在站点上发布安全联系信息，以便安全研究人员和用户报告漏洞或安全问题。这种文件通常放在网站的.well-known目录下，可以被自动化工具和搜索引擎找到。</p>
+<p>一个完整的Security.txt包含以下信息：</p>
+<pre class="line-numbers language-none"><code class="language-none"># security.txt
+# 信息安全联系文件
+
+Contact:   
+Encryption: 
+Acknowledgements: 
+Preferred-Languages: 
+Policy: 
+Hiring: 
+Expires: 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>解释</strong></p>
+<p><strong>Contact</strong>: 安全联系信息，例如你的电子邮件地址。</p>
+<p><strong>Encryption</strong>: 放置公钥的 URL，用于安全地发送敏感信息。</p>
+<p><strong>Acknowledgements</strong>: 感谢页面的 URL，用于致谢报告漏洞的人员。（连声感谢都没人家干嘛给你报告漏洞）</p>
+<p><strong>Preferred-Languages</strong>: 首选语言，用逗号分隔。（例如：<code>zh, en</code> ）</p>
+<p><strong>Policy</strong>: 安全政策的 URL，包含如何报告漏洞的详细信息。（可有可无吧）</p>
+<p><strong>Hiring</strong>: 安全职位招聘的 URL，若你希望雇佣安全研究人员或有空缺职位。（没有就别填，省的让费人家时间）</p>
+<p><strong>Expires</strong>: 信息的过期日期和时间，用于指明该文件何时不再有效。（例如 2100-01-01T00:00:00.000Z）</p>
+<p>注：公钥使用PGP公钥， <a href="./%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%B8%8E%E4%BB%96%E4%BA%BA%E4%BA%A4%E6%B5%81%E4%BD%BF%E7%94%A8PGP%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86%EF%BC%9F">如何创建并与他人交流使用PGP密钥加密？</a></p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>网站维护</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>Security.txt</tag>
+        <tag>Security.txt怎么用</tag>
+        <tag>Security.txt如何使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何创建并与他人交流使用PGP密钥加密？</title>
+    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%B8%8E%E4%BB%96%E4%BA%BA%E4%BA%A4%E6%B5%81%E4%BD%BF%E7%94%A8PGP%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86%EF%BC%9F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="如何创建并与他人交流使用PGP密钥加密？"><a href="#如何创建并与他人交流使用PGP密钥加密？" class="headerlink" title="如何创建并与他人交流使用PGP密钥加密？"></a>如何创建并与他人交流使用PGP密钥加密？</h2><p>GPG，又称为GnuPG，全称是Gnu Private Guard，即GNU隐私卫士。GPG是以PGP算法为核心的强大的加密软件。但GPG项目是一套命令行程序，而且是为 Linux 等开源操作系统设计的。那么在Windows平台下如何使用GPG呢？不用担心，Gpg4win就是Windows平台GPG及图形前端的集合安装包。</p>
+<p>简单介绍一下，Gpg4win是一款非对称加密方式软件。简单来讲，就是用公钥加密文件，用私钥解密文件。如果你需要发送加密信息，首先获取接收者的公钥，然后利用该公钥加密后传递，对方利用公钥对应的私钥就可解密。也就是说，公钥是锁，私钥是钥匙。非对称加密方式很好地解决了传递机密信息的问题。</p>
+<h2 id="下载安装Gpg4win"><a href="#下载安装Gpg4win" class="headerlink" title="下载安装Gpg4win"></a>下载安装Gpg4win</h2><p>请到官方网站下载：<a href="http://www.gpg4win.org/">http://www.gpg4win.org/</a><br>之后运行安装程序，保持默认设置即可。安装完成后会要求设置信任的根证书，勾选下方的Root certificate defined or skip configuration（根证书已定义或跳过设置）即可。安装好后叫Kleopatra</p>
+<h2 id="创建密钥对"><a href="#创建密钥对" class="headerlink" title="创建密钥对"></a>创建密钥对</h2><ol>
+<li>运行Kleopatra，点击: 新建OpenPGP密钥对，会弹出OpenPGP证书创建向导</li>
+<li>填入名字、电子邮箱地址。（填写了电子邮件就可以在后面上传密钥服务器让别人搜邮箱地址到你的证书）</li>
+<li>点击Advanced Settings，可以进行高级设置，为了增强安全性，建议Key Material栏选择最长的4096 bits，你也可以勾选使用密码句保护生成的密钥，当然，可有可无</li>
+<li>点击OK，如果你勾选使用密码句保护生成的密钥，那么这一步会要求你输入密码，请一定要牢记！以后使用都要密钥！</li>
+<li>在创建的过程中，可以在随便上网读写磁盘，电脑将利用IO生成随机数。</li>
+<li>创建完成！</li>
+</ol>
+<h2 id="上传公钥到PGP公钥服务器"><a href="#上传公钥到PGP公钥服务器" class="headerlink" title="上传公钥到PGP公钥服务器"></a>上传公钥到PGP公钥服务器</h2><p>公钥加密信息发给私钥持有人，私钥持有人使用私钥解密。如果想要别人给你发送加密信息，别人就要知道你的公钥才行。公钥之所以称为公钥，就是因为它是公开的。接下来，我们需要把自己的公钥公之于众，上传到专门的服务器上。这里以上传到MIT的PGP公钥服务器为例。</p>
+<ol>
+<li>在Kleopatra主界面右键点击要导出的秘钥，点击导出或按CTRL+E，输入保存路径和文件名，点击保存后会得到一个asc文件。</li>
+<li>使用文本编辑器（记事本、Visual Code）打开刚才生成的asc文件，复制全部内容。</li>
+<li>使用浏览器访问MIT的PGP公钥服务器<a href="http://pgp.mit.edu/%EF%BC%8C%E5%B0%86%E5%88%9A%E6%89%8D%E5%A4%8D%E5%88%B6%E7%9A%84%E5%86%85%E5%AE%B9%E9%BB%8F%E8%B4%B4%E5%88%B0%E2%80%9CSubmit">http://pgp.mit.edu/，将刚才复制的内容黏贴到“Submit</a> a key”下方的文本框里，点击Submit this key to the key server!。上传成功后，别人搜索你的邮箱即可获取你的公钥。</li>
+</ol>
+<p>反过来，如果你想给别人发送加密信息，就需要获取他的公钥。假如我想发送给<a href="mailto:&#x45;&#x74;&#x68;&#x61;&#x6e;&#105;&#x65;&#108;&#64;&#49;&#x30;&#48;&#x37;&#x31;&#51;&#x2e;&#120;&#x79;&#x7a;">&#x45;&#x74;&#x68;&#x61;&#x6e;&#105;&#x65;&#108;&#64;&#49;&#x30;&#48;&#x37;&#x31;&#51;&#x2e;&#120;&#x79;&#x7a;</a>，则需要通过以下步骤获取相应的公钥。</p>
+<ol>
+<li>使用浏览器访问MIT的PGP公钥服务器<a href="http://pgp.mit.edu/%EF%BC%8C%E5%9C%A8%E2%80%9CExtract">http://pgp.mit.edu/，在“Extract</a> a key”下方的文本框输入<a href="mailto:&#69;&#x74;&#104;&#97;&#110;&#x69;&#x65;&#108;&#64;&#49;&#x30;&#48;&#55;&#49;&#x33;&#x2e;&#x78;&#x79;&#122;">&#69;&#x74;&#104;&#97;&#110;&#x69;&#x65;&#108;&#64;&#49;&#x30;&#48;&#55;&#49;&#x33;&#x2e;&#x78;&#x79;&#122;</a>，如下图所示。之后点击Do the search!。</li>
+<li>在搜索结果页中点击相应的keyID，会进入一个有一长串乱码的页面。复制该页面的全部内容。</li>
+<li>新建并打开文本文档，粘贴刚才复制的内容，保存。文件名随意，例如“123.asc”。</li>
+<li>在Kleopatra主界面点击左上角的文件——导入或按CTRL+I，选择刚才保存的文件，点击打开。这样就成功导入了一个公钥。或者直接拖动刚刚保存的文件到Kleopatra</li>
+</ol>
+<h2 id="加密文本"><a href="#加密文本" class="headerlink" title="加密文本"></a>加密文本</h2><p>下面的例子将演示如何加密一段文本并通过邮件发送给别人。</p>
+<ol>
+<li>新建并打开文本文档，输入你想要加密的文本（即原文），保存。文件名随意，例如“666.txt”。（你也可以加密其他已有文件哦，直接跳过该步骤）</li>
+<li>在Kleopatra主界面点击签名&#x2F;加密，选择刚才保存的文本文档或其他你想加密的文件。</li>
+<li>之后弹出的窗口中间有3个可勾选的选项，分别是签名身份、为我加密、为他人加密。这里勾选为我加密就好。</li>
+<li>点击加密，出现“加密成功”就是成功了（废话）</li>
+<li>加密后的文件会在文件的同一路径生成一个相同名称后缀是gpg的文件，将这个文件发给目标即可，你也可以用文本编辑器（记事本、Visual Code）打开该文件复制里面的密文发送</li>
+</ol>
+<h2 id="解密文本"><a href="#解密文本" class="headerlink" title="解密文本"></a>解密文本</h2><p>下面的例子将演示如何解密一封收到的密文。</p>
+<ol>
+<li>复制收到的密文，新建并打开文本文档，粘贴，保存。文件名随意，例如“999.txt”。（如果是gpg文件跳过该步骤）</li>
+<li>在Kleopatra主界面点击 解密&#x2F;校验，选择刚才保存的文本文档或gpg文件。</li>
+<li>点击解密（如果没有刚刚创建密钥没设密码那么跳过下一步）</li>
+<li>之后会要求你输入密码，就是你刚刚创建密钥时输入的那个，点击解密。</li>
+<li>解密完成后，点击OK。</li>
+<li>在输出路径找到解密后的文件（和原文件同名）解密前是啥样解密后就啥样。</li>
+</ol>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>网站维护</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>PGP密钥</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>各大搜索引擎的提交入口</title>
+    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8F%90%E4%BA%A4.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="各大搜索引擎导航站提交入口"><a href="#各大搜索引擎导航站提交入口" class="headerlink" title="各大搜索引擎导航站提交入口"></a>各大搜索引擎导航站提交入口</h2><p>当你有了个网站，想要让大家知道，想要流量，应该怎么做？</p>
+<p><strong>1.</strong> 搜索引擎：</p>
+<ul>
+<li><del>百毒</del>，呸，是百度在中文区市场份额最大，但要有备案才能提交</li>
+<li>bing（必应）是微软家的搜索引擎，有国内外两个版本</li>
+<li>360搜索，不温不火，但鉴于360经常劫持主页，估计用过的人不少（我小时候特喜欢用….）</li>
+<li>谷歌，只有你会翻墙，那你一定用过，推荐</li>
+<li>Yandex是俄罗斯最大的搜索引擎，类似俄罗斯的百度</li>
+</ul>
+<p><strong>2.</strong> 各大导航站，例如以前的hao123。</p>
+<p><strong>3.</strong> 博客区，例如萌备，交换友链</p>
+<p><strong>4.</strong>  广告，不推荐</p>
+<p>下面是我爬取的各大搜索引擎，导航站，博客社区的提交链接：</p>
+<blockquote>
+<p>像Tor浏览器用的<a href="https://duckduckgo.com/"><strong>DuckDuckGo</strong></a>隐私搜索引擎使用的是Bing（必应）的索引，也就是你的网站被必应收录了，用<strong>DuckDuckGo</strong>也能搜索到了</p>
+</blockquote>
+<h3 id="1-网站管理员工具大全（主流搜索引擎）："><a href="#1-网站管理员工具大全（主流搜索引擎）：" class="headerlink" title="1.网站管理员工具大全（主流搜索引擎）："></a>1.网站管理员工具大全（主流搜索引擎）：</h3><p>Google网站管理员工具：<a href="http://www.google.com/webmasters/">http://www.google.com/webmasters/</a></p>
+<p>微软Bing管理员工具地址：<a href="http://www.bing.com/toolbox/webmaster/">http://www.bing.com/toolbox/webmaster/</a></p>
+<p>百度站长平台：<a href="http://zhanzhang.baidu.com/">http://zhanzhang.baidu.com/</a></p>
+<p>360搜索站长平台：<a href="http://zhanzhang.so.com/">http://zhanzhang.so.com/</a></p>
+<p>Yandex搜索提交：<a href="http://webmaster.yandex.com/site">http://webmaster.yandex.com/site</a></p>
+<h3 id="2-搜索引擎提交"><a href="#2-搜索引擎提交" class="headerlink" title="2.搜索引擎提交"></a>2.搜索引擎提交</h3><p>360搜索引擎登录入口：<a href="http://info.so.360.cn/site_submit.html">http://info.so.360.cn/site_submit.html</a></p>
+<p>即刻搜索网站提交入口：<a href="http://zz.jike.com/submit/genUrlForm">http://zz.jike.com/submit/genUrlForm</a></p>
+<p>盘古数据开放平台：<a href="http://open.panguso.com/data/resource/url/new">http://open.panguso.com/data/resource/url/new</a></p>
+<p>百度搜索网站登录口：<a href="http://www.baidu.com/search/url_submit.html">http://www.baidu.com/search/url_submit.html</a></p>
+<p>百度单个网页提交入口：<a href="http://zhanzhang.baidu.com/sitesubmit">http://zhanzhang.baidu.com/sitesubmit</a></p>
+<p>Google网站登录口：<a href="https://www.google.com/webmasters/tools/submit-url">https://www.google.com/webmasters/tools/submit-url</a></p>
+<p>Google新闻网站内容：<a href="http://www.google.com/support/news_pub/bin/request.py?contact_type=suggest_content&hl=cn">http://www.google.com/support/news_pub/bin/request.py?contact_type=suggest_content&amp;hl=cn</a></p>
+<p>bing(必应)网页提交登录入口：<a href="http://www.bing.com/toolbox/submit-site-url">http://www.bing.com/toolbox/submit-site-url</a></p>
+<p>简搜搜索引擎登陆口：<a href="http://www.jianso.com/add_site.html">http://www.jianso.com/add_site.html</a></p>
+<p>搜狗网站收录提交入口:<a href="http://www.sogou.com/feedback/urlfeedback.php">http://www.sogou.com/feedback/urlfeedback.php</a></p>
+<p>SOSO搜搜网站收录提交入口:<a href="http://www.soso.com/help/usb/urlsubmit.shtml">http://www.soso.com/help/usb/urlsubmit.shtml</a></p>
+<p>雅虎中国网站登录口：<a href="http://sitemap.cn.yahoo.com/">http://sitemap.cn.yahoo.com/</a></p>
+<p>网易有道搜索引擎登录口：<a href="http://tellbot.youdao.com/report">http://tellbot.youdao.com/report</a></p>
+<p>中搜免费登录服务：<a href="http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm">http://register.zhongsou.com/NetSearch/frontEnd/free_protocol.htm</a></p>
+<p>MSN必应网站登录口：<a href="http://cn.bing.com/docs/submit.aspx?FORM=WSDD2">http://cn.bing.com/docs/submit.aspx?FORM=WSDD2</a></p>
+<p>Alexa网站登录入口：<a href="http://www.alexa.com/help/webmasters">http://www.alexa.com/help/webmasters</a></p>
+<p>TOM搜索网站登录口：<a href="http://search.tom.com/tools/weblog/log.php">http://search.tom.com/tools/weblog/log.php</a></p>
+<p>铭万网B2B(必途)网址登陆口：<a href="http://search.b2b.cn/pageIncluded/AddPage.php">http://search.b2b.cn/pageIncluded/AddPage.php</a></p>
+<p>蚁搜搜索网站登录口：<a href="http://www.antso.com/apply.asp">http://www.antso.com/apply.asp</a></p>
+<p>快搜搜索网站登录口：<a href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp</a></p>
+<p>汕头搜索登录口：<a href="http://www.stsou.com/join.asp">http://www.stsou.com/join.asp</a></p>
+<p>孙悟空搜索网站登录：<a href="http://www.swkong.com/add.php">http://www.swkong.com/add.php</a></p>
+<p>天网网站登陆口：<a href="http://home.tianwang.com/denglu.htm">http://home.tianwang.com/denglu.htm</a></p>
+<p>速搜全球登陆口：<a href="http://www.suso.com.cn/suso/link.asp">http://www.suso.com.cn/suso/link.asp</a></p>
+<p>酷帝网站目录提交入口：<a href="http://www.coodir.com/accounts/addsite.asp">http://www.coodir.com/accounts/addsite.asp</a></p>
+<p>快搜网站登陆口：<a href="http://www.kuaisou.com/main/inputweb.asp">http://www.kuaisou.com/main/inputweb.asp</a></p>
+<p>搜猫搜索引擎登录入口：<a href="http://test.somao123.com/search/url_submit.php">http://test.somao123.com/search/url_submit.php</a></p>
+<p>泽许搜索网站登录入口：<a href="http://www.zxyt.cn/guide/?m=adc4&Nsid=a3c6847db163587d&wver=t">http://www.zxyt.cn/guide/?m=adc4&amp;Nsid=a3c6847db163587d&amp;wver=t</a></p>
+<p>一淘网开放搜索申请入口：<a href="http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ">http://open.etao.com/apply_intro.htm?spm=0.0.0.40.9VF4FQ</a></p>
+<h3 id="3-独立博客收录提交网址"><a href="#3-独立博客收录提交网址" class="headerlink" title="3.独立博客收录提交网址"></a>3.独立博客收录提交网址</h3><p>博客大全提交：<a href="https://daohang.lusongsong.com/login.html">https://daohang.lusongsong.com/login.html</a></p>
+<p>萌备<a href="https://icp.gov.moe/join.php">https://icp.gov.moe/join.php</a></p>
+<h3 id="4-英文搜索网站收录地址"><a href="#4-英文搜索网站收录地址" class="headerlink" title="4.英文搜索网站收录地址"></a>4.英文搜索网站收录地址</h3><p>Dmoz网站登录入口：<a href="http://www.dmoz.org/World/Chinese_Simplified">http://www.dmoz.org/World/Chinese_Simplified</a></p>
+<p>NetSearch登陆口：<a href="http://intelseek.com/add_url_form.asp">http://intelseek.com/add_url_form.asp</a></p>
+<p>Freewebsubmission.com 搜索引擎批量提交：<a href="http://www.freewebsubmission.com/">http://www.freewebsubmission.com/</a></p>
+<p>快速登录20个搜索引擎：<a href="http://www.trafficzap.com/searchsubmit.php">http://www.trafficzap.com/searchsubmit.php</a></p>
+<p>HotBot登录口：<a href="http://www.hotbot.com/prefs_filters.asp?prov=Inktomifilter=web">http://www.hotbot.com/prefs_filters.asp?prov=Inktomifilter=web</a></p>
+<p>netscape登录口：<a href="http://about.netscape.com/">http://about.netscape.com/</a></p>
+<p>AddMe登陆口 ：<a href="http://www.addme.com/submission/free-submission-start.php">http://www.addme.com/submission/free-submission-start.php</a></p>
+<p>NetSearch登录口：<a href="http://www.netsearch.org/promo/submit.htm">http://www.netsearch.org/promo/submit.htm</a></p>
+<p>AddMe登录口：<a href="http://www.addme.com/s0new.htm">http://www.addme.com/s0new.htm</a></p>
+<p>Link it All登录口：<a href="http://www.that-special-gift.com/ffa/links.html">http://www.that-special-gift.com/ffa/links.html</a></p>
+<p>Voyager登录口：<a href="http://www.voyagersearch.com/cgi-bin/q/search.cgi?NAVG=AddURL">http://www.voyagersearch.com/cgi-bin/q/search.cgi?NAVG=AddURL</a></p>
+<p>Gigablast登录口：<a href="http://www.gigablast.com/addurl">http://www.gigablast.com/addurl</a></p>
+<p>Aeiwei登录口：<a href="http://www.aeiwi.com/submit.html">http://www.aeiwi.com/submit.html</a></p>
+<p>Infotiger登录口：<a href="http://www.infotiger.com/addurl.html">http://www.infotiger.com/addurl.html</a></p>
+<p>Nationaldirectory登录口：<a href="http://www.nationaldirectory.com/addurl/">http://www.nationaldirectory.com/addurl/</a></p>
+<p>WhatUseek登录口：<a href="http://www.whatuseek.com/addurl-secondary.shtml">http://www.whatuseek.com/addurl-secondary.shtml</a></p>
+<p>Exactseek登录口：<a href="http://www.exactseek.com/add.html">http://www.exactseek.com/add.html</a></p>
+<p>Walhello登录口：<a href="http://www.walhello.com/addlinkgl.html">http://www.walhello.com/addlinkgl.html</a></p>
+<p>Scrubtheweb登录口：<a href="http://www.scrubtheweb.com/addurl.html">http://www.scrubtheweb.com/addurl.html</a></p>
+<h3 id="5-网址导航站收录申请接口大全"><a href="#5-网址导航站收录申请接口大全" class="headerlink" title="5.网址导航站收录申请接口大全"></a>5.网址导航站收录申请接口大全</h3><p>hao123网址收录：<a href="http://submit.hao123.com/static/auditSys/wztj.htm">http://submit.hao123.com/static/auditSys/wztj.htm</a></p>
+<p>360网址导航收录入口：<a href="http://hao.360.cn/url.html">http://hao.360.cn/url.html</a></p>
+<p>谷歌265上网导航网站提交：<a href="http://www.265.com/submit.html">http://www.265.com/submit.html</a></p>
+<p>百度网址导航提交入口：<a href="http://site.baidu.com/quality/quality_form.php">http://site.baidu.com/quality/quality_form.php</a></p>
+<p>2345网址导航申请收录入口：<a href="http://www.2345.com/help/submitweb.htm">http://www.2345.com/help/submitweb.htm</a></p>
+<p>必应网址导航提交：<a href="https://feedback.discoverbing.com/default.aspx?locale=zh-CN&productkey=bingweb&scrx=1">https://feedback.discoverbing.com/default.aspx?locale=zh-CN&amp;productkey=bingweb&amp;scrx=1</a></p>
+<p>搜狗网址导航收录入口：<a href="http://123.sogou.com/about/shoulu.html">http://123.sogou.com/about/shoulu.html</a></p>
+<p>博客大全申请收录入口：<a href="http://lusongsong.com/daohang/login.asp">http://lusongsong.com/daohang/login.asp</a></p>
+<p>QQ导航网站收录申请规则：<a href="http://support.qq.com/cgi-bin/content">http://support.qq.com/cgi-bin/content</a>_…</p>
+<p>搜狗网址导航收录申请：<a href="http://123.sogou.com/shoulu.html">http://123.sogou.com/shoulu.html</a></p>
+<p>114啦网址收录：<a href="http://url.114la.com/">http://url.114la.com/</a></p>
+<p>金山网址导航收录申请：<a href="http://123.duba.net/apply/">http://123.duba.net/apply/</a></p>
+<p>瑞星网址导航收录申请：<a href="http://hao.rising.cn/catalog/slsq.html">http://hao.rising.cn/catalog/slsq.html</a></p>
+<p>好看123网址导航收录申请：<a href="http://www.haokan123.com/urlsubmit/url_submit.html">http://www.haokan123.com/urlsubmit/url_submit.html</a></p>
+<p>466傲游网址导航申请收录网站：<a href="http://bbs.maxthon.cn/viewthread.php?tid=584498&extra=">http://bbs.maxthon.cn/viewthread.php?tid=584498&amp;extra=</a></p>
+<p>1616网址导航收录：<a href="http://www.1616.net/jd/misc/coop.htm">http://www.1616.net/jd/misc/coop.htm</a></p>
+<p>淘网址(tao123)收录申请：<a href="http://krq.tao123.com/collectsite/">http://krq.tao123.com/collectsite/</a></p>
+<p>0460网站之家收录：<a href="http://www.0460.com/member/login.aspx">http://www.0460.com/member/login.aspx</a></p>
+<p>赶驴啊网站收录提交入口：<a href="http://www.ganlva.com/url-submit/">http://www.ganlva.com/url-submit/</a></p>
+<p>hao123网站收录规则：<a href="http://www.hao123.cn/hezuo.htm">http://www.hao123.cn/hezuo.htm</a></p>
+<p>114网址导航收录申请：<a href="http://www.114.com.cn/index.php?view=websubmit">http://www.114.com.cn/index.php?view=websubmit</a></p>
+<p>726网址收录口：<a href="http://www.726.com/url-submit/">http://www.726.com/url-submit/</a></p>
+<p>1166网址收录口：<a href="http://www.1166.com/tool/add.html">http://www.1166.com/tool/add.html</a></p>
+<p>中商网址导航链接提交：<a href="http://www.cb114.cn/apps/about.html">http://www.cb114.cn/apps/about.html</a></p>
+<p>7999网址收录口：<a href="http://7999.com/misc/coop.htm">http://7999.com/misc/coop.htm</a></p>
+<p>369网址大全新站提交：<a href="http://wvw.369.com/us/url.htm">http://wvw.369.com/us/url.htm</a></p>
+<p>568网址导航网址提交：<a href="http://www.568.cc/abc/website-add.html">http://www.568.cc/abc/website-add.html</a></p>
+<p>找军事网址提交：<a href="http://www.zhaojunshi.com/url-submit/">http://www.zhaojunshi.com/url-submit/</a></p>
+<p>19687网站大全网址提交：<a href="http://www.19687.com/apps/about.html#add">http://www.19687.com/apps/about.html#add</a></p>
+<p>易看网址大全：<a href="http://www.ekan123.com/shoulu.htm">http://www.ekan123.com/shoulu.htm</a></p>
+<p>1181网址登陆：<a href="http://link.1181.com/adduser.asp">http://link.1181.com/adduser.asp</a></p>
+<p>57616网址导航登陆：<a href="http://www.57616.com/apps/about.html#add">http://www.57616.com/apps/about.html#add</a></p>
+<p>Jia123网址网址提交：<a href="http://bbs.jia123.com/index.asp?boardid=2">http://bbs.jia123.com/index.asp?boardid=2</a></p>
+<h3 id="6-开放平台注册应用大全："><a href="#6-开放平台注册应用大全：" class="headerlink" title="6.开放平台注册应用大全："></a>6.开放平台注册应用大全：</h3><p>搜搜论坛开放计划：<a href="http://open.soso.com/datacoop/bbs/submitbbs.html">http://open.soso.com/datacoop/bbs/submitbbs.html</a> （仅适用于Discus，会带来大量外链）</p>
+<p>百度数据开放平台：<a href="http://open.baidu.com/data/">http://open.baidu.com/data/</a></p>
+<p>新浪微博开放平台：<a href="http://open.weibo.com/">http://open.weibo.com/</a></p>
+<p>腾讯微博开放平台：<a href="http://dev.open.t.qq.com/">http://dev.open.t.qq.com/</a></p>
+<p>QQ互联：<a href="http://connect.qq.com/">http://connect.qq.com/</a></p>
+<p>百度链接开放平台：<a href="http://dev.baidu.com/connect/">http://dev.baidu.com/connect/</a></p>
+<p>人人网开放平台：<a href="http://dev.renren.com/">http://dev.renren.com/</a></p>
+<p>网易微博开放平台：<a href="http://open.t.163.com/">http://open.t.163.com/</a></p>
+<p>搜狐微博开放平台：<a href="http://open.t.sohu.com/">http://open.t.sohu.com/</a></p>
+<p>淘宝开放平台：<a href="http://open.taobao.com/">http://open.taobao.com</a></p>
+<p>支付好开放平台：<a href="http://bizpartner.alipay.com/denglu/index.htm">http://bizpartner.alipay.com/denglu/index.htm</a></p>
+<p>豆瓣API key：<a href="http://www.douban.com/service/apikey/apply">http://www.douban.com/service/apikey/apply</a></p>
+<p>天涯开放平台：<a href="http://open.tianya.cn/">http://open.tianya.cn/</a></p>
+<p>Google站长开发者：<a href="https://www.google.com/accounts/ManageDomains">https://www.google.com/accounts/ManageDomains</a></p>
+<p>开心开放平台：<a href="http://open.kaixin001.com/">http://open.kaixin001.com/</a></p>
+<p>天翼开放平台：<a href="http://open.189.cn/">http://open.189.cn/</a></p>
+<p>360应用开放平台：<a href="http://dev.app.360.cn/">http://dev.app.360.cn/</a></p>
+<p>雅虎开放平台：<a href="https://developer.apps.yahoo.com/projects">https://developer.apps.yahoo.com/projects</a></p>
+<p>Twitter开放平台：<a href="https://dev.twitter.com/">https://dev.twitter.com/</a></p>
+<p>Facebook开放平台：<a href="https://developers.facebook.com/">https://developers.facebook.com/</a></p>
+<h3 id="7-向搜索引擎递交sitemap大全（网站地图）："><a href="#7-向搜索引擎递交sitemap大全（网站地图）：" class="headerlink" title="7.向搜索引擎递交sitemap大全（网站地图）："></a>7.向搜索引擎递交sitemap大全（网站地图）：</h3><p>腾讯搜搜：<a href="http://open.soso.com/sitemap/">http://open.soso.com/sitemap/</a> 搜搜开放平台提供了提交sitemap的功能。</p>
+<p>百度：<a href="http://sitemap.baidu.com/">http://sitemap.baidu.com/</a> 百度站长平台，期待很久了，可惜一直在内测中。暂时无法提交。</p>
+<p>雅虎中国：<a href="http://sitemap.cn.yahoo.com/">http://sitemap.cn.yahoo.com/</a> 雅虎中国的站长工具很早就提供了提交sitemap的功能，还支持rss。</p>
+<p>Google：<a href="https://www.google.com/webmasters/tools/">https://www.google.com/webmasters/tools/</a> 可谓最强大的网站管理员工具，提交sitemap当然是最基本的。</p>
+<p>Yandex：<a href="http://webmaster.yandex.com/">http://webmaster.yandex.com/</a> Yandex是俄罗斯最大的搜索引擎，相对于俄罗斯的百度。管理员工具提供了类似Google Webmaster的功能，非常强大。</p>
+<p>Bing：<a href="http://www.bing.com/toolbox/webmaster/">http://www.bing.com/toolbox/webmaster/</a> 微软的强力产品，在美国市场占有一定搜索份额。管理员工具功能也很强大。</p>
+<p>Yahoo!：<a href="https://siteexplorer.search.yahoo.com/">https://siteexplorer.search.yahoo.com/</a> 雅虎英文站，因为同微软的bing合作关系，提交sitemap后提示已经提交给了微软。</p>
+<p>Ask：<a href="http://submissions.ask.com/ping?sitemap=http://www.YourWebSite.com/sitemap.xml">http://submissions.ask.com/ping?sitemap=http://www.YourWebSite.com/sitemap.xml</a> 修改红色部分的url为自己的sitemap地址，直接在浏览器提交。</p>
+<p>最后，在robots.txt文件中添加sitemap，搜索引擎抓取robots.txt的时候就可以获取sitemap。方法非常简单，只要在robots.txt的第一行或者最后一行按以下格式加入sitemap地址即可。</p>
+<p>Sitemap: <a href="http://www.example.com/sitemap.xml">http://www.example.com/sitemap.xml</a></p>
+<h3 id="8-网站被K申诉通道"><a href="#8-网站被K申诉通道" class="headerlink" title="8.网站被K申诉通道"></a>8.网站被K申诉通道</h3><p>百度网页申诉：<a href="http://zhanzhang.baidu.com/feedback">http://zhanzhang.baidu.com/feedback</a></p>
+<p>腾讯QQ电脑管家网站申诉：<a href="http://guanjia.qq.com/complaint.html">http://guanjia.qq.com/complaint.html</a></p>
+<p>Google网站申诉：<a href="http://www.google.com/webmasters/">http://www.google.com/webmasters/</a></p>
+<p>雅虎网站申诉：<a href="http://help.cn.yahoo.com/feedback.html?product=onesearch&source=1W5">http://help.cn.yahoo.com/feedback.html?product=onesearch&amp;source=1W5</a></p>
+<p>知道创宇（Scanv）安全联盟申诉通道：<a href="http://www.scanv.com/seccenter/appeal/?domain=">http://www.scanv.com/seccenter/appeal/?domain=</a></p>
+<p>360网盾申诉：<a href="http://wd.360.cn/appeal/appeal.html">http://wd.360.cn/appeal/appeal.html</a></p>
+<p>金山云安全网站申诉：<a href="http://fish.ijinshan.com/Kws/appeal">http://fish.ijinshan.com/Kws/appeal</a> (注：搜狗浏览器遇到拦截，也可在金山申诉)</p>
+<p>瑞星卡卡网站申诉：<a href="http://tool.ikaka.com/ssinfo.asp">http://tool.ikaka.com/ssinfo.asp</a></p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>网站维护</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>网站提交</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML教程</title>
     <url>/%E7%BC%96%E7%A8%8B/HTML/HTML01.%E6%95%99%E7%A8%8B.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="HTML-教程-HTML5-标准"><a href="#HTML-教程-HTML5-标准" class="headerlink" title="HTML 教程- (HTML5 标准)"></a>HTML 教程- (HTML5 标准)</h1><p><img src="/2024%5C07%5C31%5CHTML%E6%95%99%E7%A8%8B%5Cimage-icon.png"></p>
@@ -3883,69 +4343,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>HTML标题</title>
-    <url>/%E7%BC%96%E7%A8%8B/HTML/HTML07.%E6%A0%87%E9%A2%98.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="HTML-标题"><a href="#HTML-标题" class="headerlink" title="HTML 标题"></a>HTML 标题</h1><p>在 HTML 文档中，标题很重要，它体现的是文档的层级，帮助读者了解文章结构</p>
-<h2 id="HTML-标题-1"><a href="#HTML-标题-1" class="headerlink" title="HTML 标题"></a>HTML 标题</h2><p>标题（Heading）是通过 <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> 标签进行定义的。</p>
-<p><code>&lt;h1&gt;</code> 定义最大的标题。 <code>&lt;h6&gt;</code> 定义最小的标题。例如：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;h1&gt;这是一个标题。&lt;&#x2F;h1&gt;
-&lt;h2&gt;这是一个标题。&lt;&#x2F;h2&gt;
-&lt;h3&gt;这是一个标题。&lt;&#x2F;h3&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>效果</p>
-<h1>这是一个标题。</h1>
-<h2>这是一个标题。</h2>
-<h3>这是一个标题。</h3>
-
-<p><strong>冷知识:</strong> 浏览器会自动地在标题的前后添加空行。</p>
-<hr>
-<h2 id="标题很重要"><a href="#标题很重要" class="headerlink" title="标题很重要"></a>标题很重要</h2><p>请确保将 HTML 标题 标签只用于标题。不要仅仅是为了生成<strong>粗体</strong>或<strong>大号</strong>的文本而使用标题。（尤其是博客，这样会影响文章结构的）</p>
-<p>而且搜索引擎使用标题为你的网页的结构和内容编制索引。</p>
-<p>同时用户可以通过标题来快速浏览网页，所以用标题来呈现文档结构是很重要的。</p>
-<p>应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。</p>
-<hr>
-<h2 id="HTML-水平线"><a href="#HTML-水平线" class="headerlink" title="HTML 水平线"></a>HTML 水平线</h2><hr> 标签在 HTML 页面中创建水平线。
-
-<p><code>&lt;hr&gt;</code> 元素可用于分隔内容。例如</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;
-&lt;hr&gt;
-&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;
-&lt;hr&gt;
-&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>效果：</p>
-<p>这是一个段落。</p> <hr> <p>这是一个段落。</p> <hr> <p>这是一个段落。</p>
-
-<h2 id="HTML-注释"><a href="#HTML-注释" class="headerlink" title="HTML 注释"></a>HTML 注释</h2><p>可以将注释插入 HTML 代码中，这样可以提高你日后重新编辑的可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。</p>
-<p>注释写法如下:</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;!-- 这是一个注释 --&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>效果（看不到的，你可以按F12打开开发者模式查看源码，我有添加）：</p>
-<!-- 这是一个注释 -->
-
-<p><strong>注意:</strong> 开始括号之后（左边的括号）需要紧跟一个叹号 <strong>!</strong> (英文标点符号，中文的无效啊)，结束括号之前（右边的括号）不需要，合理地使用注释可以对未来的代码编辑工作产生帮助。</p>
-<hr>
-<h2 id="HTML-提示-如何查看源代码"><a href="#HTML-提示-如何查看源代码" class="headerlink" title="HTML 提示 - 如何查看源代码"></a>HTML 提示 - 如何查看源代码</h2><p>你是否看过一些漂亮网页然后惊叹它是如何实现的。</p>
-<p>如果你想找到其中的奥秘，只需要按F12，打开开发者模式源码那查看，同时你还可以在开发者工具的左上角选择页面元素查看。</p>
-<p><strong>标签参考手册</strong>：&#x2F;HTMLa.标签参考手册</p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
-]]></content>
-      <categories>
-        <category>编程</category>
-        <category>HTML标记语言</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-        <tag>HTML标记语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML属性</title>
     <url>/%E7%BC%96%E7%A8%8B/HTML/HTML06.%E5%B1%9E%E6%80%A7.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="HTML-属性"><a href="#HTML-属性" class="headerlink" title="HTML 属性"></a>HTML 属性</h1><hr>
@@ -4003,6 +4400,69 @@ int main()
 <td align="left">描述了元素的额外信息 (作为工具条使用)</td>
 </tr>
 </tbody></table>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>
+]]></content>
+      <categories>
+        <category>编程</category>
+        <category>HTML标记语言</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+        <tag>HTML标记语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML标题</title>
+    <url>/%E7%BC%96%E7%A8%8B/HTML/HTML07.%E6%A0%87%E9%A2%98.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="HTML-标题"><a href="#HTML-标题" class="headerlink" title="HTML 标题"></a>HTML 标题</h1><p>在 HTML 文档中，标题很重要，它体现的是文档的层级，帮助读者了解文章结构</p>
+<h2 id="HTML-标题-1"><a href="#HTML-标题-1" class="headerlink" title="HTML 标题"></a>HTML 标题</h2><p>标题（Heading）是通过 <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> 标签进行定义的。</p>
+<p><code>&lt;h1&gt;</code> 定义最大的标题。 <code>&lt;h6&gt;</code> 定义最小的标题。例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;h1&gt;这是一个标题。&lt;&#x2F;h1&gt;
+&lt;h2&gt;这是一个标题。&lt;&#x2F;h2&gt;
+&lt;h3&gt;这是一个标题。&lt;&#x2F;h3&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>效果</p>
+<h1>这是一个标题。</h1>
+<h2>这是一个标题。</h2>
+<h3>这是一个标题。</h3>
+
+<p><strong>冷知识:</strong> 浏览器会自动地在标题的前后添加空行。</p>
+<hr>
+<h2 id="标题很重要"><a href="#标题很重要" class="headerlink" title="标题很重要"></a>标题很重要</h2><p>请确保将 HTML 标题 标签只用于标题。不要仅仅是为了生成<strong>粗体</strong>或<strong>大号</strong>的文本而使用标题。（尤其是博客，这样会影响文章结构的）</p>
+<p>而且搜索引擎使用标题为你的网页的结构和内容编制索引。</p>
+<p>同时用户可以通过标题来快速浏览网页，所以用标题来呈现文档结构是很重要的。</p>
+<p>应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。</p>
+<hr>
+<h2 id="HTML-水平线"><a href="#HTML-水平线" class="headerlink" title="HTML 水平线"></a>HTML 水平线</h2><hr> 标签在 HTML 页面中创建水平线。
+
+<p><code>&lt;hr&gt;</code> 元素可用于分隔内容。例如</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;
+&lt;hr&gt;
+&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;
+&lt;hr&gt;
+&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>效果：</p>
+<p>这是一个段落。</p> <hr> <p>这是一个段落。</p> <hr> <p>这是一个段落。</p>
+
+<h2 id="HTML-注释"><a href="#HTML-注释" class="headerlink" title="HTML 注释"></a>HTML 注释</h2><p>可以将注释插入 HTML 代码中，这样可以提高你日后重新编辑的可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。</p>
+<p>注释写法如下:</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!-- 这是一个注释 --&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>效果（看不到的，你可以按F12打开开发者模式查看源码，我有添加）：</p>
+<!-- 这是一个注释 -->
+
+<p><strong>注意:</strong> 开始括号之后（左边的括号）需要紧跟一个叹号 <strong>!</strong> (英文标点符号，中文的无效啊)，结束括号之前（右边的括号）不需要，合理地使用注释可以对未来的代码编辑工作产生帮助。</p>
+<hr>
+<h2 id="HTML-提示-如何查看源代码"><a href="#HTML-提示-如何查看源代码" class="headerlink" title="HTML 提示 - 如何查看源代码"></a>HTML 提示 - 如何查看源代码</h2><p>你是否看过一些漂亮网页然后惊叹它是如何实现的。</p>
+<p>如果你想找到其中的奥秘，只需要按F12，打开开发者模式源码那查看，同时你还可以在开发者工具的左上角选择页面元素查看。</p>
+<p><strong>标签参考手册</strong>：&#x2F;HTMLa.标签参考手册</p>
 <script src="https://utteranc.es/client.js"
         repo="2010HCY/utterances"
         issue-term="title"
@@ -4562,7 +5022,7 @@ int main()
 <td align="left">规定在文本中的何处适合添加换行符。</td>
 </tr>
 </tbody></table>
-<p>呼，爆肝55分钟，终于完成这个表格了，若有错误，请发邮件到<a href="mailto:&#50;&#48;&#x31;&#48;&#x68;&#x63;&#x79;&#x40;&#112;&#x72;&#x6f;&#x74;&#111;&#x6e;&#46;&#109;&#x65;">&#50;&#48;&#x31;&#48;&#x68;&#x63;&#x79;&#x40;&#112;&#x72;&#x6f;&#x74;&#111;&#x6e;&#46;&#109;&#x65;</a>,或评论留言</p>
+<p>呼，爆肝55分钟，终于完成这个表格了，若有错误，请发邮件到<a href="mailto:&#x32;&#48;&#49;&#48;&#x68;&#x63;&#x79;&#x40;&#112;&#x72;&#x6f;&#x74;&#x6f;&#x6e;&#x2e;&#109;&#x65;">&#x32;&#48;&#49;&#48;&#x68;&#x63;&#x79;&#x40;&#112;&#x72;&#x6f;&#x74;&#x6f;&#x6e;&#x2e;&#109;&#x65;</a>,或评论留言</p>
 <script src="https://utteranc.es/client.js"
         repo="2010HCY/utterances"
         issue-term="title"
@@ -4578,375 +5038,6 @@ int main()
         <tag>编程</tag>
         <tag>HTML标记语言</tag>
         <tag>HTML手册</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客功能更新日志15</title>
-    <url>/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%BB%A3%E7%A0%81%E5%9D%97%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="1-修复代码块显示异常"><a href="#1-修复代码块显示异常" class="headerlink" title="1.修复代码块显示异常"></a>1.修复代码块显示异常</h2><p>修改步骤很简单，打开博客根目录下的_config.yml配置文件（不是主题的），然后将其中配置highlight配置项修改成以下样子：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Writing</span>
-<span class="token key atrule">new_post_name</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>title.md <span class="token comment"># File name of new posts</span>
-<span class="token key atrule">default_layout</span><span class="token punctuation">:</span> post
-<span class="token key atrule">titlecase</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># Transform title into titlecase</span>
-<span class="token key atrule">external_link</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># Open external links in new tab</span>
-  <span class="token key atrule">field</span><span class="token punctuation">:</span> site <span class="token comment"># Apply to the whole site</span>
-  <span class="token key atrule">exclude</span><span class="token punctuation">:</span> <span class="token string">''</span>
-<span class="token key atrule">filename_case</span><span class="token punctuation">:</span> <span class="token number">0</span>
-<span class="token key atrule">render_drafts</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-<span class="token key atrule">post_asset_folder</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-<span class="token key atrule">relative_link</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-<span class="token key atrule">future</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-<span class="token key atrule">syntax_highlighter</span><span class="token punctuation">:</span> prismjs
-<span class="token key atrule">highlight</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-
-<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">' '</span>
-  <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>关键修改点：将highlight关掉，syntax_highlighter设置成prismjs，prismjs要选择主题（我当时没选择折腾了半天）</p>
-<h2 id="把博客的logo换成了svg"><a href="#把博客的logo换成了svg" class="headerlink" title="把博客的logo换成了svg"></a>把博客的logo换成了svg</h2><p>之前使用的是jpg，虽然猛地一看察觉不出什么变化，但仔细看还是很难受，现在换成了svg格式，更清晰，体积更小。</p>
-  <img src="/H.svg" alt="Hlogo" style="max-width: 45%; margin-right: 10px; background-color: #f0f0f0;"/>
-  <img src="/medias/Hlogo徽章.svg" alt="Hlogo徽章" style="max-width: 45%; background-color: #f0f0f0;"/>
-
-<p><strong><a href="https://page.100713.xyz/%E5%8D%9A%E5%AE%A2/Page/svg%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/">svg在线预览工具</a></strong></p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>博客发展历程</category>
-      </categories>
-      <tags>
-        <tag>博客发展历程</tag>
-        <tag>修复显示问题</tag>
-        <tag>修复BUG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何制作一个刷流量脚本</title>
-    <url>/%E7%BC%96%E7%A8%8B/%E5%88%B7%E6%B5%81%E9%87%8F%E8%84%9A%E6%9C%AC%E5%88%B6%E4%BD%9C.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="关于脚本"><a href="#关于脚本" class="headerlink" title="关于脚本"></a>关于脚本</h2><p>适合PCDN用户平衡上下行流量（我不跑PCDN，但我看跑PCDN的有需求才写这个脚本），或者是闲着无聊的人，想把流量卡流量刷光的，想刷对家网站流量的人使用</p>
-<p><strong>脚本特点：</strong></p>
-<ol>
-<li>不会保存到硬盘，而是保存到内存</li>
-<li>不会塞爆内存，每轮脚本执行会清理垃圾</li>
-<li>可以将url改成页面，不一定要是文件</li>
-<li>简单，无需下载其他软件应用，开箱即用</li>
-</ol>
-<p>注：想要效果好点建议找个大文件，比如视频啦，WindowsIOS文件啦，用大文件记得把执行时间调长</p>
-<h2 id="PowerShell脚本实现"><a href="#PowerShell脚本实现" class="headerlink" title="PowerShell脚本实现"></a>PowerShell脚本实现</h2><p>以下为脚本源码</p>
-<pre class="line-numbers language-none"><code class="language-none"># 设置目标 URL
-$url &#x3D; &quot;https:&#x2F;&#x2F;www.travellings.cn&#x2F;assets&#x2F;travelling.png&quot;  # 替换为你希望访问的文件或页面
-
-# 消耗流量的函数
-function Consume-Traffic &#123;
-    try &#123;
-        # 发送一个 HTTP 请求
-        Invoke-WebRequest -Uri $url -Method GET
-        Write-Host &quot;HTTP 请求已发送，流量已消耗&quot;
-    &#125; catch &#123;
-        Write-Host &quot;HTTP 请求失败: $_&quot;
-    &#125;
-
-    # 强制垃圾回收
-    [System.GC]::Collect()
-&#125;
-
-# 定时循环消耗流量
-while ($true) &#123;
-    Consume-Traffic
-    Start-Sleep -Seconds 0.1 # 每 0.1 秒执行一次（你可以根据需要调整时间）
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>新建个文本文档，把以下内容复制进去，修改好文件url和执行时间后，复制修改好后的源码，右键左下角的Windows徽标键或者按Win+X，在弹出的对话框中选择<strong>Windows PowerShell （管理员）</strong> 在Windows PowerShell 中右键粘贴脚本代码，回车即开始刷流量</p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>刷流量</tag>
-        <tag>PowerShell脚本</tag>
-        <tag>源码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>厦门地铁图开源预告</title>
-    <url>/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E5%8E%A6%E9%97%A8%E5%9C%B0%E9%93%81%E5%9B%BE.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="厦门地铁图1-0（标准版-专业版）1-1（专业版）-喷锡版（专业版）制作完毕！"><a href="#厦门地铁图1-0（标准版-专业版）1-1（专业版）-喷锡版（专业版）制作完毕！" class="headerlink" title="厦门地铁图1.0（标准版&amp;专业版）1.1（专业版） 喷锡版（专业版）制作完毕！"></a>厦门地铁图1.0（标准版&amp;专业版）1.1（专业版） 喷锡版（专业版）制作完毕！</h2><p>此工程一共有四个版本，分别是：</p>
-<ol>
-<li><strong>1.0版本</strong> ，此版本有标准版和专业版的，区别在于专业版的用了布尔运算合并了填充区域；</li>
-<li><strong>1.1版本</strong> ，此版本将字符位置移动到了地图上的陆地地区，微调客编区，并将顶上的厦门地铁图及其英文纵向放置；</li>
-<li><strong>喷锡版</strong> ，此版本在1.1版本上将海洋区域放置开窗区喷锡，让锡模拟波光粼粼的大海。</li>
-</ol>
-<p>以下是三个版本的截图，我建议1.0、1.1版本用沉金工艺做比较好看，喷锡版建议用喷锡就好，当然，你也可以用沉金（要是能地铁路线用沉金，海洋部分用喷锡就好了）</p>
-<p>啥？你问我什么时候开源？明年，因为今年开源的话积分会过期（悲~）</p>
-<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.0.png" alt="1.0版本" style="zoom:67%;" />
-
-<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.1.png" alt="1.1版本" style="zoom:67%;" />
-
-<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图喷锡版.png" alt="喷锡版" style="zoom:67%;" />
-
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>嘉立创开源工程</category>
-      </categories>
-      <tags>
-        <tag>嘉立创</tag>
-        <tag>PCB</tag>
-        <tag>硬件开源</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何更改网卡MAC地址？</title>
-    <url>/Windows%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E7%BD%91%E5%8D%A1MAC%E5%9C%B0%E5%9D%80%EF%BC%9F.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="如何更改网卡MAC地址"><a href="#如何更改网卡MAC地址" class="headerlink" title="如何更改网卡MAC地址"></a>如何更改网卡MAC地址</h1><p>有的时候你成功连上了邻居家的Wifi，但没多久因为流量过大啦，或者其他原因被发现并被封了MAC地址，想重连就要改MAC，遂出此教程</p>
-<p>更改MAC很简单：</p>
-<p>首先按Win+R打开运行框，输入regedit回车打开<strong>注册表编辑器</strong>；</p>
-<p>然后打开以下路径： HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class{4D36E972-E325-11CE-BFC1-08002bE10318} ；</p>
-<p>在此项下面有14个子项，我们要找到自己使用的网卡的那一项，</p>
-<p>这时候右键桌面此电脑图标，点击管理，在管理中打开设备管理器，查看自己的网卡，我的网卡叫 Intel(R) Dual Band Wireless-AC 8265 ，这<strong>每个人都不一样</strong>啊，网卡名就是你买的网卡的型号名；</p>
-<p>这时候在注册表编辑器中依次点击0000～0014项，找到右侧窗口中DriverDesc数值数据为Intel(R) Dual Band Wireless-AC 8265的那一项，我的网卡是在0003项下（每个人的不一定一样）；</p>
-<p>这时候右键0003项（每个人的不一定一样），新建字符串值，将其命名为: NetworkAddress （如果已经有了此项就直接更改值），双击NetworkAddress，在弹出的编辑字符串值对话框中输入你想更改的MAC地址，比如006666666666，保存并退出。</p>
-<p>最后，重启电脑或重启网卡，再次查看即可发现MAC地址修改成功了</p>
-<p>注：修改的MAC地址<strong>第二位不能为2、6、A、E</strong>，否则无法修改成功</p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>Windows的使用技巧</category>
-      </categories>
-      <tags>
-        <tag>注册表编辑</tag>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>狐狸-在历史的长河中逐渐污名化</title>
-    <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E7%8B%90%E7%8B%B8-%E5%9C%A8%E5%8E%86%E5%8F%B2%E7%9A%84%E9%95%BF%E6%B2%B3%E4%B8%AD%E9%80%90%E6%B8%90%E6%B1%A1%E5%90%8D%E5%8C%96.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="狐狸-在历史的长河中逐渐污名化"><a href="#狐狸-在历史的长河中逐渐污名化" class="headerlink" title="狐狸-在历史的长河中逐渐污名化"></a>狐狸-在历史的长河中逐渐污名化</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>近来互联网上开始流传一个热梗：狐主任。</p>
-<img src="/images/人们对狐狸的印象/狐主任.jpg" style="zoom:80%;" />
-
-<p>狐主任其实就是藏狐，藏狐靠着一张国字脸火遍全国，那一张写满对世俗的不屑的方脸在搭配那“淡定”的眼神，引得人们自发将其做成表情包。藏狐靠着一张方脸让人们对狐狸的形象有所改观，而在此之前，狐狸的形象一直都不好，人们对狐狸的看法都是狡猾，阴险，比如著名的《狐狸列那的故事》就刻画了一只狡猾至极，死不悔改的狐狸，由此可见狐狸的形象属实不佳，但在以前狐狸可是祥瑞的象征，甚至与王位关联，只不过在历史的长河里慢慢污名化了</p>
-<h3 id="狐狸形象的演变"><a href="#狐狸形象的演变" class="headerlink" title="狐狸形象的演变"></a>狐狸形象的演变</h3><p>在中国古代<strong>夏</strong>至<strong>汉魏</strong>时期，那时候狐狸在人民心中的形象是吉祥的、护佑人的正面形象。</p>
-<h4 id="1-夏朝"><a href="#1-夏朝" class="headerlink" title="1.夏朝"></a>1.夏朝</h4><p>在《山海经》《淮南子》《吴越春秋》等古籍中，狐狸被描述为神兽、大禹之妻。比如《吴越春秋》中：<code>大禹向天祝告求妻时，一只九条巨尾的白狐，优雅缓行出现在他的面前。大禹见状，心下了然：我族尚白，我身着白衣，白狐之色与之相应；九为至尊之数，白狐九尾，昭示我族王者气象， “绥绥白狐，九尾痝痝。···成家成室，我造彼昌。”于是，大禹遵从上天的安排，娶涂山女娇为妻。</code><del>嗯…咋感觉涂山女娇就是那只白狐呢…</del></p>
-<h4 id="2-秦汉时期"><a href="#2-秦汉时期" class="headerlink" title="2.秦汉时期"></a>2.秦汉时期</h4><p>《<strong>史记</strong>》中记载，陈胜和吴广为煽动戍卒反秦，在驻地旁的丛祠中以狐鸣，呼曰：“大楚兴，陈胜王！”，引得戍卒惶恐不已，使得后来戍卒愿意与陈胜吴广一同起义。</p>
-<p>汉代石刻画像及砖画中，常有九尾狐与白兔、蟾蜍、三足乌之属列于西王母座旁，以示祯祥。</p>
-<h4 id="3-南北朝"><a href="#3-南北朝" class="headerlink" title="3.南北朝"></a>3.南北朝</h4><p>李暹在注《千字文》“周伐殷汤”一句时，率先提出妲己为九尾狐。与此同时，动物通过长时间修炼化身为妖也就是”物老成精“的观点逐渐被人们所接受，这个观点的出现对狐狸的瑞兽形象产生了极大的冲击，因为之前只有特殊的动物才会化成人形，而现在所有动物都有了这个能力，这也让狐狸的形象走上了下坡路。</p>
-<h4 id="4-唐宋时期"><a href="#4-唐宋时期" class="headerlink" title="4.唐宋时期"></a>4.唐宋时期</h4><blockquote>
-<p>到了唐宋时期，狐狸的形象开始发生变化。人们开始相信狐狸可以修炼成精，幻化成人形。再加上一些文学作品的渲染，狐狸的形象逐渐变得复杂起来，既有善良美丽的狐仙，也有迷惑人心的妖狐。</p>
-</blockquote>
-<h5 id="唐朝"><a href="#唐朝" class="headerlink" title="唐朝"></a>唐朝</h5><p><strong>唐期初期，狐灵信仰在民间流传，设庙参拜狐仙的现象屡见不鲜。</strong>张鷟的《朝野佥载》记载到：初唐以来，百姓流行信仰狐仙，甚至流传出了“无狐魅，不成村”的谚语；</p>
-<p>但与此同时，在文人圈子里，或许受到前面所提的“物老成精”观念的影响，汉代以后，狐仙开始跌落神坛，妖性渐显，形象也开始负面化。众多狐仙中尤为出名的九尾狐，首当其冲成为口诛笔伐的对象。唐代白居易在《古冢狐》中，写下“女为狐媚害即深，日长月增溺人心。何况褒妲之色善蛊惑，能丧人家覆人国“等诗句。</p>
-<h5 id="宋朝"><a href="#宋朝" class="headerlink" title="宋朝"></a>宋朝</h5><p>吕希哲的《吕氏杂记》记载，宋代邠地（今陕西省彬县）出现狐王庙，能施福降祸，深得百姓敬畏。但妲己也开始频繁以狐妖的形象出现在各种平话小说之中，这也对后来明代小说《封神演义》产生了一定影响。</p>
-<h4 id="5-元、明朝"><a href="#5-元、明朝" class="headerlink" title="5.元、明朝"></a>5.元、明朝</h4><p>伴随着元代话本《武王伐纣书》和明代长篇章回小说《封神演义》的问世，进一步坐实了妲己是千年九尾金狐的化身。故事中妲己把商纣迷惑得神魂颠倒，丧失真性，原本外有忠臣良将、内有贤后淑妃的大好江山被推上改君易代的悬崖。《封神演义》的风行让狐妖的魅惑形象深入人心，狐媚祸国的观念被推向极致，让狐仙形象几乎在大众认知中被完全黑化，<strong>一句“狐狸精”，是将女子咒为娼妓的最恶毒的诅咒。</strong></p>
-<p>除了《封神演义》之外，《西游记》中的形象也是此类狐妖传说的代表，牛魔王的小妾玉面狐狸令牛魔王和铁扇公主关系恶化，应对了前面白居易所说的“覆家”之言。随着封建社会的日益衰落，人们对鬼神之说更加迷信，狐狸的形象也变得更加妖魔化。很多流传广泛小说、戏曲中也都越来越频繁出现了狐狸精迷惑害人的故事。</p>
-<h4 id="6-清朝"><a href="#6-清朝" class="headerlink" title="6.清朝"></a>6.清朝</h4><p>狐狸的污名一直延续到清代，《狐狸缘》、《九尾狐》小说中的狐妖，不是被收服割掉尾巴，就是被拿来比拟坏透的娼妓。</p>
-<p>但在漫天贬斥中，有些人们的观念发生了变化，部分小说作者已经厌倦了用刻板印象描绘故事中的狐狸形象，他们开始尝试赋予小说中的人物更丰富人性，创作《聊斋志异》的蒲松龄便是其中代表，《聊斋志异》的出现，里面《<strong>王成</strong>》、《<strong>狐女</strong>》等几个勾勒出狐灵亦正亦邪的形象，给人们狐狸<strong>有仙有妖有善恶</strong>的观念。</p>
-<p>在蒲松龄笔下，狐妖人性化的一面成为了描述的重点，这也意味着当时文人阶级自我意识的觉醒，这让他们能够用更加多元化的方式来构建笔下的人物。</p>
-<p>但无奈《聊斋志异》中短篇故事的影响力远不及《封神演义》和《西游记》等著作，因此民间对于狐妖的看法并没有发生扭转。</p>
-<h4 id="7-现代"><a href="#7-现代" class="headerlink" title="7.现代"></a>7.现代</h4><p>及至今日，东北地区“狐黄白柳灰”（狐、黄鼠狼、刺猬、蛇、鼠）五仙信仰中还有狐仙的一席之地。</p>
-<p>尽管提到对狐狸的印象，大家首先想到的词肯定还是狡猾，不少小说也经常描述狐狸怎样用阴谋诡计害人，但现在小说里不再只有负面印象了，更多的描述了狐狸的家庭生存遇到的困难，狐狸妈妈的母爱，一家狐的团结互助，《再被狐狸骗一次》、《猎狐》等故事描写了狐狸家庭的亲情，在新兴的文艺作品中，狐狸的形象愈发丰满，相信在新的时代文化背景下，狐狸的形象一定会有的新的内涵，不再是污名。</p>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>在我写这篇文章时，我查阅了大量资料（浏览器挂着36个还未关闭的页面，全是维基、电子书），从狐狸的形象演变中，我仿佛看到每个时代人们的内心诉求和当时社会中的流行文化，而狐狸作为一个有着悠久历史的意象，也从瑞兽变成了害人的妖怪，人们对于狐狸的形象过于片面，在全面了解狐狸后，你会发现其实狐狸也是地球的一份子，它们外貌各异，有的圆滚滚毛茸茸，有的凭借着自身奇特的长相获得人们的喜爱，而且狐狸会猎捕仓鼠做为食物，对农业可是大有助益呢。</p>
-<h3 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h3><table>
-  <tr>
-    <td colspan="3">
-      <img src="/images/人们对狐狸的印象/中国历史.png" style="zoom:100%;" /><br />
-    </td>
-  </tr>
-  <tr>
-    <th><b>夏</b> 前21世纪 | 前17世纪</th>
-    <th><b>商</b> 前17世纪 | 前11世纪</th>
-    <th><b>秦</b> 前221年 | 前207年</th>
-  </tr>
-  <tr>
-    <td><b>汉</b> 前202年 ︱ 220年</td>
-    <td><b>南 北 朝</b> 420年 ︱ 589年</td>
-    <td><b>唐</b> 618年 | 907年</td>
-  </tr>
-  <tr>
-    <td><b>宋</b> 960年 ︱ 1279年</td>
-    <td><b>南宋</b> 1127年 | 1279年</td>
-    <td><b>元</b> 1260年/1271年 | 1368年</td>
-  </tr>
-  <tr>
-    <td><b>明</b> 1368年 | 1644年</td>
-    <td><b>清</b> 1636年/1644年 | 1912年</td>
-    <td></td>
-  </tr>
-</table>
-
-<p>参考书籍文章：</p>
-<p><em>《山海经》《淮南子》《吴越春秋》《史记》《千字文》《古冢狐》《吕氏杂记》《武王伐纣书》《封神演义》《西游记》《狐狸缘》《九尾狐》《聊斋志异》《王成》《狐女》《再被狐狸骗一次》《猎狐》《以文学发展的视角论狐狸文化符号的认知变迁》</em></p>
-<h3 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h3><h4 id="狐狸与神仙的关系"><a href="#狐狸与神仙的关系" class="headerlink" title="狐狸与神仙的关系"></a>狐狸与神仙的关系</h4><p>在道教和民间信仰中，狐狸被认为是具有灵性的动物，可以修炼成仙。修炼成仙的狐狸被称为狐仙。狐仙通常被认为具有法力，可以帮助人们实现愿望，但也有可能迷惑人心。</p>
-<p>狐仙与神仙的关系比较复杂。一方面，狐仙被认为是神仙的追随者，可以向神仙求助。另一方面，狐仙也可能被视为妖邪，受到神仙的制约。</p>
-<h4 id="狐狸的生物学特征"><a href="#狐狸的生物学特征" class="headerlink" title="狐狸的生物学特征"></a>狐狸的生物学特征</h4><ul>
-<li><strong>分类地位：</strong> 犬科动物，与狼、豺的关系</li>
-<li><strong>形态特征：</strong> 外形、毛色、体型等方面的多样性</li>
-<li><strong>生理特征：</strong> 感官、适应环境的能力</li>
-<li><strong>分布范围：</strong> 全球分布，不同种类的分布特点</li>
-</ul>
-<h4 id="狐狸的生态习性（赤狐）"><a href="#狐狸的生态习性（赤狐）" class="headerlink" title="狐狸的生态习性（赤狐）"></a>狐狸的生态习性（赤狐）</h4><ul>
-<li><strong>生活习性：</strong> 通常成对或以家庭为单位组成小团体</li>
-<li><strong>食性：</strong> 赤狐主要以啮齿类为食，但有时也捕食兔子、松鼠、禽类、爬行动物、无脊椎动物和有蹄类幼崽，它们偶尔也吃水果和植物。（想不到吧，它还会吃素）</li>
-<li><strong>繁殖：</strong> 赤狐的繁殖期在每年春季，孕期49-58天，一胎可产4-6崽，偶尔一胎多达13个幼崽</li>
-<li><strong>肢体语言：</strong> 赤狐的肢体语言由耳朵、尾巴的活动以及不同的身体姿态组成。</li>
-</ul>
-<h4 id="狐狸与人类的关系"><a href="#狐狸与人类的关系" class="headerlink" title="狐狸与人类的关系"></a>狐狸与人类的关系</h4><ul>
-<li><strong>历史上的狐狸：</strong> <ul>
-<li>希腊神话中曾描绘了一只身形巨大，永远无法被捕捉的透墨索斯恶狐</li>
-<li>在凯尔特神话中，赤狐是一种重要的动物。例如在英国科茨沃尔德，当地人相信巫师会化身为赤狐偷取邻居家的黄油。</li>
-</ul>
-</li>
-<li><strong>狐狸与人类的冲突：</strong> 赤狐偶尔会捕食小鸡、羊羔，它们通常不会捕食人工饲养的动物，除非饿的不行</li>
-<li><strong>狐狸保护：</strong> 赤狐，属于<strong>国家二级保护动物</strong></li>
-</ul>
-<h4 id="狐狸在文学艺术中的形象"><a href="#狐狸在文学艺术中的形象" class="headerlink" title="狐狸在文学艺术中的形象"></a>狐狸在文学艺术中的形象</h4><ul>
-<li><strong>文学作品中的狐狸：</strong> 在欧洲民俗中，列那狐的形象象征了狡诈与欺骗。列那狐最初是公元1150年的诗歌《Ysengrimus》里的一个次要角色，而后在1175年被皮埃尔·圣克劳德编入了小说《狐狸列那》，后来又出现在杰弗里·乔叟的《修女牧师故事集》中。许多有关列那狐的冒险故事都取材于赤狐在野外的真实习性，例如列那狐与狼为敌，喜爱黑莓与葡萄。</li>
-<li><strong>艺术作品中的狐狸：</strong> 德国表现主义画家弗兰兹‧马尔克油曾绘制过一副油画《狐狸》，该画最终以4265.45万英镑拍卖成交</li>
-</ul>
-<img src="/images/人们对狐狸的印象/狐狸油画.webp" style="zoom:80%;" />
-
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>生活随记</category>
-      </categories>
-      <tags>
-        <tag>生活随记</tag>
-        <tag>论文</tag>
-        <tag>狐狸</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Security.txt创建和使用</title>
-    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/Security.txt%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="1-什么是Security-txt"><a href="#1-什么是Security-txt" class="headerlink" title="1.什么是Security.txt"></a>1.什么是Security.txt</h2><p>Security.txt文件是一种标准方法，用于让网站管理员、所有者在站点上发布安全联系信息，以便安全研究人员和用户报告漏洞或安全问题。这种文件通常放在网站的.well-known目录下，可以被自动化工具和搜索引擎找到。</p>
-<p>一个完整的Security.txt包含以下信息：</p>
-<pre class="line-numbers language-none"><code class="language-none"># security.txt
-# 信息安全联系文件
-
-Contact:   
-Encryption: 
-Acknowledgements: 
-Preferred-Languages: 
-Policy: 
-Hiring: 
-Expires: 
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>解释</strong></p>
-<p><strong>Contact</strong>: 安全联系信息，例如你的电子邮件地址。</p>
-<p><strong>Encryption</strong>: 放置公钥的 URL，用于安全地发送敏感信息。</p>
-<p><strong>Acknowledgements</strong>: 感谢页面的 URL，用于致谢报告漏洞的人员。（连声感谢都没人家干嘛给你报告漏洞）</p>
-<p><strong>Preferred-Languages</strong>: 首选语言，用逗号分隔。（例如：<code>zh, en</code> ）</p>
-<p><strong>Policy</strong>: 安全政策的 URL，包含如何报告漏洞的详细信息。（可有可无吧）</p>
-<p><strong>Hiring</strong>: 安全职位招聘的 URL，若你希望雇佣安全研究人员或有空缺职位。（没有就别填，省的让费人家时间）</p>
-<p><strong>Expires</strong>: 信息的过期日期和时间，用于指明该文件何时不再有效。（例如 2100-01-01T00:00:00.000Z）</p>
-<p>注：公钥使用PGP公钥， <a href="./%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%B8%8E%E4%BB%96%E4%BA%BA%E4%BA%A4%E6%B5%81%E4%BD%BF%E7%94%A8PGP%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86%EF%BC%9F">如何创建并与他人交流使用PGP密钥加密？</a></p>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>网站维护</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>Security.txt</tag>
-        <tag>Security.txt怎么用</tag>
-        <tag>Security.txt如何使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何创建并与他人交流使用PGP密钥加密？</title>
-    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%B8%8E%E4%BB%96%E4%BA%BA%E4%BA%A4%E6%B5%81%E4%BD%BF%E7%94%A8PGP%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86%EF%BC%9F.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="如何创建并与他人交流使用PGP密钥加密？"><a href="#如何创建并与他人交流使用PGP密钥加密？" class="headerlink" title="如何创建并与他人交流使用PGP密钥加密？"></a>如何创建并与他人交流使用PGP密钥加密？</h2><p>GPG，又称为GnuPG，全称是Gnu Private Guard，即GNU隐私卫士。GPG是以PGP算法为核心的强大的加密软件。但GPG项目是一套命令行程序，而且是为 Linux 等开源操作系统设计的。那么在Windows平台下如何使用GPG呢？不用担心，Gpg4win就是Windows平台GPG及图形前端的集合安装包。</p>
-<p>简单介绍一下，Gpg4win是一款非对称加密方式软件。简单来讲，就是用公钥加密文件，用私钥解密文件。如果你需要发送加密信息，首先获取接收者的公钥，然后利用该公钥加密后传递，对方利用公钥对应的私钥就可解密。也就是说，公钥是锁，私钥是钥匙。非对称加密方式很好地解决了传递机密信息的问题。</p>
-<h2 id="下载安装Gpg4win"><a href="#下载安装Gpg4win" class="headerlink" title="下载安装Gpg4win"></a>下载安装Gpg4win</h2><p>请到官方网站下载：<a href="http://www.gpg4win.org/">http://www.gpg4win.org/</a><br>之后运行安装程序，保持默认设置即可。安装完成后会要求设置信任的根证书，勾选下方的Root certificate defined or skip configuration（根证书已定义或跳过设置）即可。安装好后叫Kleopatra</p>
-<h2 id="创建密钥对"><a href="#创建密钥对" class="headerlink" title="创建密钥对"></a>创建密钥对</h2><ol>
-<li>运行Kleopatra，点击: 新建OpenPGP密钥对，会弹出OpenPGP证书创建向导</li>
-<li>填入名字、电子邮箱地址。（填写了电子邮件就可以在后面上传密钥服务器让别人搜邮箱地址到你的证书）</li>
-<li>点击Advanced Settings，可以进行高级设置，为了增强安全性，建议Key Material栏选择最长的4096 bits，你也可以勾选使用密码句保护生成的密钥，当然，可有可无</li>
-<li>点击OK，如果你勾选使用密码句保护生成的密钥，那么这一步会要求你输入密码，请一定要牢记！以后使用都要密钥！</li>
-<li>在创建的过程中，可以在随便上网读写磁盘，电脑将利用IO生成随机数。</li>
-<li>创建完成！</li>
-</ol>
-<h2 id="上传公钥到PGP公钥服务器"><a href="#上传公钥到PGP公钥服务器" class="headerlink" title="上传公钥到PGP公钥服务器"></a>上传公钥到PGP公钥服务器</h2><p>公钥加密信息发给私钥持有人，私钥持有人使用私钥解密。如果想要别人给你发送加密信息，别人就要知道你的公钥才行。公钥之所以称为公钥，就是因为它是公开的。接下来，我们需要把自己的公钥公之于众，上传到专门的服务器上。这里以上传到MIT的PGP公钥服务器为例。</p>
-<ol>
-<li>在Kleopatra主界面右键点击要导出的秘钥，点击导出或按CTRL+E，输入保存路径和文件名，点击保存后会得到一个asc文件。</li>
-<li>使用文本编辑器（记事本、Visual Code）打开刚才生成的asc文件，复制全部内容。</li>
-<li>使用浏览器访问MIT的PGP公钥服务器<a href="http://pgp.mit.edu/%EF%BC%8C%E5%B0%86%E5%88%9A%E6%89%8D%E5%A4%8D%E5%88%B6%E7%9A%84%E5%86%85%E5%AE%B9%E9%BB%8F%E8%B4%B4%E5%88%B0%E2%80%9CSubmit">http://pgp.mit.edu/，将刚才复制的内容黏贴到“Submit</a> a key”下方的文本框里，点击Submit this key to the key server!。上传成功后，别人搜索你的邮箱即可获取你的公钥。</li>
-</ol>
-<p>反过来，如果你想给别人发送加密信息，就需要获取他的公钥。假如我想发送给<a href="mailto:&#x45;&#x74;&#x68;&#x61;&#x6e;&#x69;&#x65;&#108;&#x40;&#49;&#x30;&#x30;&#x37;&#49;&#x33;&#46;&#120;&#x79;&#122;">&#x45;&#x74;&#x68;&#x61;&#x6e;&#x69;&#x65;&#108;&#x40;&#49;&#x30;&#x30;&#x37;&#49;&#x33;&#46;&#120;&#x79;&#122;</a>，则需要通过以下步骤获取相应的公钥。</p>
-<ol>
-<li>使用浏览器访问MIT的PGP公钥服务器<a href="http://pgp.mit.edu/%EF%BC%8C%E5%9C%A8%E2%80%9CExtract">http://pgp.mit.edu/，在“Extract</a> a key”下方的文本框输入<a href="mailto:&#69;&#x74;&#104;&#97;&#x6e;&#x69;&#x65;&#x6c;&#64;&#49;&#x30;&#x30;&#x37;&#x31;&#51;&#x2e;&#x78;&#x79;&#x7a;">&#69;&#x74;&#104;&#97;&#x6e;&#x69;&#x65;&#x6c;&#64;&#49;&#x30;&#x30;&#x37;&#x31;&#51;&#x2e;&#x78;&#x79;&#x7a;</a>，如下图所示。之后点击Do the search!。</li>
-<li>在搜索结果页中点击相应的keyID，会进入一个有一长串乱码的页面。复制该页面的全部内容。</li>
-<li>新建并打开文本文档，粘贴刚才复制的内容，保存。文件名随意，例如“123.asc”。</li>
-<li>在Kleopatra主界面点击左上角的文件——导入或按CTRL+I，选择刚才保存的文件，点击打开。这样就成功导入了一个公钥。或者直接拖动刚刚保存的文件到Kleopatra</li>
-</ol>
-<h2 id="加密文本"><a href="#加密文本" class="headerlink" title="加密文本"></a>加密文本</h2><p>下面的例子将演示如何加密一段文本并通过邮件发送给别人。</p>
-<ol>
-<li>新建并打开文本文档，输入你想要加密的文本（即原文），保存。文件名随意，例如“666.txt”。（你也可以加密其他已有文件哦，直接跳过该步骤）</li>
-<li>在Kleopatra主界面点击签名&#x2F;加密，选择刚才保存的文本文档或其他你想加密的文件。</li>
-<li>之后弹出的窗口中间有3个可勾选的选项，分别是签名身份、为我加密、为他人加密。这里勾选为我加密就好。</li>
-<li>点击加密，出现“加密成功”就是成功了（废话）</li>
-<li>加密后的文件会在文件的同一路径生成一个相同名称后缀是gpg的文件，将这个文件发给目标即可，你也可以用文本编辑器（记事本、Visual Code）打开该文件复制里面的密文发送</li>
-</ol>
-<h2 id="解密文本"><a href="#解密文本" class="headerlink" title="解密文本"></a>解密文本</h2><p>下面的例子将演示如何解密一封收到的密文。</p>
-<ol>
-<li>复制收到的密文，新建并打开文本文档，粘贴，保存。文件名随意，例如“999.txt”。（如果是gpg文件跳过该步骤）</li>
-<li>在Kleopatra主界面点击 解密&#x2F;校验，选择刚才保存的文本文档或gpg文件。</li>
-<li>点击解密（如果没有刚刚创建密钥没设密码那么跳过下一步）</li>
-<li>之后会要求你输入密码，就是你刚刚创建密钥时输入的那个，点击解密。</li>
-<li>解密完成后，点击OK。</li>
-<li>在输出路径找到解密后的文件（和原文件同名）解密前是啥样解密后就啥样。</li>
-</ol>
-<script src="https://utteranc.es/client.js"
-        repo="2010HCY/utterances"
-        issue-term="title"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>]]></content>
-      <categories>
-        <category>网站维护</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>PGP密钥</tag>
       </tags>
   </entry>
 </search>
