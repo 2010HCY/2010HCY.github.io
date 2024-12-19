@@ -5054,4 +5054,48 @@ Expires:
         <tag>HTML手册</tag>
       </tags>
   </entry>
+  <entry>
+    <title>做个Z-library的小印章玩玩吧</title>
+    <url>/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%81%9A%E4%B8%AAZ-library%E7%9A%84%E5%B0%8F%E5%8D%B0%E7%AB%A0%E7%8E%A9%E7%8E%A9%E5%90%A7.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="3D打印的小印章"><a href="#3D打印的小印章" class="headerlink" title="3D打印的小印章"></a>3D打印的小印章</h2><p>这是使用3D打印的小印章，长64mm宽20mm高30mm，和印制面是分开打印的。</p>
+<img src="/images/Z-library的小印章/logo.zlibrary.svg" style="zoom:67%;" />
+
+<p>上面这是Z-library的logo，可以看到Y字上面有书页，但因为打印机打不出那么细的条纹，所以实物Y字少了那书页部分。</p>
+<p>有两版，1号是小尺寸版，logo与边缘没有空隙，2号则比一号长了两毫米，有与边缘的空隙。</p>
+<h3 id="打印文件下载"><a href="#打印文件下载" class="headerlink" title="打印文件下载"></a>打印文件下载</h3><blockquote>
+<p><strong>一号打印文件下载：</strong></p>
+</blockquote>
+<p><a href="/images/Z-library的小印章/1号.Z-library印章握把.stl" download="1号.Z-library印章握把.stl" class="download-button">握把</a></p>
+<p><a href="/images/Z-library的小印章/1号.Z-library印制面（边缘无空）" download="1号.Z-library印制面（边缘无空）" class="download-button">印制面</a></p>
+<blockquote>
+<p><strong>二号打印文件下载</strong></p>
+</blockquote>
+<p><a href="/images/Z-library的小印章/2号.Z-library印章握把.stl" download="2号.Z-library印章握把.stl" class="download-button">握把</a></p>
+<p><a href="/images/Z-library的小印章/2号.Z-library印制面（边缘有空）.stl" download="2号.Z-library印制面（边缘有空）.stl" class="download-button">印制面</a></p>
+<h3 id="实物效果图"><a href="#实物效果图" class="headerlink" title="实物效果图"></a>实物效果图</h3><p>效果图：</p>
+<img src="/images/Z-library的小印章/1.webp" style="zoom:10%;" />
+
+<img src="/images/Z-library的小印章/2.webp" style="zoom:10%;" />
+
+<img src="/images/Z-library的小印章/3.webp" style="zoom:10%;" />
+
+<img src="/images/Z-library的小印章/7.webp" style="zoom:10%;" />
+
+<img src="/images/Z-library的小印章/6.webp" style="zoom:10%;" />
+
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>生活随记</category>
+      </categories>
+      <tags>
+        <tag>小印章</tag>
+        <tag>3D打印</tag>
+      </tags>
+  </entry>
 </search>

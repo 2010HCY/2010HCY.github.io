@@ -6,7 +6,7 @@
   <link href="https://100713.xyz/atom.xml" rel="self"/>
   
   <link href="https://100713.xyz/"/>
-  <updated>2024-12-09T14:29:12.275Z</updated>
+  <updated>2024-12-19T07:48:17.791Z</updated>
   <id>https://100713.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>做个Z-library的小印章玩玩吧</title>
+    <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%81%9A%E4%B8%AAZ-library%E7%9A%84%E5%B0%8F%E5%8D%B0%E7%AB%A0%E7%8E%A9%E7%8E%A9%E5%90%A7"/>
+    <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%81%9A%E4%B8%AAZ-library%E7%9A%84%E5%B0%8F%E5%8D%B0%E7%AB%A0%E7%8E%A9%E7%8E%A9%E5%90%A7</id>
+    <published>2024-12-19T07:46:45.000Z</published>
+    <updated>2024-12-19T07:48:17.791Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随记" scheme="https://100713.xyz/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="小印章" scheme="https://100713.xyz/tags/%E5%B0%8F%E5%8D%B0%E7%AB%A0/"/>
+    
+    <category term="3D打印" scheme="https://100713.xyz/tags/3D%E6%89%93%E5%8D%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>如何创建并与他人交流使用PGP密钥加密？</title>
@@ -560,35 +587,6 @@
     <category term="PCB" scheme="https://100713.xyz/tags/PCB/"/>
     
     <category term="硬件开源" scheme="https://100713.xyz/tags/%E7%A1%AC%E4%BB%B6%E5%BC%80%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客发展历程13-佛祖保佑，永无BUG</title>
-    <link href="https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG"/>
-    <id>https://100713.xyz/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/%E6%B0%B8%E6%97%A0BUG</id>
-    <published>2024-11-10T15:51:39.000Z</published>
-    <updated>2024-12-15T13:39:02.682Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="博客发展历程" scheme="https://100713.xyz/categories/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B/"/>
-    
-    
-    <category term="赛博佛祖" scheme="https://100713.xyz/tags/%E8%B5%9B%E5%8D%9A%E4%BD%9B%E7%A5%96/"/>
-    
-    <category term="程序代码" scheme="https://100713.xyz/tags/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
-    
-    <category term="代码护符" scheme="https://100713.xyz/tags/%E4%BB%A3%E7%A0%81%E6%8A%A4%E7%AC%A6/"/>
     
   </entry>
   
