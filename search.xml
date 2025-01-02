@@ -11,11 +11,11 @@
 </ol>
 <p>以下是三个版本的截图，我建议1.0、1.1版本用沉金工艺做比较好看，喷锡版建议用喷锡就好，当然，你也可以用沉金（要是能地铁路线用沉金，海洋部分用喷锡就好了）</p>
 <p>啥？你问我什么时候开源？明年，因为今年开源的话积分会过期（悲~）</p>
-<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.0.png" alt="1.0版本" style="zoom:67%;" />
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.0.webp" alt="1.0版本" style="zoom:67%;" />
 
-<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.1.png" alt="1.1版本" style="zoom:67%;" />
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图1.1.webp" alt="1.1版本" style="zoom:67%;" />
 
-<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图喷锡版.png" alt="喷锡版" style="zoom:67%;" />
+<img src="/images/嘉立创开源工程/厦门地铁图/厦门地铁图喷锡版.webp" alt="喷锡版" style="zoom:67%;" />
 
 <script src="https://utteranc.es/client.js"
         repo="2010HCY/utterances"
@@ -469,8 +469,7 @@ start mshta vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;&quot;&qu
 <img src="/images/我FFF.webp" style="zoom:50%;" />
 
 <p>嗯……除非翻墙，否则休想下载，为了照顾不会翻墙的人，我已经下载好了Windows系统13.5.4版本的Tor浏览器，但因为博客有单文件大小限制，所以我分卷压缩成两份。未来我会不定期更新，你也可以下载好后连上Tor网络下载最新版</p>
-<p>点击下载 <a href="/images/Tor/tor-windows64-13.5.7z.001" target="_blank">Tor浏览器分卷压缩包1</a> <a href="/images/Tor/tor-windows64-13.5.7z.002" target="_blank">Tor浏览器分卷压缩包2</a></p>
-<p>下载完两个压缩包后将其放在同一个文件夹里，右键tor-windows64-13.5.7z.001选择解压，解压后双击tor-windows64-13.5.exe安装，默认安装路径是桌面，可以自行更改，稍等片刻即可安装成功</p>
+<p>点击下载 <a href="https://drive.100713.xyz/%E9%9D%99%E6%B0%B4%E6%B7%B1%E6%B5%81%20%7C%20Drive/Tor-Windows.exe" target="_blank">Tor浏览器分卷压缩包1</a></p>
 <h2 id="2-连接Tor网络"><a href="#2-连接Tor网络" class="headerlink" title="2.连接Tor网络"></a>2.连接Tor网络</h2><p>安装好后双击打开，点击那个紫色的连接Tor网络</p>
 <img src="/images/Tor/connect.png" style="zoom:90%;" />
 
@@ -5313,6 +5312,49 @@ Expires:
       <tags>
         <tag>生活随记</tag>
         <tag>论文</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>厦门地铁图合集开源版</title>
+    <url>/%E5%98%89%E7%AB%8B%E5%88%9B%E5%BC%80%E6%BA%90%E5%B7%A5%E7%A8%8B/%E5%8E%A6%E9%97%A8%E5%9C%B0%E9%93%81%E5%9B%BE%E5%90%88%E9%9B%86%E5%BC%80%E6%BA%90%E7%89%88.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="厦门地铁图PCB版震撼发布！"><a href="#厦门地铁图PCB版震撼发布！" class="headerlink" title="厦门地铁图PCB版震撼发布！"></a>厦门地铁图PCB版震撼发布！</h2><blockquote>
+<p>复刻成本0元，可免费打样</p>
+</blockquote>
+<p>有了它，在厦门乘坐地铁将不再需要看地铁图，只需在他人震惊的目光中掏出这小小的一张板子，你，将成为地铁上<strong>最靓</strong>的仔！</p>
+<p>此工程一共有四个版本，分别是：</p>
+<ol>
+<li>标准版的1.0和专业版的1.0，区别在于专业版的用了布尔运算合并了填充区域；</li>
+<li>1.1版本则是将字符位置移动到了地图上的陆地地区，微调客编区，并将顶上的厦门地铁图及其英文纵向放置；</li>
+<li>喷锡版则是将海洋区域放置开窗区喷锡，让锡模拟波光粼粼的大海</li>
+</ol>
+<p>以下是四个版本的实物图，我建议1.0、1.1版本用沉金工艺做比较好看，喷锡版你也可以用沉金，但我不建议，因为那样太浪费资源了（要是能地铁路线用沉金，海洋部分用喷锡就好了）</p>
+<p>注：一定要记得设置<strong>自定义客编位置</strong>！！！</p>
+<p>下面是实物图</p>
+<img src="/images\嘉立创开源工程/厦门地铁图合集开源版/1.webp" style="zoom:67%;" />
+
+<img src="/images/嘉立创开源工程/厦门地铁图合集开源版/2.webp" style="zoom:67%;" />
+
+<img src="/images/嘉立创开源工程/厦门地铁图合集开源版/3.webp" style="zoom:67%;" />
+
+<img src="/images/嘉立创开源工程/厦门地铁图合集开源版/4.webp" style="zoom:67%;" />
+
+<p>PCB设计图</p>
+<img src="/images/嘉立创开源工程/厦门地铁图合集开源版/PCB.webp" alt="PCB" style="zoom:67%;" />
+
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>嘉立创开源工程</category>
+      </categories>
+      <tags>
+        <tag>嘉立创</tag>
+        <tag>PCB</tag>
+        <tag>硬件开源</tag>
       </tags>
   </entry>
 </search>
