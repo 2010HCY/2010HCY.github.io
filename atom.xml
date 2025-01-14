@@ -6,7 +6,7 @@
   <link href="https://100713.xyz/atom.xml" rel="self"/>
   
   <link href="https://100713.xyz/"/>
-  <updated>2025-01-13T14:45:00.544Z</updated>
+  <updated>2025-01-14T13:15:14.550Z</updated>
   <id>https://100713.xyz/</id>
   
   <author>
@@ -17,9 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>点赞功能测试</title>
+    <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/1"/>
+    <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/1</id>
+    <published>2025-01-14T14:44:56.000Z</published>
+    <updated>2025-01-14T13:15:14.550Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随记" scheme="https://100713.xyz/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="生活随记" scheme="https://100713.xyz/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>厚积薄发：从《逍遥游》看人生的哲理</title>
-    <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%8E%9A%E7%A7%AF%E8%96%84%E5%8F%91%EF%BC%9A%E4%BB%8E%E3%80%8A%E9%80%8D%E9%81%A5%E6%B8%B8%E3%80%8B%E7%9C%8B%E4%BA%BA%E7%94%9F%E7%9A%84%E5%93%B2%E7%90%86"/>
-    <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%8E%9A%E7%A7%AF%E8%96%84%E5%8F%91%EF%BC%9A%E4%BB%8E%E3%80%8A%E9%80%8D%E9%81%A5%E6%B8%B8%E3%80%8B%E7%9C%8B%E4%BA%BA%E7%94%9F%E7%9A%84%E5%93%B2%E7%90%86</id>
+    <link href="https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%8E%9A%E7%A7%AF%E8%96%84%E5%8F%91%EF%BC%9A%E4%BB%8E%E3%80%8A%E9%80%8D%E9%81%A5%E6%B8%B8%E3%80%8B%E7%9C%8B%E4%BA%BA%E7%94%9F%E7%9A%84%E5%93%B2%E7%90%86%20-%20%E5%89%AF%E6%9C%AC"/>
+    <id>https://100713.xyz/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/%E5%8E%9A%E7%A7%AF%E8%96%84%E5%8F%91%EF%BC%9A%E4%BB%8E%E3%80%8A%E9%80%8D%E9%81%A5%E6%B8%B8%E3%80%8B%E7%9C%8B%E4%BA%BA%E7%94%9F%E7%9A%84%E5%93%B2%E7%90%86%20-%20%E5%89%AF%E6%9C%AC</id>
     <published>2025-01-13T14:44:56.000Z</published>
     <updated>2025-01-13T14:45:00.544Z</updated>
     
@@ -540,35 +565,6 @@
     <category term="程序代码" scheme="https://100713.xyz/tags/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/"/>
     
     <category term="游戏汉化" scheme="https://100713.xyz/tags/%E6%B8%B8%E6%88%8F%E6%B1%89%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更新博客音乐播放界面</title>
-    <link href="https://100713.xyz/%E7%BC%96%E7%A8%8B/%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E9%A1%B5%E9%9D%A2"/>
-    <id>https://100713.xyz/%E7%BC%96%E7%A8%8B/%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E9%A1%B5%E9%9D%A2</id>
-    <published>2024-11-24T11:39:09.000Z</published>
-    <updated>2024-11-28T10:52:32.006Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://100713.xyz/categories/programming/"/>
-    
-    
-    <category term="编程" scheme="https://100713.xyz/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="代码" scheme="https://100713.xyz/tags/%E4%BB%A3%E7%A0%81/"/>
-    
-    <category term="博客" scheme="https://100713.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
