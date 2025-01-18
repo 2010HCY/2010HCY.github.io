@@ -5833,4 +5833,91 @@ Expires:
         <tag>工具</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Hexo点赞插件</title>
+    <url>/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/Hexo%E7%82%B9%E8%B5%9E%E6%8F%92%E4%BB%B6.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Blog-Like-博客点赞插件"><a href="#Blog-Like-博客点赞插件" class="headerlink" title="Blog-Like 博客点赞插件"></a>Blog-Like 博客点赞插件</h1><p>Blog-Like，一个由我开发的简洁好用的点赞插件，GitHub地址<a href="https://github.com/2010HCY/Blog-Like">https://github.com/2010HCY/Blog-Like</a></p>
+<h2 id="特点介绍"><a href="#特点介绍" class="headerlink" title="特点介绍"></a>特点介绍</h2><p>此点赞功能适配Hexo博客，适合任何静态网站，只是步骤有所不同，以下是它的特点：</p>
+<ol>
+<li>免费，此点赞功能使用开发者的好伙伴<strong>leancloud</strong>存储点赞数据，免费版足够使用</li>
+<li>简洁，轻轻一点即可完成操作</li>
+<li>小巧，大小仅24.4kb（图像资源20kb）</li>
+<li>便捷，Hexo框架的博客仅需3步即可使用！</li>
+</ol>
+<p>效果展示：</p>
+<div id="zan" class="clearfix">
+    <div class="heart" onclick="goodplus(url, flag)"></div>
+    <br>
+    <div id="zan_text"></div>
+</div>
+
+<p>不仅仅是Hexo，所以静态博客都可以用，只是其他博客需要自己下载代码植入博客，Hexo可以一键安装</p>
+<h2 id="部署教程"><a href="#部署教程" class="headerlink" title="部署教程"></a>部署教程</h2><p>下面开始部署教程，你需要有一个<a href="https://www.leancloud.com/"><strong>leancloud</strong>账号</a>，没有的话就注册一个，只需要邮箱即可注册，无需绑定信用卡之类的，注册即用（中国大陆版要备案，可以使用国际版，备案要支付宝刷脸）。</p>
+<p>在开始之前，你需要获取AppID和AppKEY这两个凭证：</p>
+<h3 id="1-初始化leancloud应用并获取凭证"><a href="#1-初始化leancloud应用并获取凭证" class="headerlink" title="1.初始化leancloud应用并获取凭证"></a>1.初始化leancloud应用并获取凭证</h3><p>注册好<a href="https://www.leancloud.com/"><strong>leancloud</strong>账号</a>后进入控制台，点击创建应用，计费计划选择开发版，应用名称、描述随便填，</p>
+<img src="/images/博客点赞功能/创建应用.png" style="zoom:80%;" />
+
+<p>创建好后进入应用设置→点击应用凭证，将<strong>AppID</strong>和<strong>AppKey</strong>复制下来待会要用</p>
+<img src="/images/博客点赞功能/获取应用凭证.png" style="zoom:80%;" />
+
+<p>然后打开数据存储→结构化数据，创建一个名为Zan的Class。</p>
+<img src="/images/博客点赞功能/创建Class.png" style="zoom:70%;" />
+
+<h3 id="2-安装配置插件"><a href="#2-安装配置插件" class="headerlink" title="2.安装配置插件"></a>2.安装配置插件</h3><blockquote>
+<p>适用于Hexo框架，其他框架我没用过</p>
+</blockquote>
+<p>在博客根目录粘贴以下命令一键安装</p>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-blog-like --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>安装好后在博客根目录的<code>_config.yml</code>（<strong>不是你主题的<code>_config.yml</code>！</strong>）添加以下配置项：</p>
+<pre class="line-numbers language-none"><code class="language-none">Blog-Like:
+  enable: true &#x2F;&#x2F;是否启用本插件
+  AppID: &quot;你的ID&quot; &#x2F;&#x2F;填写前面获取的AppID
+  AppKEY: &quot;你的KEY&quot; &#x2F;&#x2F;填写AppKEY
+  xianzhi: true &#x2F;&#x2F;是否开启访客点赞数限制
+  number: 5 &#x2F;&#x2F;限制为几个赞，默认是5个<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>完事后<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>启动博客，在你想要的显示位置（例如文章末尾）插入如下代码块，打开博客瞅瞅效果吧！</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div id&#x3D;&quot;zan&quot; class&#x3D;&quot;clearfix&quot;&gt;
+    &lt;div class&#x3D;&quot;heart&quot; onclick&#x3D;&quot;goodplus(url, flag)&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;br&gt;
+    &lt;div id&#x3D;&quot;zan_text&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<div id="zan" class="clearfix">
+    <div class="heart" onclick="goodplus(url, flag)"></div>
+    <br>
+    <div id="zan_text"></div>
+</div>
+
+<p>对你有帮助的话给我个Starred吧！</p>
+<p><a href="https://github.com/2010HCY/Blog-Like"><img src="https://img.shields.io/github/stars/2010HCY/Blog-Like.svg?style=social" alt="Star this project on GitHub"></a></p>
+<h2 id="未来打算"><a href="#未来打算" class="headerlink" title="未来打算"></a>未来打算</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 此脚本目前没有限制点赞次数，同一个访客可以不停的搓点赞次数，搓个上万次不成问题，未来打算加入一个开关选择是否限制单访客点赞次数，若打开则通过Cookie记录限制只能点一次赞或几次。</li>
+<li><input checked="" disabled="" type="checkbox"> 制作成Hexo插件，可以一键安装使用</li>
+<li><input disabled="" type="checkbox"> 制作多种样式以供选择</li>
+<li><input checked="" disabled="" type="checkbox"> 长期接收意见以及维护</li>
+</ul>
+<h2 id="版本更新记录"><a href="#版本更新记录" class="headerlink" title="版本更新记录"></a>版本更新记录</h2><p><strong>v2.1 (2025.1.16)</strong></p>
+<p>修复了多个页面只能点五个赞，新版本把不同URL分开计算</p>
+<p><strong>v2.0 (2025.1.15)</strong></p>
+<p>发布npm包，可以在Hexo博客中一键安装咯！</p>
+<p><strong>v1.1 (2025.1.15)</strong></p>
+<p>增加了点赞次数限制，使用Cookie记录点赞次数，优化了代码逻辑</p>
+<p><strong>v1.0 (2025.1.14)</strong></p>
+<p>博客点赞插件横空出世 </p>
+<script src="https://utteranc.es/client.js"
+        repo="2010HCY/utterances"
+        issue-term="title"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        async>
+</script>]]></content>
+      <categories>
+        <category>网站维护</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
 </search>

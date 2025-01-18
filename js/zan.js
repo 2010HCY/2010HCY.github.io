@@ -2,21 +2,20 @@ AV.init({
     appId: 'Fz4cbRyZ9i4Kb84tIF5t3K2e-MdYXbMMI',
     appKey: 'E3j0z0SRnw2EVYlafLDaUqxt'
 });
+
 var flag = 0;
-var url = encodeURIComponent(window.location.href);
+var url = encodeURIComponent(window.location.href); 
 
-// 设置是否限制访客点赞次数（true = 限制，false = 不限制）
-var enableLimit = true;
-// 最大点赞次数
-var maxLikes = 5;
+var enableLimit = true;  // 设置是否限制访客点赞次数（true = 限制，false = 不限制）
+var maxLikes = 5;  //上面的值设为true可用此值限制最大点赞次数，5表示单个访客最大点赞次数5次
 
-function getVisitorLikes() {
-    var likes = getCookie("visitor_likes");
-    return likes ? parseInt(likes) : 0; 
+function getVisitorLikes(url) {
+    var likes = getCookie("likes_" + url); 
+    return likes ? parseInt(likes) : 0;
 }
 
-function setVisitorLikes(likes) {
-    setCookie("visitor_likes", likes, 30); 
+function setVisitorLikes(url, likes) {
+    setCookie("likes_" + url, likes, 30); 
 }
 
 function getCookie(name) {
@@ -32,24 +31,23 @@ function getCookie(name) {
 
 function setCookie(name, value, days) {
     var date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // 设置过期时间
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     var expires = "expires=" + date.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
 function goodplus(url) {
     if (enableLimit) {
-        var currentLikes = getVisitorLikes();
+        var currentLikes = getVisitorLikes(url); 
         if (currentLikes >= maxLikes) {
             showAlert("最多只能点 " + maxLikes + " 个赞");
-            return; 
+            return;
         }
     }
 
-    senddata(url, 1);
+    senddata(url, 1); 
 }
 
-// 发送数据到 LeanCloud
 function senddata(url, flag) {
     var Zan = AV.Object.extend('Zan');
     var query = new AV.Query('Zan');
@@ -64,8 +62,8 @@ function senddata(url, flag) {
             zan.save().then(function () {
                 document.getElementById("zan_text").innerHTML = flag === 1 ? "1" : "0";
                 if (enableLimit && flag === 1) {
-                    var currentLikes = getVisitorLikes();
-                    setVisitorLikes(currentLikes + 1); // 增加点赞次数
+                    var currentLikes = getVisitorLikes(url);
+                    setVisitorLikes(url, currentLikes + 1); 
                 }
             });
         } else {
@@ -77,8 +75,8 @@ function senddata(url, flag) {
                 zan.save().then(function () {
                     document.getElementById("zan_text").innerHTML = vViews + 1;
                     if (enableLimit) {
-                        var currentLikes = getVisitorLikes();
-                        setVisitorLikes(currentLikes + 1); // 增加点赞次数
+                        var currentLikes = getVisitorLikes(url);
+                        setVisitorLikes(url, currentLikes + 1); 
                     }
                 });
             } else {
@@ -91,7 +89,6 @@ function senddata(url, flag) {
     });
 }
 
-// 动画辅助函数
 function remcls() {
     $('.heart').removeClass("heartAnimation");
 }
@@ -100,7 +97,6 @@ function addcls() {
     $('.heart').addClass("heartAnimation");
 }
 
-// 显示自动关闭的弹窗提示
 function showAlert(message) {
     var alertBox = document.createElement("div");
     alertBox.innerText = message;
@@ -117,14 +113,13 @@ function showAlert(message) {
     alertBox.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.2)";
     document.body.appendChild(alertBox);
 
-    // 3 秒后自动关闭
     setTimeout(function () {
         document.body.removeChild(alertBox);
     }, 3000);
 }
 
 $(document).ready(function () {
-    senddata(url, flag);
+    senddata(url, flag); // 加载页面时发送数据
 
     $('body').on("click", '.heart', function () {
         var heartClass = $('.heart').attr("class");
